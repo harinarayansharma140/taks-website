@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAKS & CO. — Chartered Accountants in Faridabad | taks.com</title>
+<meta name="description" content="TAKS & CO. is an ICAI registered Chartered Accountancy firm in Faridabad led by CA Kuldeep Pandey. Expert services in Income Tax, GST, Audit, Company Registration, TDS, Bookkeeping & more.">
+<meta name="keywords" content="Chartered Accountant Faridabad, CA firm Faridabad, GST filing, Income Tax Return, Tax Audit, Company Registration, TAKS and CO, CA Kuldeep Pandey, taks.com">
+<meta name="author" content="TAKS & CO., Chartered Accountants">
+<meta property="og:title" content="TAKS & CO. — Chartered Accountants | Faridabad">
+<meta property="og:description" content="ICAI registered CA firm led by CA Kuldeep Pandey. Tax, Audit, GST, Company Formation & advisory services since 2018.">
+<meta property="og:url" content="https://taks.com">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taks.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--midnight:#0a0e1a;--deep-navy:#101630;--navy:#1a2044;--gold:#c9a84c;--gold-light:#e4c96a;--gold-dim:rgba(201,168,76,0.15);--cream:#f5f0e8;--white:#fff;--gray-50:#fafafa;--gray-100:#f7f7f8;--gray-200:#e8e8ec;--gray-400:#9295a3;--gray-600:#5a5d6e;--gray-800:#2a2d3e;--emerald:#2d8a6e;--font-display:'Playfair Display',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-mono:'JetBrains Mono',monospace}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--cream);color:var(--gray-800);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* PRELOADER */
+.preloader{position:fixed;inset:0;z-index:9999;background:var(--midnight);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.2rem;transition:opacity .6s ease,visibility .6s ease}
+.preloader.hide{opacity:0;visibility:hidden;pointer-events:none}
+.preloader-logo{font-family:var(--font-display);font-size:2.8rem;font-weight:700;color:var(--gold);animation:pulse-gold 1.5s ease-in-out infinite;letter-spacing:-.02em}
+.preloader-sub{font-family:var(--font-mono);font-size:.7rem;color:var(--gray-400);letter-spacing:.2em;text-transform:uppercase}
+.preloader-bar{width:120px;height:2px;background:rgba(201,168,76,.15);border-radius:2px;overflow:hidden}
+.preloader-bar::after{content:'';display:block;width:40%;height:100%;background:var(--gold);border-radius:2px;animation:loader-slide 1s ease-in-out infinite}
+@keyframes loader-slide{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}
+@keyframes pulse-gold{0%,100%{opacity:.4;transform:scale(.96)}50%{opacity:1;transform:scale(1)}}
+
+/* CURSOR */
+.cursor-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transition:transform .15s ease;mix-blend-mode:difference}
+@media(max-width:768px){.cursor-dot{display:none}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 4%;display:flex;align-items:center;justify-content:space-between;transition:all .4s ease}
+nav.scrolled{background:rgba(10,14,26,.95);backdrop-filter:blur(24px);padding:.7rem 4%;box-shadow:0 1px 30px rgba(0,0,0,.25)}
+.nav-logo{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:-.02em;display:flex;align-items:center;gap:.6rem}
+.nav-logo-icon{width:36px;height:36px;background:var(--gold);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:.78rem;font-weight:800;color:var(--midnight);letter-spacing:0}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;transition:color .3s ease;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--gold);transition:width .3s ease}
+.nav-links a:hover{color:var(--white)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--gold)!important;color:var(--midnight)!important;padding:.55rem 1.4rem!important;border-radius:4px;font-weight:600!important;transition:all .3s ease!important}
+.nav-cta::after{display:none!important}
+.nav-cta:hover{background:var(--gold-light)!important;transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;z-index:1001}
+.hamburger span{width:24px;height:2px;background:var(--white);transition:all .3s ease;border-radius:2px}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:960px){
+  .hamburger{display:flex}
+  .nav-links{position:fixed;top:0;right:-100%;width:75%;max-width:380px;height:100vh;background:var(--midnight);flex-direction:column;padding:6rem 2.5rem;gap:1.8rem;transition:right .4s cubic-bezier(.4,0,.2,1);box-shadow:-20px 0 60px rgba(0,0,0,.5)}
+  .nav-links.open{right:0}
+  .nav-links a{font-size:1.1rem}
+}
+
+/* HERO */
+.hero{min-height:100vh;background:var(--midnight);position:relative;display:flex;align-items:center;overflow:hidden}
+.hero-bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:60px 60px;animation:grid-drift 20s linear infinite}
+@keyframes grid-drift{0%{transform:translate(0,0)}100%{transform:translate(60px,60px)}}
+.hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;filter:blur(120px)}
+.hero-glow-1{background:var(--gold);top:-200px;right:-100px;opacity:.1}
+.hero-glow-2{background:#1e3a5f;bottom:-200px;left:-100px;opacity:.18}
+.hero-glow-3{background:var(--gold);bottom:10%;right:20%;opacity:.05;width:400px;height:400px}
+.hero-content{position:relative;z-index:2;max-width:1300px;margin:0 auto;padding:8rem 5% 4rem;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:.6rem;background:var(--gold-dim);border:1px solid rgba(201,168,76,.25);padding:.45rem 1.1rem;border-radius:100px;font-size:.72rem;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:2rem;animation:fadeSlideUp .8s ease forwards;opacity:0}
+.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.8rem,5.5vw,4.8rem);font-weight:800;color:var(--white);line-height:1.08;letter-spacing:-.03em;margin-bottom:1.5rem;animation:fadeSlideUp .8s ease .15s forwards;opacity:0}
+.hero h1 .gold{color:var(--gold)}
+.hero h1 .outline{-webkit-text-stroke:1.5px var(--gold);color:transparent}
+.hero-sub{font-size:clamp(.95rem,1.6vw,1.15rem);color:var(--gray-400);max-width:530px;line-height:1.75;margin-bottom:2.5rem;animation:fadeSlideUp .8s ease .3s forwards;opacity:0}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeSlideUp .8s ease .45s forwards;opacity:0}
+.btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--midnight);padding:.95rem 2rem;border:none;border-radius:6px;font-family:var(--font-body);font-size:.92rem;font-weight:700;cursor:pointer;text-decoration:none;transition:all .3s ease;position:relative;overflow:hidden}
+.btn-primary::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(255,255,255,.2));transform:translateX(-100%);transition:transform .4s ease}
+.btn-primary:hover::before{transform:translateX(0)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,.3)}
+.btn-outline{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--white);padding:.95rem 2rem;border:1.5px solid rgba(255,255,255,.2);border-radius:6px;font-family:var(--font-body);font-size:.92rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all .3s ease}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-dim)}
+.hero-right{animation:fadeSlideUp .8s ease .5s forwards;opacity:0}
+.hero-stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.hero-stat-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:1.6rem 1.3rem;backdrop-filter:blur(10px);transition:all .3s ease}
+.hero-stat-card:hover{background:rgba(201,168,76,.06);border-color:rgba(201,168,76,.2);transform:translateY(-3px)}
+.hero-stat-card h3{font-family:var(--font-display);font-size:2.2rem;font-weight:800;color:var(--gold);letter-spacing:-.02em;line-height:1}
+.hero-stat-card p{color:var(--gray-400);font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin-top:.4rem}
+.hero-stat-card .stat-icon{font-size:1.2rem;margin-bottom:.6rem;display:block}
+.hero-firm-badge{margin-top:1.2rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.15);border-radius:14px;padding:1.1rem 1.3rem;display:flex;align-items:center;gap:1rem}
+.hero-firm-badge-icon{width:46px;height:46px;background:var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;color:var(--midnight);font-size:.85rem;flex-shrink:0}
+.hero-firm-badge h4{color:var(--white);font-size:.9rem;font-weight:600}
+.hero-firm-badge p{color:var(--gray-400);font-size:.76rem;margin-top:.1rem}
+@media(max-width:960px){.hero-content{grid-template-columns:1fr;gap:3rem;padding-top:7rem}}
+@media(max-width:480px){.hero-stats-grid{grid-template-columns:1fr}}
+@keyframes fadeSlideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* TICKER */
+.ticker{background:var(--gold);padding:.85rem 0;overflow:hidden}
+.ticker-track{display:flex;gap:3rem;animation:scroll-ticker 35s linear infinite;width:max-content}
+.ticker-item{font-family:var(--font-body);font-size:.8rem;font-weight:700;color:var(--midnight);text-transform:uppercase;letter-spacing:.12em;white-space:nowrap;display:flex;align-items:center;gap:.8rem}
+.ticker-item .diamond{width:5px;height:5px;background:var(--midnight);transform:rotate(45deg);flex-shrink:0}
+@keyframes scroll-ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* SHARED */
+.section{padding:7rem 5%}
+.section-dark{background:var(--midnight);color:var(--white)}
+.section-navy{background:var(--deep-navy);color:var(--white)}
+.section-cream{background:var(--cream)}
+.section-label{font-family:var(--font-mono);font-size:.72rem;font-weight:500;color:var(--gold);text-transform:uppercase;letter-spacing:.2em;margin-bottom:.8rem}
+.section-title{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin-bottom:1rem}
+.section-subtitle{font-size:1.02rem;color:var(--gray-400);max-width:560px;line-height:1.7}
+.container{max-width:1280px;margin:0 auto}
+
+/* MEET YOUR CA */
+.ca-section{background:var(--midnight);position:relative;overflow:hidden}
+.ca-section::before{content:'';position:absolute;top:0;right:0;width:50%;height:100%;background:linear-gradient(135deg,rgba(201,168,76,.04),transparent)}
+.ca-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:5rem;align-items:center;margin-top:3rem}
+.ca-portrait{position:relative}
+.ca-portrait-frame{aspect-ratio:3/4;border-radius:16px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--navy),var(--deep-navy));border:1px solid rgba(201,168,76,.12)}
+.ca-portrait-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem}
+.ca-avatar{width:130px;height:130px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#b8933e);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:3rem;font-weight:800;color:var(--midnight);box-shadow:0 12px 40px rgba(201,168,76,.25)}
+.ca-avatar-name{font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--white);text-align:center}
+.ca-avatar-sub{font-size:.82rem;color:var(--gold);font-weight:500}
+.ca-credentials{position:absolute;bottom:0;left:0;right:0;background:rgba(10,14,26,.85);backdrop-filter:blur(12px);padding:1rem 1.3rem;display:flex;gap:1.5rem;justify-content:center}
+.ca-cred{text-align:center}
+.ca-cred-val{font-family:var(--font-mono);font-size:.76rem;color:var(--gold);font-weight:600;letter-spacing:.05em}
+.ca-cred-label{font-size:.62rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:.08em;margin-top:.12rem}
+.ca-floating-card{position:absolute;top:-12px;right:-20px;background:var(--gold);color:var(--midnight);padding:.65rem 1.1rem;border-radius:10px;font-weight:700;font-size:.8rem;box-shadow:0 8px 24px rgba(201,168,76,.3);z-index:2}
+.ca-info h3{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--white);margin-bottom:.4rem;line-height:1.2}
+.ca-info .ca-designation{font-size:.95rem;color:var(--gold);font-weight:600;margin-bottom:1.5rem}
+.ca-info p{color:var(--gray-400);line-height:1.8;font-size:.95rem;margin-bottom:1rem}
+.ca-highlights{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:1.5rem}
+.ca-highlight{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.1);border-radius:10px;padding:.9rem;transition:all .3s ease}
+.ca-highlight:hover{background:rgba(201,168,76,.1);border-color:rgba(201,168,76,.25)}
+.ca-highlight h4{font-size:.85rem;font-weight:600;color:var(--white);margin-bottom:.2rem}
+.ca-highlight p{font-size:.76rem;color:var(--gray-400);margin:0;line-height:1.4}
+.ca-contact-row{display:flex;gap:1rem;margin-top:1.8rem;flex-wrap:wrap}
+.ca-contact-pill{display:flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:.55rem 1.1rem;border-radius:100px;font-size:.83rem;color:var(--gray-400);text-decoration:none;transition:all .3s ease}
+.ca-contact-pill:hover{border-color:var(--gold);color:var(--gold)}
+@media(max-width:960px){.ca-grid{grid-template-columns:1fr;gap:2.5rem}.ca-floating-card{right:10px}}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3.5rem}
+.service-card{background:var(--white);border-radius:12px;padding:2rem;position:relative;overflow:hidden;transition:all .4s cubic-bezier(.4,0,.2,1);border:1px solid var(--gray-200);cursor:default}
+.service-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card:hover{transform:translateY(-5px);box-shadow:0 16px 50px rgba(0,0,0,.08);border-color:rgba(201,168,76,.3)}
+.service-num{font-family:var(--font-mono);font-size:.68rem;color:var(--gray-400);letter-spacing:.1em;margin-bottom:1rem}
+.service-icon{width:48px;height:48px;background:var(--gold-dim);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1rem}
+.service-card h3{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--gray-800);margin-bottom:.6rem}
+.service-card p{color:var(--gray-600);font-size:.88rem;line-height:1.65}
+.service-tag{display:inline-block;margin-top:.8rem;font-size:.7rem;font-weight:600;color:var(--gold);background:var(--gold-dim);padding:.25rem .7rem;border-radius:100px;text-transform:uppercase;letter-spacing:.06em}
+@media(max-width:960px){.services-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr}}
+
+/* WHY US */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3.5rem}
+.why-card{text-align:center;padding:2.2rem 1.2rem;border-radius:12px;background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.1);transition:all .3s ease}
+.why-card:hover{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.25);transform:translateY(-4px)}
+.why-icon{width:56px;height:56px;margin:0 auto 1rem;background:var(--gold-dim);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.why-card h3{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:.5rem}
+.why-card p{color:var(--gray-400);font-size:.85rem;line-height:1.6}
+@media(max-width:960px){.why-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.why-grid{grid-template-columns:1fr}}
+
+/* PROCESS */
+.process-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:4rem;position:relative}
+.process-timeline::before{content:'';position:absolute;top:40px;left:40px;right:40px;height:2px;background:linear-gradient(90deg,var(--gold),rgba(201,168,76,.15))}
+.process-step{text-align:center;position:relative;padding:0 1rem}
+.process-dot{width:26px;height:26px;background:var(--midnight);border:3px solid var(--gold);border-radius:50%;margin:27px auto 1.5rem;position:relative;z-index:2;transition:all .3s ease}
+.process-step:hover .process-dot{background:var(--gold);box-shadow:0 0 20px rgba(201,168,76,.4)}
+.process-step h4{font-family:var(--font-display);font-size:1rem;font-weight:700;margin-bottom:.5rem}
+.process-step p{font-size:.85rem;color:var(--gray-600);line-height:1.6}
+.process-num{font-family:var(--font-mono);font-size:.7rem;color:var(--gold);letter-spacing:.1em;font-weight:700}
+@media(max-width:768px){.process-timeline{grid-template-columns:1fr 1fr;gap:2rem}.process-timeline::before{display:none}}
+@media(max-width:480px){.process-timeline{grid-template-columns:1fr}}
+
+/* TAX DEADLINES */
+.deadlines-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:3rem}
+.deadline-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1.3rem;transition:all .3s ease;display:flex;gap:1rem;align-items:start}
+.deadline-card:hover{border-color:rgba(201,168,76,.2);background:rgba(201,168,76,.04)}
+.deadline-date{background:var(--gold);color:var(--midnight);border-radius:10px;padding:.45rem .65rem;text-align:center;min-width:52px;flex-shrink:0}
+.deadline-date .dd{font-family:var(--font-display);font-size:1.3rem;font-weight:800;line-height:1}
+.deadline-date .mm{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.deadline-info h4{color:var(--white);font-size:.88rem;font-weight:600;margin-bottom:.2rem}
+.deadline-info p{color:var(--gray-400);font-size:.78rem;line-height:1.5}
+
+/* TESTIMONIALS */
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+.testimonial-card{background:var(--white);border:1px solid var(--gray-200);border-radius:12px;padding:1.8rem;transition:all .3s ease;position:relative}
+.testimonial-card::before{content:'"';position:absolute;top:.8rem;right:1.3rem;font-family:var(--font-display);font-size:4rem;color:var(--gold-dim);line-height:1;font-weight:800}
+.testimonial-card:hover{border-color:rgba(201,168,76,.3);box-shadow:0 10px 40px rgba(0,0,0,.06);transform:translateY(-3px)}
+.testimonial-stars{color:var(--gold);font-size:.85rem;letter-spacing:2px;margin-bottom:.8rem}
+.testimonial-card blockquote{color:var(--gray-600);font-size:.9rem;line-height:1.7;font-style:italic;margin-bottom:1.2rem}
+.testimonial-author{display:flex;align-items:center;gap:.7rem}
+.testimonial-avatar{width:36px;height:36px;border-radius:50%;background:var(--gold-dim);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;color:var(--gold);font-size:.82rem}
+.testimonial-name{font-weight:600;font-size:.85rem;color:var(--gray-800)}
+.testimonial-role{font-size:.74rem;color:var(--gray-400)}
+@media(max-width:768px){.testimonials-grid{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq-grid{max-width:800px;margin:3rem auto 0}
+.faq-item{border-bottom:1px solid var(--gray-200)}
+.faq-question{width:100%;background:none;border:none;padding:1.3rem 0;font-family:var(--font-body);font-size:.95rem;font-weight:600;color:var(--gray-800);text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:color .3s ease}
+.faq-question:hover{color:var(--gold)}
+.faq-icon{font-size:1.4rem;color:var(--gold);transition:transform .3s ease;flex-shrink:0;font-weight:300;line-height:1}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-item.open .faq-answer{max-height:300px}
+.faq-answer p{padding-bottom:1.3rem;color:var(--gray-600);font-size:.9rem;line-height:1.75}
+
+/* CTA */
+.cta-section{background:linear-gradient(135deg,var(--gold),#b8933e);padding:5.5rem 5%;text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.cta-content{position:relative;z-index:2;max-width:660px;margin:0 auto}
+.cta-section h2{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:var(--midnight);margin-bottom:.8rem}
+.cta-section p{color:rgba(10,14,26,.65);font-size:1.05rem;margin-bottom:2rem;line-height:1.6}
+.btn-dark{display:inline-flex;align-items:center;gap:.5rem;background:var(--midnight);color:var(--gold);padding:1rem 2.2rem;border:none;border-radius:6px;font-family:var(--font-body);font-size:.95rem;font-weight:700;cursor:pointer;text-decoration:none;transition:all .3s ease}
+.btn-dark:hover{transform:translateY(-2px);box-shadow:0 10px 40px rgba(0,0,0,.3)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:3.5rem;margin-top:3rem}
+.contact-info h3{font-family:var(--font-display);font-size:1.6rem;font-weight:700;margin-bottom:1rem}
+.contact-info>p{color:var(--gray-600);line-height:1.8;margin-bottom:2rem}
+.contact-detail{display:flex;align-items:start;gap:1rem;margin-bottom:1.3rem}
+.contact-detail-icon{width:42px;height:42px;background:var(--gold-dim);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.contact-detail h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);font-weight:600;margin-bottom:.12rem}
+.contact-detail p{color:var(--gray-800);font-size:.9rem;line-height:1.5;margin:0}
+.contact-map{margin-top:1.5rem;border-radius:12px;overflow:hidden;border:1px solid var(--gray-200)}
+.contact-map iframe{width:100%;height:180px;border:0;display:block}
+.contact-form{background:var(--white);border-radius:16px;padding:2.2rem;box-shadow:0 8px 40px rgba(0,0,0,.06);border:1px solid var(--gray-200)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:.8rem}
+.form-group{margin-bottom:.8rem}
+.form-group label{display:block;font-size:.78rem;font-weight:600;color:var(--gray-800);margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.05em}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:.78rem 1rem;border:1.5px solid var(--gray-200);border-radius:8px;font-family:var(--font-body);font-size:.88rem;color:var(--gray-800);background:var(--gray-100);transition:all .3s ease;outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-dim);background:var(--white)}
+.form-group textarea{resize:vertical;min-height:85px}
+.form-submit{width:100%;background:var(--gold);color:var(--midnight);padding:.9rem;border:none;border-radius:8px;font-family:var(--font-body);font-size:.9rem;font-weight:700;cursor:pointer;transition:all .3s ease;text-transform:uppercase;letter-spacing:.06em}
+.form-submit:hover{background:var(--gold-light);transform:translateY(-1px)}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+
+/* FOOTER */
+footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem}
+.footer-brand .nav-logo{margin-bottom:1rem;display:inline-flex}
+.footer-brand>p{font-size:.85rem;line-height:1.7;color:var(--gray-400);max-width:300px}
+.footer-col h4{font-family:var(--font-display);color:var(--white);font-size:.92rem;font-weight:700;margin-bottom:1rem}
+.footer-col a{display:block;color:var(--gray-400);text-decoration:none;font-size:.83rem;margin-bottom:.55rem;transition:color .3s ease}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.76rem}
+.footer-socials{display:flex;gap:.6rem}
+.footer-socials a{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:var(--gray-400);text-decoration:none;font-size:.8rem;transition:all .3s ease}
+.footer-socials a:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-dim)}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:900;display:flex;flex-direction:column;align-items:flex-end;gap:.5rem}
+.whatsapp-tooltip{background:var(--white);color:var(--gray-800);padding:.5rem 1rem;border-radius:8px;font-size:.8rem;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,.12);opacity:0;transform:translateY(8px);transition:all .3s ease;pointer-events:none;white-space:nowrap}
+.whatsapp-float:hover .whatsapp-tooltip{opacity:1;transform:translateY(0)}
+.whatsapp-btn{width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:all .3s ease;text-decoration:none;animation:wa-pulse 3s ease-in-out infinite}
+.whatsapp-btn:hover{transform:scale(1.08);box-shadow:0 6px 30px rgba(37,211,102,.45)}
+.whatsapp-btn svg{width:28px;height:28px;fill:#fff}
+@keyframes wa-pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.35)}50%{box-shadow:0 4px 20px rgba(37,211,102,.55),0 0 0 12px rgba(37,211,102,.08)}}
+
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:1.5rem;left:1.5rem;z-index:900;width:42px;height:42px;background:var(--midnight);border:1px solid rgba(201,168,76,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s ease;color:var(--gold)}
+.back-to-top.visible{opacity:1;visibility:visible}
+.back-to-top:hover{background:var(--gold);color:var(--midnight);transform:translateY(-2px)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(35px);transition:all .7s cubic-bezier(.4,0,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AccountingService","name":"TAKS & CO., Chartered Accountants","url":"https://taks.com","telephone":"+919899955467","email":"cakuldeeppandey@outlook.com","address":{"@type":"PostalAddress","streetAddress":"SCO 75, 2nd Floor, Omaxe World Street, Sector 79","addressLocality":"Faridabad","addressRegion":"Haryana","postalCode":"121004","addressCountry":"IN"},"founder":{"@type":"Person","name":"CA Kuldeep Pandey"},"foundingDate":"2018","description":"ICAI registered CA firm providing tax, audit, GST, company registration, and financial advisory services."}
+</script>
+</head>
+<body>
+
+<div class="preloader" id="preloader">
+  <div class="preloader-logo">TAKS & CO.</div>
+  <div class="preloader-sub">Chartered Accountants</div>
+  <div class="preloader-bar"></div>
+</div>
+
+<div class="cursor-dot" id="cursor"></div>
+
+<nav id="navbar">
+  <a href="#" class="nav-logo"><div class="nav-logo-icon">T&C</div>TAKS<span>&CO.</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#ca">Our CA</a>
+    <a href="#services">Services</a>
+    <a href="#process">How It Works</a>
+    <a href="#faq">FAQs</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="nav-cta">Free Consultation</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="hero-glow hero-glow-3"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge"><span class="dot"></span>Trusted Since 2018 · ICAI Registered Firm</div>
+      <h1>Navigate Your<br>Finances with<br><span class="gold">Confidence</span> &<br><span class="outline">Clarity</span></h1>
+      <p class="hero-sub">Expert Chartered Accountancy services — from tax planning and GST compliance to audit, company formation, and financial strategy — led by <strong style="color:var(--white)">CA Kuldeep Pandey</strong> in Faridabad.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Book Free Consultation <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#services" class="btn-outline">Our Services <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stats-grid">
+        <div class="hero-stat-card"><span class="stat-icon">📋</span><h3>8+</h3><p>Years Experience</p></div>
+        <div class="hero-stat-card"><span class="stat-icon">📊</span><h3>2,500+</h3><p>Returns Filed</p></div>
+        <div class="hero-stat-card"><span class="stat-icon">🤝</span><h3>500+</h3><p>Happy Clients</p></div>
+        <div class="hero-stat-card"><span class="stat-icon">✅</span><h3>100%</h3><p>Compliance Rate</p></div>
+      </div>
+      <div class="hero-firm-badge">
+        <div class="hero-firm-badge-icon">T&C</div>
+        <div><h4>TAKS & CO., Chartered Accountants</h4><p>FRN: 030474N · Faridabad, Haryana</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track" id="ticker">
+    <span class="ticker-item"><span class="diamond"></span>Income Tax</span><span class="ticker-item"><span class="diamond"></span>GST Returns</span><span class="ticker-item"><span class="diamond"></span>Tax Audit</span><span class="ticker-item"><span class="diamond"></span>Company Registration</span><span class="ticker-item"><span class="diamond"></span>TDS/TCS Compliance</span><span class="ticker-item"><span class="diamond"></span>ROC Filing</span><span class="ticker-item"><span class="diamond"></span>Bookkeeping</span><span class="ticker-item"><span class="diamond"></span>MSME Registration</span><span class="ticker-item"><span class="diamond"></span>Financial Planning</span><span class="ticker-item"><span class="diamond"></span>Startup Advisory</span><span class="ticker-item"><span class="diamond"></span>Import/Export Code</span><span class="ticker-item"><span class="diamond"></span>FSSAI License</span>
+    <span class="ticker-item"><span class="diamond"></span>Income Tax</span><span class="ticker-item"><span class="diamond"></span>GST Returns</span><span class="ticker-item"><span class="diamond"></span>Tax Audit</span><span class="ticker-item"><span class="diamond"></span>Company Registration</span><span class="ticker-item"><span class="diamond"></span>TDS/TCS Compliance</span><span class="ticker-item"><span class="diamond"></span>ROC Filing</span><span class="ticker-item"><span class="diamond"></span>Bookkeeping</span><span class="ticker-item"><span class="diamond"></span>MSME Registration</span><span class="ticker-item"><span class="diamond"></span>Financial Planning</span><span class="ticker-item"><span class="diamond"></span>Startup Advisory</span><span class="ticker-item"><span class="diamond"></span>Import/Export Code</span><span class="ticker-item"><span class="diamond"></span>FSSAI License</span>
+  </div>
+</div>
+
+<!-- MEET YOUR CA -->
+<section class="section ca-section" id="ca">
+  <div class="container">
+    <div class="section-label reveal">// Meet Your CA</div>
+    <div class="section-title reveal" style="color:var(--white)">The Expert Behind TAKS & CO.</div>
+    <div class="ca-grid">
+      <div class="ca-portrait reveal">
+        <div class="ca-floating-card">⚖ Est. 2018</div>
+        <div class="ca-portrait-frame">
+          <div class="ca-portrait-inner">
+            <div class="ca-avatar">KP</div>
+            <div class="ca-avatar-name">CA Kuldeep Pandey</div>
+            <div class="ca-avatar-sub">Founder & Managing Partner</div>
+          </div>
+          <div class="ca-credentials">
+            <div class="ca-cred"><div class="ca-cred-val">548802</div><div class="ca-cred-label">Membership No.</div></div>
+            <div class="ca-cred"><div class="ca-cred-val">030474N</div><div class="ca-cred-label">Firm Reg. No.</div></div>
+            <div class="ca-cred"><div class="ca-cred-val">2018</div><div class="ca-cred-label">Established</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="ca-info reveal">
+        <h3>CA Kuldeep Pandey</h3>
+        <div class="ca-designation">B.Com, FCA · Founder, TAKS & CO.</div>
+        <p>With over 8 years of dedicated practice in taxation, audit, and compliance, CA Kuldeep Pandey founded <strong>TAKS & CO.</strong> in 2018 with a clear vision — to provide accessible, reliable, and personal Chartered Accountancy services to businesses and individuals.</p>
+        <p>From individual ITR filings to complex corporate audits, GST structuring, and company incorporation — every engagement is personally overseen to ensure accuracy, compliance, and strategic value for the client.</p>
+        <div class="ca-highlights">
+          <div class="ca-highlight"><h4>Tax & Compliance Expert</h4><p>Income Tax, GST, TDS across all entity types</p></div>
+          <div class="ca-highlight"><h4>Audit & Assurance</h4><p>Statutory, Tax & Internal Audit</p></div>
+          <div class="ca-highlight"><h4>Corporate Advisory</h4><p>Company formation, ROC, restructuring</p></div>
+          <div class="ca-highlight"><h4>Startup Friendly</h4><p>MSME, Startup India, compliance setup</p></div>
+        </div>
+        <div class="ca-contact-row">
+          <a href="tel:+919899955467" class="ca-contact-pill"><span class="pill-icon">📞</span> +91 98999 55467</a>
+          <a href="mailto:cakuldeeppandey@outlook.com" class="ca-contact-pill"><span class="pill-icon">✉️</span> cakuldeeppandey@outlook.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-cream" id="services">
+  <div class="container">
+    <div class="section-label reveal">// Our Services</div>
+    <div class="section-title reveal">Comprehensive CA Services<br>Under One Roof</div>
+    <p class="section-subtitle reveal">From individual tax returns to complex corporate compliance — we handle every aspect of your financial and regulatory needs.</p>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="service-num">01</div><div class="service-icon">📊</div><h3>Income Tax Filing & Planning</h3><p>Expert ITR filing for individuals, HUFs, firms & companies. Strategic tax planning to legally minimize liability under both old & new regimes.</p><span class="service-tag">ITR-1 to ITR-7</span></div>
+      <div class="service-card reveal"><div class="service-num">02</div><div class="service-icon">🧾</div><h3>GST Registration & Returns</h3><p>Complete GST compliance — registration, monthly/quarterly return filing (GSTR-1, GSTR-3B, GSTR-9), e-invoicing setup, and ITC reconciliation.</p><span class="service-tag">End-to-End GST</span></div>
+      <div class="service-card reveal"><div class="service-num">03</div><div class="service-icon">🔍</div><h3>Statutory & Tax Audit</h3><p>Thorough audit services including Tax Audit (44AB), Statutory Audit, Internal Audit, and Bank Audit with detailed reporting and compliance assurance.</p><span class="service-tag">Form 3CD / 3CA / 3CB</span></div>
+      <div class="service-card reveal"><div class="service-num">04</div><div class="service-icon">🏢</div><h3>Company & LLP Formation</h3><p>End-to-end company incorporation — Private Limited, LLP, OPC, Section 8 — including DIN, DSC, MOA/AOA drafting, and PAN/TAN registration.</p><span class="service-tag">MCA Compliance</span></div>
+      <div class="service-card reveal"><div class="service-num">05</div><div class="service-icon">📑</div><h3>ROC & Annual Compliance</h3><p>Annual ROC filings, board resolutions, AGM management, Director KYC, and full Companies Act compliance to keep your company in good standing.</p><span class="service-tag">AOC-4 / MGT-7</span></div>
+      <div class="service-card reveal"><div class="service-num">06</div><div class="service-icon">💰</div><h3>TDS/TCS Returns & Advisory</h3><p>Quarterly TDS/TCS return filing, challan preparation, lower deduction certificates, and compliance with the latest TDS provisions and rates.</p><span class="service-tag">Form 26Q / 24Q / 27Q</span></div>
+      <div class="service-card reveal"><div class="service-num">07</div><div class="service-icon">📒</div><h3>Bookkeeping & Accounting</h3><p>Accurate, Tally-integrated bookkeeping — bank reconciliation, ledger management, financial statements, and month-end closures for businesses of all sizes.</p><span class="service-tag">Tally / Zoho Books</span></div>
+      <div class="service-card reveal"><div class="service-num">08</div><div class="service-icon">🚀</div><h3>Startup & MSME Advisory</h3><p>Startup India registration, MSME/Udyam registration, seed fund applications, pitch deck financial modeling, and compliance structuring for new ventures.</p><span class="service-tag">Startup India</span></div>
+      <div class="service-card reveal"><div class="service-num">09</div><div class="service-icon">⚖️</div><h3>Trademark & License Registration</h3><p>Trademark filing, FSSAI licenses, import/export code (IEC), professional tax, shop & establishment registration — all licensing needs covered.</p><span class="service-tag">IPR & Licenses</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section section-navy" id="why">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-label reveal">// Why TAKS & CO.</div>
+      <div class="section-title reveal" style="color:var(--white)">Why Businesses Trust Us</div>
+      <p class="section-subtitle reveal" style="margin:0 auto">We combine deep expertise with personal attention, making complex financial compliance feel simple and stress-free.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-icon">🎯</div><h3>Expert Knowledge</h3><p>Deep expertise across Income Tax, GST, Companies Act, and all Indian regulatory frameworks.</p></div>
+      <div class="why-card reveal"><div class="why-icon">⚡</div><h3>Quick Turnaround</h3><p>Fast, deadline-aware execution. No last-minute scrambles — we plan and deliver ahead of time.</p></div>
+      <div class="why-card reveal"><div class="why-icon">🤝</div><h3>Personal Attention</h3><p>You speak directly with CA Kuldeep Pandey. No intermediaries — just real expert guidance.</p></div>
+      <div class="why-card reveal"><div class="why-icon">💎</div><h3>Transparent Pricing</h3><p>Clear, upfront fees with no hidden charges. You know exactly what you're paying for, always.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-label reveal">// How It Works</div>
+      <div class="section-title reveal">Simple. Transparent. Effective.</div>
+      <p class="section-subtitle reveal" style="margin:0 auto">Our streamlined 4-step process ensures you get expert financial guidance without any hassle.</p>
+    </div>
+    <div class="process-timeline">
+      <div class="process-step reveal"><div class="process-num">STEP 01</div><div class="process-dot"></div><h4>Free Consultation</h4><p>Share your requirements over a call or visit our Faridabad office. We understand your financial situation thoroughly.</p></div>
+      <div class="process-step reveal"><div class="process-num">STEP 02</div><div class="process-dot"></div><h4>Document Collection</h4><p>We collect necessary documents digitally — PAN, Aadhaar, financials, bank statements — securely via WhatsApp or email.</p></div>
+      <div class="process-step reveal"><div class="process-num">STEP 03</div><div class="process-dot"></div><h4>Expert Processing</h4><p>CA Kuldeep Pandey and team process your filings, computations, and compliance with meticulous attention to detail.</p></div>
+      <div class="process-step reveal"><div class="process-num">STEP 04</div><div class="process-dot"></div><h4>Delivery & Support</h4><p>Receive completed filings with acknowledgements. Ongoing support for notices, queries, and future planning.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TAX DEADLINES -->
+<section class="section section-dark" id="deadlines">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-label reveal">// Stay Compliant</div>
+      <div class="section-title reveal" style="color:var(--white)">Key Tax Deadlines — FY 2025-26</div>
+      <p class="section-subtitle reveal" style="margin:0 auto;color:var(--gray-400)">Never miss a deadline. Here are the important due dates you need to know.</p>
+    </div>
+    <div class="deadlines-grid" style="margin-top:3rem">
+      <div class="deadline-card reveal"><div class="deadline-date"><div class="dd">7</div><div class="mm">Monthly</div></div><div class="deadline-info"><h4>TDS/TCS Payment</h4><p>Deposit TDS/TCS deducted in the previous month to the government.</p></div></div>
+      <div class="deadline-card reveal"><div class="deadline-date"><div class="dd">11</div><div class="mm">Monthly</div></div><div class="deadline-info"><h4>GSTR-1 Filing</h4><p>Details of outward supplies for the previous month.</p></div></div>
+      <div class="deadline-card reveal"><div class="deadline-date"><div class="dd">20</div><div class="mm">Monthly</div></div><div class="deadline-info"><h4>GSTR-3B Filing</h4><p>Summary return of inward/outward supplies with tax payment.</p></div></div>
+      <div class="deadline-card reveal"><div class="deadline-date"><div class="dd">31</div><div class="mm">Jul</div></div><div class="deadline-info"><h4>ITR — Individuals</h4><p>Income Tax Return due date for individuals and non-audit cases.</p></div></div>
+      <div class="deadline-card reveal"><div class="deadline-date"><div class="dd">31</div><div class="mm">Oct</div></div><div class="deadline-info"><h4>ITR — Audit Cases</h4><p>Due date for companies and persons requiring tax audit u/s 44AB.</p></div></div>
+      <div class="deadline-card reveal"><div class="deadline-date"><div class="dd">30</div><div class="mm">Sep</div></div><div class="deadline-info"><h4>Tax Audit Report</h4><p>Filing of Tax Audit Report in Form 3CD by the Chartered Accountant.</p></div></div>
+      <div class="deadline-card reveal"><div class="deadline-date"><div class="dd">15</div><div class="mm">Quarterly</div></div><div class="deadline-info"><h4>Advance Tax</h4><p>Quarterly instalment for estimated tax liability exceeding ₹10,000.</p></div></div>
+      <div class="deadline-card reveal"><div class="deadline-date"><div class="dd">31</div><div class="mm">May</div></div><div class="deadline-info"><h4>TDS Returns (Q4)</h4><p>Quarterly TDS return for Jan-Mar. Other quarters due 31st of month after quarter.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-cream" id="testimonials">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-label reveal">// Client Stories</div>
+      <div class="section-title reveal">What Our Clients Say</div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal"><div class="testimonial-stars">★ ★ ★ ★ ★</div><blockquote>"TAKS & CO. has been handling our GST and ITR for 3 years now. Impeccable accuracy and always available when we need them. Truly the best CA firm we've worked with."</blockquote><div class="testimonial-author"><div class="testimonial-avatar">RK</div><div><div class="testimonial-name">Rajesh Kumar</div><div class="testimonial-role">Director, Kumar Enterprises</div></div></div></div>
+      <div class="testimonial-card reveal"><div class="testimonial-stars">★ ★ ★ ★ ★</div><blockquote>"CA Kuldeep helped us incorporate our company and set up the entire compliance structure from scratch. Professional, patient, and incredibly knowledgeable."</blockquote><div class="testimonial-author"><div class="testimonial-avatar">PS</div><div><div class="testimonial-name">Hari Narayan Sharma</div><div class="testimonial-role">Founder, TulsiX Technologies</div></div></div></div>
+      <div class="testimonial-card reveal"><div class="testimonial-stars">★ ★ ★ ★ ★</div><blockquote>"I was paying way too much tax until TAKS & CO. restructured my investments and salary components. Saved me ₹2.4 lakhs in the very first year. Highly recommended!"</blockquote><div class="testimonial-author"><div class="testimonial-avatar">AG</div><div><div class="testimonial-name">Amit Gupta</div><div class="testimonial-role">Senior Manager, MNC</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-label reveal">// Common Questions</div>
+      <div class="section-title reveal">Frequently Asked Questions</div>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">What documents do I need for Income Tax Return filing?<span class="faq-icon">+</span></button><div class="faq-answer"><p>You'll need your PAN card, Aadhaar card, Form 16 (for salaried individuals), bank statements, investment proofs (80C, 80D, etc.), capital gains statements, and any other income documents. We'll guide you through exactly what's needed for your specific case.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">How much does it cost to file an ITR with TAKS & CO.?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Our fees depend on the complexity of your return — salaried individuals with a simple ITR-1 start at very affordable rates. For businesses, freelancers, or capital gains cases, we provide a transparent quote after understanding your situation during the free consultation.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">Can you help with GST registration for a new business?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Absolutely. We handle the complete GST registration process — from application to certificate. We'll also advise on whether you need regular or composition scheme, set up your e-invoicing, and handle all monthly/quarterly return filings going forward.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">I received an Income Tax notice. Can you help?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. CA Kuldeep Pandey personally handles all assessment and scrutiny matters. We'll review the notice, prepare the appropriate response, represent you before the authorities if needed, and ensure the matter is resolved efficiently.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">Do you work with clients outside Faridabad?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Absolutely. While our office is in Faridabad, we serve clients across Delhi-NCR, Haryana, and other states. Most of our work is done digitally — document sharing via WhatsApp/email and consultations over phone or video call.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">What's the difference between Tax Audit and Statutory Audit?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Tax Audit (u/s 44AB) is mandatory when business turnover exceeds ₹1 crore (₹10 crore with digital transactions) or professional receipts exceed ₹50 lakhs. Statutory Audit is required under the Companies Act for all registered companies. We handle both with full compliance.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">How long does company incorporation take?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Typically 7-15 working days from document submission, depending on MCA processing times. This includes DIN & DSC for directors, name approval, MOA/AOA preparation, and obtaining the Certificate of Incorporation along with PAN & TAN.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-content reveal">
+    <h2>Ready to Get Your Finances in Order?</h2>
+    <p>Book a free 30-minute consultation with CA Kuldeep Pandey. No obligations, just clear financial guidance tailored to your needs.</p>
+    <a href="https://wa.me/919899955467?text=Hi%20CA%20Kuldeep%2C%20I%20want%20to%20book%20a%20free%20consultation%20with%20TAKS%20%26%20CO." class="btn-dark" target="_blank" rel="noopener">Chat on WhatsApp <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-label reveal">// Get In Touch</div>
+    <div class="section-title reveal">Let's Start a Conversation</div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Visit Our Office</h3>
+        <p>Whether you need a quick query resolved or a full financial review — we're here for you. Walk in, call, or write to us.</p>
+        <div class="contact-detail"><div class="contact-detail-icon">📍</div><div><h4>Office Address</h4><p>TAKS & CO., Chartered Accountants<br>SCO 75, 2nd Floor, Omaxe World Street<br>Sector 79, Faridabad, Haryana — 121004</p></div></div>
+        <div class="contact-detail"><div class="contact-detail-icon">📞</div><div><h4>Phone / WhatsApp</h4><p>+91 98999 55467</p></div></div>
+        <div class="contact-detail"><div class="contact-detail-icon">✉️</div><div><h4>Email</h4><p>cakuldeeppandey@outlook.com</p></div></div>
+        <div class="contact-detail"><div class="contact-detail-icon">🕐</div><div><h4>Working Hours</h4><p>Mon – Sat: 10:00 AM – 7:00 PM<br>Sunday: By Appointment</p></div></div>
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.7!2d77.37!3d28.37!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sOmaxe+World+Street+Faridabad!5e0!3m2!1sen!2sin!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <form id="enquiryForm" onsubmit="handleSubmit(event)">
+          <!-- Web3Forms Config -->
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="New Enquiry — TAKS & CO. Website">
+          <input type="hidden" name="from_name" value="TAKS & CO. Website">
+          <input type="hidden" name="replyto" id="replyToField">
+          <input type="checkbox" name="botcheck" style="display:none">
+          <div class="form-row"><div class="form-group"><label>Full Name</label><input type="text" name="name" placeholder="Enter your name" required></div><div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required></div></div>
+          <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="you@email.com" oninput="document.getElementById('replyToField').value=this.value"></div>
+          <div class="form-group"><label>Service Required</label><select name="service" required><option value="">Select a service...</option><option>Income Tax Filing (ITR)</option><option>GST Registration & Returns</option><option>Tax Audit / Statutory Audit</option><option>Company / LLP Incorporation</option><option>ROC & Annual Compliance</option><option>TDS/TCS Returns</option><option>Bookkeeping & Accounting</option><option>Startup / MSME Registration</option><option>Trademark / License Registration</option><option>Tax Planning & Advisory</option><option>Income Tax Notice / Assessment</option><option>Other</option></select></div>
+          <div class="form-group"><label>Message</label><textarea name="message" placeholder="Tell us about your requirement..."></textarea></div>
+          <button type="submit" class="form-submit" id="submitBtn">Send Enquiry →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="#" class="nav-logo"><div class="nav-logo-icon">T&C</div>TAKS<span>&CO.</span></a><p>Your trusted Chartered Accountancy firm — delivering expert tax, audit, compliance, and advisory services with a personal touch since 2018.</p></div>
+      <div class="footer-col"><h4>Services</h4><a href="#services">Income Tax Filing</a><a href="#services">GST Compliance</a><a href="#services">Audit Services</a><a href="#services">Company Formation</a><a href="#services">Bookkeeping</a></div>
+      <div class="footer-col"><h4>Quick Links</h4><a href="#ca">Our CA</a><a href="#process">How We Work</a><a href="#testimonials">Client Reviews</a><a href="#faq">FAQs</a><a href="#contact">Contact Us</a></div>
+      <div class="footer-col"><h4>Resources</h4><a href="#deadlines">Tax Deadlines</a><a href="#">GST Rate Finder</a><a href="#">ITR Due Dates</a><a href="#">TDS Rate Chart</a><a href="#">Privacy Policy</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 TAKS & CO., Chartered Accountants. All rights reserved. | taks.com | FRN: 030474N | M.No: 548802</p>
+      <div class="footer-socials"><a href="https://wa.me/919899955467" target="_blank" rel="noopener" title="WhatsApp">W</a><a href="#" title="LinkedIn">in</a><a href="#" title="Instagram">ig</a><a href="#" title="Facebook">f</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<div class="whatsapp-float">
+  <div class="whatsapp-tooltip">Chat with CA Kuldeep</div>
+  <a href="https://wa.me/919899955467?text=Hi%20CA%20Kuldeep%2C%20I%20need%20help%20with%20my%20tax%20%2F%20compliance%20query." class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M8 13V3M4 7l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('preloader').classList.add('hide'),1400)});
+const cursor=document.getElementById('cursor');
+document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX-4+'px';cursor.style.top=e.clientY-4+'px'});
+const navbar=document.getElementById('navbar'),backToTop=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>{navbar.classList.toggle('scrolled',window.scrollY>60);backToTop.classList.toggle('visible',window.scrollY>500)});
+const hamburger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');navLinks.classList.toggle('open')});
+navLinks.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{hamburger.classList.remove('active');navLinks.classList.remove('open')})});
+const revealObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+function animateCounters(){document.querySelectorAll('.hero-stat-card h3').forEach(el=>{const text=el.textContent,num=parseInt(text.replace(/[^0-9]/g,'')),suffix=text.replace(/[0-9,]/g,''),hasComma=text.includes(',');let cur=0;const step=Math.ceil(num/50),iv=setInterval(()=>{cur+=step;if(cur>=num){cur=num;clearInterval(iv)}el.textContent=(hasComma?cur.toLocaleString('en-IN'):cur)+suffix},30)})}
+setTimeout(animateCounters,1600);
+function toggleFAQ(btn){const item=btn.parentElement,wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open')}
+async function handleSubmit(e){e.preventDefault();const btn=document.getElementById('submitBtn');const form=e.target;btn.textContent='Sending...';btn.disabled=true;btn.style.opacity='.7';try{const formData=new FormData(form);const res=await fetch('https://api.web3forms.com/submit',{method:'POST',body:formData});const data=await res.json();if(data.success){btn.textContent='✓ Enquiry Sent Successfully!';btn.style.background='#2d8a6e';btn.style.color='#fff';btn.style.opacity='1';form.reset();setTimeout(()=>{btn.textContent='Send Enquiry →';btn.style.background='';btn.style.color='';btn.disabled=false},4000)}else{throw new Error(data.message||'Submission failed')}}catch(err){btn.textContent='✗ Failed — Try Again';btn.style.background='#c0392b';btn.style.color='#fff';btn.style.opacity='1';btn.disabled=false;setTimeout(()=>{btn.textContent='Send Enquiry →';btn.style.background='';btn.style.color=''},3000)}}
+</script>
+</body>
+</html>
