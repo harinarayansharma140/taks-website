@@ -19,6 +19,9 @@
 <meta name="twitter:image" content="https://taxpandey.com/og-image.png">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://taxpandey.com">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -44,7 +47,8 @@ body{font-family:var(--font-body);background:var(--cream);color:var(--gray-800);
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 4%;display:flex;align-items:center;justify-content:space-between;transition:all .4s ease}
 nav.scrolled{background:rgba(10,14,26,.95);backdrop-filter:blur(24px);padding:.7rem 4%;box-shadow:0 1px 30px rgba(0,0,0,.25)}
 .nav-logo{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:-.02em;display:flex;align-items:center;gap:.6rem}
-.nav-logo-icon{width:36px;height:36px;background:var(--gold);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:.78rem;font-weight:800;color:var(--midnight);letter-spacing:0}
+.nav-logo-icon{width:38px;height:38px;border-radius:8px;overflow:hidden;flex-shrink:0;background:var(--white);padding:3px}
+.nav-logo-icon img{width:100%;height:100%;object-fit:contain}
 .nav-logo span{color:var(--gold)}
 .nav-links{display:flex;gap:2rem;align-items:center}
 .nav-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;transition:color .3s ease;position:relative}
@@ -97,7 +101,8 @@ nav.scrolled{background:rgba(10,14,26,.95);backdrop-filter:blur(24px);padding:.7
 .hero-stat-card p{color:var(--gray-400);font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin-top:.4rem}
 .hero-stat-card .stat-icon{font-size:1.2rem;margin-bottom:.6rem;display:block}
 .hero-firm-badge{margin-top:1.2rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.15);border-radius:14px;padding:1.1rem 1.3rem;display:flex;align-items:center;gap:1rem}
-.hero-firm-badge-icon{width:46px;height:46px;background:var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;color:var(--midnight);font-size:.85rem;flex-shrink:0}
+.hero-firm-badge-icon{width:46px;height:46px;border-radius:10px;overflow:hidden;flex-shrink:0;background:var(--white);padding:4px}
+.hero-firm-badge-icon img{width:100%;height:100%;object-fit:contain}
 .hero-firm-badge h4{color:var(--white);font-size:.9rem;font-weight:600}
 .hero-firm-badge p{color:var(--gray-400);font-size:.76rem;margin-top:.1rem}
 @media(max-width:960px){.hero-content{grid-template-columns:1fr;gap:3rem;padding-top:7rem}}
@@ -128,7 +133,8 @@ h2.section-title,.section-title{font-family:var(--font-display);font-size:clamp(
 .ca-portrait{position:relative}
 .ca-portrait-frame{aspect-ratio:3/4;border-radius:16px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--navy),var(--deep-navy));border:1px solid rgba(201,168,76,.12)}
 .ca-portrait-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem}
-.ca-avatar{width:130px;height:130px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#b8933e);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:3rem;font-weight:800;color:var(--midnight);box-shadow:0 12px 40px rgba(201,168,76,.25)}
+.ca-avatar{width:180px;height:180px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 4px var(--gold),0 0 0 8px rgba(201,168,76,.15),0 16px 50px rgba(201,168,76,.2)}
+.ca-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
 .ca-avatar-name{font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--white);text-align:center}
 .ca-avatar-sub{font-size:.82rem;color:var(--gold);font-weight:500}
 .ca-credentials{position:absolute;bottom:0;left:0;right:0;background:rgba(10,14,26,.85);backdrop-filter:blur(12px);padding:1rem 1.3rem;display:flex;gap:1.5rem;justify-content:center}
@@ -309,7 +315,7 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
 <div class="cursor-dot" id="cursor"></div>
 
 <nav id="navbar">
-  <a href="#" class="nav-logo"><div class="nav-logo-icon">TP</div>Tax<span>Pandey</span></a>
+  <a href="#" class="nav-logo"><div class="nav-logo-icon"><img src="logo.png" alt="Tax Pandey"></div>Tax<span>Pandey</span></a>
   <div class="nav-links" id="navLinks">
     <a href="#ca">Our CA</a>
     <a href="#services">Services</a>
@@ -345,7 +351,7 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
         <div class="hero-stat-card"><span class="stat-icon">✅</span><h3>99%</h3><p>On-Time Filing Rate</p></div>
       </div>
       <div class="hero-firm-badge">
-        <div class="hero-firm-badge-icon">TP</div>
+        <div class="hero-firm-badge-icon"><img src="logo.png" alt="Tax Pandey"></div>
         <div><h4>Tax Pandey, Chartered Accountants</h4><p>Faridabad, Haryana</p></div>
       </div>
     </div>
@@ -370,7 +376,7 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
         <div class="ca-floating-card">⚖ Est. 2018</div>
         <div class="ca-portrait-frame">
           <div class="ca-portrait-inner">
-            <div class="ca-avatar">KP</div>
+            <div class="ca-avatar"><img src="ca-photo.png" alt="CA Kuldeep Pandey"></div>
             <div class="ca-avatar-name">CA Kuldeep Pandey</div>
             <div class="ca-avatar-sub">Founder & Managing Partner</div>
           </div>
@@ -562,7 +568,7 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><a href="#" class="nav-logo"><div class="nav-logo-icon">TP</div>Tax<span>Pandey</span></a><p>ICAI registered Chartered Accountancy firm providing audit, taxation, GST, compliance, and business advisory services. 4,500+ returns filed. Serving Faridabad and Delhi-NCR since 2018.</p></div>
+      <div class="footer-brand"><a href="#" class="nav-logo"><div class="nav-logo-icon"><img src="logo.png" alt="Tax Pandey"></div>Tax<span>Pandey</span></a><p>ICAI registered Chartered Accountancy firm providing audit, taxation, GST, compliance, and business advisory services. 4,500+ returns filed. Serving Faridabad and Delhi-NCR since 2018.</p></div>
       <div class="footer-col"><h4>Services</h4><a href="#services">Audit Services</a><a href="#services">Income Tax Filing</a><a href="#services">GST Compliance</a><a href="#services">Company Formation</a><a href="#services">Bookkeeping</a></div>
       <div class="footer-col"><h4>Quick Links</h4><a href="#ca">Our CA</a><a href="#process">How We Work</a><a href="#testimonials">Client Reviews</a><a href="#faq">FAQs</a><a href="#contact">Contact Us</a></div>
       <div class="footer-col"><h4>Resources</h4><a href="#deadlines">Tax Deadlines</a><a href="#faq">FAQs</a><a href="#services">All Services</a><a href="#why">Why Choose Us</a><a href="#contact">Get In Touch</a></div>
