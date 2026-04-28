@@ -42,7 +42,29 @@
 </div>
 
 <div class="blog-listing">
-  <div class="blog-grid">
+  <div class="blog-controls">
+    <div class="blog-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="blogSearch" placeholder="Search articles by title or topic…" aria-label="Search articles">
+    </div>
+    <div class="blog-filters" id="blogFilters">
+      <button class="blog-filter active" data-cat="all">All</button>
+      <button class="blog-filter" data-cat="Income Tax">Income Tax</button>
+      <button class="blog-filter" data-cat="GST">GST</button>
+      <button class="blog-filter" data-cat="TDS">TDS / TCS</button>
+      <button class="blog-filter" data-cat="Audit">Audit</button>
+      <button class="blog-filter" data-cat="Company">Company / LLP</button>
+      <button class="blog-filter" data-cat="Compliance">Compliance</button>
+      <button class="blog-filter" data-cat="Startup">Startups</button>
+      <button class="blog-filter" data-cat="Accounting">Accounting</button>
+      <button class="blog-filter" data-cat="Registration">Registrations</button>
+      <button class="blog-filter" data-cat="Budget">Budget</button>
+      <button class="blog-filter" data-cat="NRI">NRI</button>
+      <button class="blog-filter" data-cat="Faridabad">Faridabad</button>
+    </div>
+    <div class="blog-empty" id="blogEmpty">No articles match your search. Try a different keyword or category.</div>
+  </div>
+  <div class="blog-grid" id="blogGrid">
     <a href="statutory-and-tax-audit.html" class="blog-card">
       <div class="blog-card-num">Audit & Assurance</div>
       <h3>The Complete Guide to Statutory & Tax Audit in India</h3>
@@ -144,6 +166,36 @@
 const hamburger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');
 hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');navLinks.classList.toggle('open')});
 navLinks.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{hamburger.classList.remove('active');navLinks.classList.remove('open')})});
+
+// Blog search + category filter
+const search=document.getElementById('blogSearch');
+const filterButtons=document.querySelectorAll('.blog-filter');
+const cards=Array.from(document.querySelectorAll('.blog-grid .blog-card'));
+const empty=document.getElementById('blogEmpty');
+let currentCat='all';
+function applyFilter(){
+  const q=(search.value||'').trim().toLowerCase();
+  let visible=0;
+  cards.forEach(c=>{
+    const cat=(c.querySelector('.blog-card-num')||{}).textContent||'';
+    const title=(c.querySelector('h3')||{}).textContent||'';
+    const desc=(c.querySelector('p')||{}).textContent||'';
+    const haystack=(cat+' '+title+' '+desc).toLowerCase();
+    const catMatch=currentCat==='all'||cat.toLowerCase().includes(currentCat.toLowerCase());
+    const qMatch=!q||haystack.includes(q);
+    const show=catMatch&&qMatch;
+    c.hidden=!show;
+    if(show)visible++;
+  });
+  empty.classList.toggle('show',visible===0);
+}
+search.addEventListener('input',applyFilter);
+filterButtons.forEach(b=>b.addEventListener('click',()=>{
+  filterButtons.forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  currentCat=b.dataset.cat;
+  applyFilter();
+}));
 </script>
 </body>
 </html>
