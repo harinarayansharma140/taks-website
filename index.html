@@ -175,6 +175,19 @@ h2.section-title,.section-title{font-family:var(--font-display);font-size:clamp(
 @media(max-width:960px){.services-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.services-grid{grid-template-columns:1fr}}
 
+/* SPECIALISED */
+.specialised-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+.specialised-card{background:var(--white);border:1px solid var(--gray-200);border-radius:12px;padding:1.8rem;text-decoration:none;color:inherit;display:block;position:relative;transition:all .4s cubic-bezier(.4,0,.2,1);overflow:hidden}
+.specialised-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+.specialised-card:hover::before{transform:scaleX(1)}
+.specialised-card:hover{transform:translateY(-4px);box-shadow:0 16px 50px rgba(0,0,0,.08);border-color:rgba(201,168,76,.3)}
+.specialised-flag{font-size:1.8rem;display:block;margin-bottom:1rem;line-height:1}
+.specialised-card h3{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--gray-800);margin-bottom:.5rem}
+.specialised-card p{color:var(--gray-600);font-size:.85rem;line-height:1.6}
+.specialised-card .link-arrow{display:inline-block;margin-top:1rem;color:var(--gold);font-weight:600;font-size:.83rem}
+@media(max-width:960px){.specialised-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.specialised-grid{grid-template-columns:1fr}}
+
 /* WHY US */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
 .why-card{text-align:center;padding:2.2rem 1.2rem;border-radius:12px;background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.1);transition:all .3s ease}
@@ -326,6 +339,7 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
   <div class="nav-links" id="navLinks">
     <a href="#ca">Our CA</a>
     <a href="#services">Services</a>
+    <a href="#specialised">Specialised</a>
     <a href="#process">How It Works</a>
     <a href="/blog/">Blog</a>
     <a href="#faq">FAQs</a>
@@ -430,6 +444,25 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
       <div class="service-card reveal"><div class="service-num">07</div><div class="service-icon">📑</div><h3>ROC & Annual Compliance</h3><p>Annual ROC filings (AOC-4, MGT-7), board resolutions, AGM documentation, Director KYC, charge creation, and full Companies Act compliance to keep your entity in good standing.</p><span class="service-tag">AOC-4 / MGT-7</span><div class="service-links"><a href="https://www.mca.gov.in/content/mca/global/en/e-filing.html" target="_blank" rel="noopener" class="gov-link">MCA e-Filing ↗</a><a href="/blog/roc-and-annual-compliance.html" class="blog-link">Read Guide →</a></div></div>
       <div class="service-card reveal"><div class="service-num">08</div><div class="service-icon">🚀</div><h3>Startup & MSME Advisory</h3><p>Startup India recognition, MSME/Udyam registration, DPIIT certification, seed fund applications, financial projections, and end-to-end compliance structuring for new ventures.</p><span class="service-tag">Startup India / DPIIT</span><div class="service-links"><a href="https://www.startupindia.gov.in" target="_blank" rel="noopener" class="gov-link">startupindia.gov.in ↗</a><a href="https://udyamregistration.gov.in" target="_blank" rel="noopener" class="gov-link">Udyam Portal ↗</a><a href="/blog/startup-and-msme-advisory.html" class="blog-link">Read Guide →</a></div></div>
       <div class="service-card reveal"><div class="service-num">09</div><div class="service-icon">⚖️</div><h3>Trademark & License Registration</h3><p>Trademark filing and prosecution, FSSAI food licenses, import/export code (IEC), professional tax registration, and shop & establishment compliance — all licensing under one roof.</p><span class="service-tag">IPR & Licenses</span><div class="service-links"><a href="https://ipindia.gov.in" target="_blank" rel="noopener" class="gov-link">IP India ↗</a><a href="https://foscos.fssai.gov.in" target="_blank" rel="noopener" class="gov-link">FSSAI Portal ↗</a><a href="https://www.dgft.gov.in" target="_blank" rel="noopener" class="gov-link">DGFT (IEC) ↗</a><a href="/blog/trademark-and-license-registration.html" class="blog-link">Read Guide →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALISED SERVICES -->
+<section class="section section-cream" id="specialised" style="padding-top:0">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-label reveal">// Specialised Practice</div>
+      <h2 class="section-title reveal">Cross-Border &amp; Strategic Services</h2>
+      <p class="section-subtitle reveal" style="margin:1rem auto 0">For NRIs, growth-stage businesses, and clients with cross-border tax exposure across major jurisdictions. India-side compliance handled remotely with full DTAA, Form 67, and Schedule FA coverage.</p>
+    </div>
+    <div class="specialised-grid">
+      <a href="virtual-cfo.html" class="specialised-card reveal"><span class="specialised-flag">📊</span><h3>Virtual CFO</h3><p>Outsourced CFO leadership for growth-stage businesses — monthly MIS, cash flow forecasting, investor reporting, board support, and strategic finance.</p><span class="link-arrow">Learn more →</span></a>
+      <a href="nri-taxation.html" class="specialised-card reveal"><span class="specialised-flag">🌏</span><h3>NRI Taxation</h3><p>ITR filing, capital gains on Indian property, DTAA benefits, repatriation (15CA/15CB), FEMA compliance, NRO/NRE advisory, and RNOR planning.</p><span class="link-arrow">Learn more →</span></a>
+      <a href="us-taxation.html" class="specialised-card reveal"><span class="specialised-flag">🇺🇸</span><h3>US-India Tax</h3><p>RSU/ESPP/ISO/NSO planning, Schedule FA, India-US DTAA, Form 67 foreign tax credit, FBAR/FATCA coordination, and returning-NRI advisory.</p><span class="link-arrow">Learn more →</span></a>
+      <a href="uae-taxation.html" class="specialised-card reveal"><span class="specialised-flag">🇦🇪</span><h3>UAE-India Tax</h3><p>UAE Corporate Tax coordination, Free Zone POEM analysis, Dubai property income, Tax Residency Certificate, Form 10F, and DTAA application.</p><span class="link-arrow">Learn more →</span></a>
+      <a href="china-taxation.html" class="specialised-card reveal"><span class="specialised-flag">🇨🇳</span><h3>China-India Tax</h3><p>Chinese IIT credit via Form 67, India-China DTAA Articles 4/7/14/22, PE risk for Indian businesses, Schedule FA, and returning-NRI planning.</p><span class="link-arrow">Learn more →</span></a>
+      <a href="singapore-taxation.html" class="specialised-card reveal"><span class="specialised-flag">🇸🇬</span><h3>Singapore-India Tax</h3><p>Singapore HoldCo / Indian OpCo structures, post-2017 DTAA, Article 13 capital gains, TRC, Form 67, EP/PEP residency, and RNOR planning.</p><span class="link-arrow">Learn more →</span></a>
     </div>
   </div>
 </section>
@@ -580,7 +613,7 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand"><a href="#" class="nav-logo"><div class="nav-logo-icon"><img src="logo.png" alt="Tax Pandey"></div>Tax<span>Pandey</span></a><p>ICAI registered Chartered Accountancy firm providing audit, taxation, GST, compliance, and business advisory services. 4,500+ returns filed. Serving Faridabad and Delhi-NCR since 2018.</p></div>
-      <div class="footer-col"><h4>Services</h4><a href="#services">Audit Services</a><a href="#services">Income Tax Filing</a><a href="#services">GST Compliance</a><a href="virtual-cfo.html">Virtual CFO</a><a href="nri-taxation.html">NRI Taxation</a></div>
+      <div class="footer-col"><h4>Specialised</h4><a href="virtual-cfo.html">Virtual CFO</a><a href="nri-taxation.html">NRI Taxation</a><a href="us-taxation.html">US-India Tax</a><a href="uae-taxation.html">UAE-India Tax</a><a href="china-taxation.html">China-India Tax</a><a href="singapore-taxation.html">Singapore-India Tax</a></div>
       <div class="footer-col"><h4>Quick Links</h4><a href="#ca">Our CA</a><a href="/blog/">Expert Blog</a><a href="#testimonials">Client Reviews</a><a href="#faq">FAQs</a><a href="#contact">Book Consultation</a></div>
       <div class="footer-col"><h4>Tools & Resources</h4><a href="tax-calculator.html">Tax Regime Calculator</a><a href="compliance-calendar.html">Compliance Calendar</a><a href="#deadlines">Key Deadlines</a><a href="#why">Why Choose Us</a></div>
     </div>
