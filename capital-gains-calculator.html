@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capital Gains Calculator (Post-Budget 2024) | Tax Pandey</title>
+<meta name="description" content="Free Capital Gains Tax Calculator for FY 2025-26 incorporating Budget 2024 changes. Computes STCG / LTCG and tax payable for listed equity, equity mutual funds, immovable property, gold, bonds, and unlisted shares — with the 23 July 2024 transition rules.">
+<meta name="keywords" content="capital gains calculator, LTCG calculator post Budget 2024, STCG Section 111A, LTCG Section 112A, indexation 23 July 2024, property capital gains, equity LTCG 12.5%, Tax Pandey">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxpandey.com/capital-gains-calculator.html">
+<meta property="og:title" content="Capital Gains Calculator (Post-Budget 2024) | Tax Pandey">
+<meta property="og:description" content="Compute STCG / LTCG tax under Sections 111A and 112A, with the post-23-July-2024 rates and the indexation transition rule for property and unlisted assets.">
+<meta property="og:url" content="https://taxpandey.com/capital-gains-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Capital Gains Tax Calculator (Post-Budget 2024)","applicationCategory":"FinanceApplication","operatingSystem":"Web","url":"https://taxpandey.com/capital-gains-calculator.html","description":"Computes STCG and LTCG tax for listed equity, equity mutual funds, immovable property, gold, bonds, and unlisted shares under the FY 2025-26 rules with the 23 July 2024 indexation transition.","provider":{"@type":"AccountingService","name":"Tax Pandey, Chartered Accountants"}}
+</script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--midnight:#0a0e1a;--gold:#c9a84c;--gold-light:#e4c96a;--gold-dim:rgba(201,168,76,0.15);--cream:#f5f0e8;--white:#fff;--gray-50:#fafafa;--gray-100:#f7f7f8;--gray-200:#e8e8ec;--gray-400:#9295a3;--gray-600:#5a5d6e;--gray-800:#2a2d3e;--font-display:'Merriweather',Georgia,serif;--font-body:'Inter',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--cream);color:var(--gray-800);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 4%;display:flex;align-items:center;justify-content:space-between;transition:all .4s ease;background:rgba(10,14,26,.95);backdrop-filter:blur(24px);box-shadow:0 1px 30px rgba(0,0,0,.25)}
+.nav-logo{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:-.02em;display:flex;align-items:center;gap:.6rem}
+.nav-logo-icon{width:38px;height:38px;border-radius:8px;overflow:hidden;flex-shrink:0;background:var(--white);padding:3px}
+.nav-logo-icon img{width:100%;height:100%;object-fit:contain}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;transition:color .3s ease}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--gold)!important;color:var(--midnight)!important;padding:.55rem 1.4rem!important;border-radius:4px;font-weight:600!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;z-index:1001}
+.hamburger span{width:24px;height:2px;background:var(--white);transition:all .3s ease;border-radius:2px}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:960px){.hamburger{display:flex}.nav-links{position:fixed;top:0;right:-100%;width:75%;max-width:380px;height:100vh;background:var(--midnight);flex-direction:column;padding:6rem 2.5rem;gap:1.8rem;transition:right .4s ease;box-shadow:-20px 0 60px rgba(0,0,0,.5)}.nav-links.open{right:0}.nav-links a{font-size:1.1rem}}
+.calc-hero{background:var(--midnight);padding:8rem 5% 4rem;text-align:center;position:relative;overflow:hidden}
+.calc-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:60px 60px}
+.calc-hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:var(--white);line-height:1.15;letter-spacing:-.02em;position:relative;z-index:1}
+.calc-hero h1 .gold{color:var(--gold)}
+.calc-hero p{font-size:1rem;color:var(--gray-400);margin-top:1rem;position:relative;z-index:1;max-width:680px;margin-left:auto;margin-right:auto;line-height:1.7}
+.calc-section{padding:4rem 5%}
+.calc-container{max-width:980px;margin:0 auto}
+.calc-card{background:var(--white);border-radius:16px;padding:clamp(1.5rem,3vw,2.5rem);box-shadow:0 4px 40px rgba(0,0,0,.06);border:1px solid var(--gray-200)}
+.calc-card h2{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--midnight);margin-bottom:.4rem}
+.calc-card .card-sub{font-size:.92rem;color:var(--gray-600);margin-bottom:1.4rem;line-height:1.6}
+.asset-pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.4rem}
+.asset-pill{padding:.55rem 1.05rem;border:1.5px solid var(--gray-200);border-radius:100px;background:var(--white);font-size:.83rem;font-weight:600;color:var(--gray-800);cursor:pointer;transition:all .25s ease}
+.asset-pill:hover{border-color:var(--gold);background:var(--gold-dim)}
+.asset-pill.active{background:var(--midnight);border-color:var(--midnight);color:var(--gold)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem;margin-top:.6rem}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;font-weight:600;color:var(--gray-600);text-transform:uppercase;letter-spacing:.06em}
+.form-group input,.form-group select{padding:.75rem 1rem;border:1.5px solid var(--gray-200);border-radius:8px;font-family:var(--font-body);font-size:.95rem;color:var(--gray-800);background:var(--gray-50);outline:none;transition:border-color .3s ease}
+.form-group input:focus,.form-group select:focus{border-color:var(--gold);background:var(--white)}
+.form-group .hint{font-size:.72rem;color:var(--gray-400)}
+.btn-calculate{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--midnight);padding:.95rem 2.2rem;border:none;border-radius:8px;font-family:var(--font-body);font-size:.95rem;font-weight:700;cursor:pointer;transition:all .3s ease;margin-top:1.6rem}
+.btn-calculate:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,.3)}
+.results{margin-top:2.5rem;display:none}
+.results.show{display:block}
+.verdict{background:var(--midnight);border:2px solid var(--gold);border-radius:14px;padding:1.6rem 1.8rem;margin-bottom:1.5rem;text-align:center}
+.verdict h3{font-family:var(--font-display);font-size:.85rem;font-weight:600;color:var(--gray-400);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem}
+.verdict .amount{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums}
+.verdict .sub{font-size:.85rem;color:var(--gray-400);margin-top:.4rem}
+.breakdown{background:var(--white);border:1px solid var(--gray-200);border-radius:14px;padding:1.5rem 1.8rem}
+.breakdown h4{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--midnight);margin-bottom:1rem}
+.row{display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid var(--gray-100);font-size:.9rem;gap:1rem}
+.row:last-child{border-bottom:none}
+.row .label{color:var(--gray-600);flex:1}
+.row .value{font-weight:600;color:var(--gray-800);font-variant-numeric:tabular-nums;white-space:nowrap}
+.row.total{border-top:2px solid var(--gray-200);border-bottom:none;padding-top:.8rem;margin-top:.4rem}
+.row.total .label{font-weight:700;color:var(--midnight)}
+.row.total .value{color:var(--gold);font-weight:800;font-size:1.05rem}
+.note{margin-top:1.2rem;padding:1rem 1.2rem;background:var(--gold-dim);border-left:3px solid var(--gold);border-radius:6px;font-size:.85rem;color:var(--gray-800);line-height:1.6}
+.rules{background:var(--white);border:1px solid var(--gray-200);border-radius:14px;padding:1.6rem 1.8rem;margin-top:2rem;font-size:.9rem;line-height:1.7;color:var(--gray-600)}
+.rules h3{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--midnight);margin-bottom:.7rem}
+.rules ul{padding-left:1.2rem;margin-top:.5rem}
+.rules li{margin-bottom:.4rem}
+.rules strong{color:var(--midnight)}
+.cta-banner{background:var(--midnight);padding:4rem 5%;text-align:center;color:var(--white)}
+.cta-banner h2{font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2rem);font-weight:700;margin-bottom:.6rem}
+.cta-banner p{font-size:.95rem;color:var(--gray-400);margin-bottom:1.5rem;max-width:520px;margin-left:auto;margin-right:auto}
+.btn-wa{display:inline-flex;align-items:center;gap:.5rem;background:#25D366;color:var(--white);padding:.9rem 1.8rem;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:transform .2s ease}
+.btn-wa:hover{transform:translateY(-2px)}
+footer{background:var(--midnight);border-top:1px solid rgba(255,255,255,.06);padding:2rem 5% 1.5rem;text-align:center}
+footer .disclaimer{font-size:.78rem;line-height:1.7;color:var(--gray-400);max-width:920px;margin:0 auto 1.2rem;text-align:left;padding-bottom:1.2rem;border-bottom:1px solid rgba(255,255,255,.06)}
+footer .disclaimer strong{color:var(--gold-light)}
+footer p{font-size:.82rem;color:var(--gray-400);margin-bottom:.5rem}
+footer a{color:var(--gold);text-decoration:none}
+footer .legal-links{font-size:.78rem;color:var(--gray-400);display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-top:.5rem}
+footer .legal-links a{color:var(--gray-400);font-weight:400}
+footer .legal-links a:hover{color:var(--gold);text-decoration:none}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="/" class="nav-logo"><div class="nav-logo-icon"><img src="logo.png" alt="Tax Pandey"></div>Tax<span>Pandey</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="/#services">Services</a>
+    <a href="/#specialised">Specialised</a>
+    <a href="/blog/">Articles</a>
+    <a href="/#faq">FAQs</a>
+    <a href="/#contact" class="nav-cta">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="calc-hero">
+  <h1>Capital Gains <span class="gold">Calculator</span></h1>
+  <p>Compute STCG and LTCG tax under <strong>Sections 111A and 112A</strong> of the Income Tax Act, 1961, with the post-23-July-2024 Finance (No. 2) Act, 2024 rates and the indexation transition rule that lets owners of pre-23-July-2024 property and unlisted assets choose between 12.5% without indexation and 20% with indexation.</p>
+</section>
+
+<section class="calc-section">
+  <div class="calc-container">
+    <div class="calc-card">
+      <h2>1. Choose the asset type</h2>
+      <p class="card-sub">The applicable rate, holding period, and indexation rules differ by asset class. Pick the asset to see the relevant inputs.</p>
+
+      <div class="asset-pills">
+        <button class="asset-pill active" data-asset="equity_listed" onclick="pickAsset(this)">Listed Equity / Equity MF (STT paid)</button>
+        <button class="asset-pill" data-asset="property" onclick="pickAsset(this)">Immovable Property</button>
+        <button class="asset-pill" data-asset="unlisted" onclick="pickAsset(this)">Unlisted Shares</button>
+        <button class="asset-pill" data-asset="gold_bond" onclick="pickAsset(this)">Gold / Bonds / Other</button>
+        <button class="asset-pill" data-asset="debt_mf" onclick="pickAsset(this)">Debt Mutual Fund (post 1 Apr 2023)</button>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="cost">Cost of Acquisition (₹)</label>
+          <input type="number" id="cost" placeholder="e.g. 500000" min="0">
+          <span class="hint">Original purchase price including stamp duty / brokerage where applicable.</span>
+        </div>
+        <div class="form-group">
+          <label for="sale">Sale Consideration (₹)</label>
+          <input type="number" id="sale" placeholder="e.g. 800000" min="0">
+          <span class="hint">Net of selling expenses (brokerage, advertising, etc.).</span>
+        </div>
+        <div class="form-group">
+          <label for="purchaseDate">Date of Purchase</label>
+          <input type="date" id="purchaseDate">
+          <span class="hint">Determines holding period and indexation eligibility.</span>
+        </div>
+        <div class="form-group">
+          <label for="saleDate">Date of Sale</label>
+          <input type="date" id="saleDate">
+          <span class="hint">For pre / post 23 July 2024 classification.</span>
+        </div>
+        <div class="form-group" id="cii-group" style="display:none">
+          <label for="cii">Indexed Cost (CII × Original) (₹) <span style="color:var(--gold)">*optional</span></label>
+          <input type="number" id="cii" placeholder="Pre-computed indexed cost" min="0">
+          <span class="hint">If you've already computed indexed cost using CII (FY 2001-02 = 100), enter it here. Used only when 20% with-indexation regime is favourable.</span>
+        </div>
+      </div>
+
+      <button class="btn-calculate" onclick="calculate()">Calculate Capital Gains →</button>
+
+      <div class="results" id="results">
+        <div class="verdict">
+          <h3>Capital Gains Tax Payable</h3>
+          <div class="amount" id="taxOut">₹ 0</div>
+          <div class="sub" id="classification">—</div>
+        </div>
+
+        <div class="breakdown">
+          <h4>Computation</h4>
+          <div class="row"><div class="label">Sale Consideration</div><div class="value" id="b-sale">₹ 0</div></div>
+          <div class="row"><div class="label">Cost of Acquisition</div><div class="value" id="b-cost">₹ 0</div></div>
+          <div class="row" id="b-indexed-row" style="display:none"><div class="label">Indexed Cost (if used)</div><div class="value" id="b-indexed">₹ 0</div></div>
+          <div class="row"><div class="label">Holding Period</div><div class="value" id="b-period">—</div></div>
+          <div class="row"><div class="label">Classification</div><div class="value" id="b-classification">—</div></div>
+          <div class="row"><div class="label">Capital Gain</div><div class="value" id="b-gain">₹ 0</div></div>
+          <div class="row" id="b-exempt-row" style="display:none"><div class="label">Less: Section 112A exempt threshold</div><div class="value" id="b-exempt">₹ 1,25,000</div></div>
+          <div class="row"><div class="label">Taxable Gain</div><div class="value" id="b-taxable">₹ 0</div></div>
+          <div class="row"><div class="label">Applicable Rate</div><div class="value" id="b-rate">—</div></div>
+          <div class="row total"><div class="label">Tax Payable (excl. surcharge &amp; cess)</div><div class="value" id="b-tax">₹ 0</div></div>
+        </div>
+
+        <div class="note" id="ruleNote"></div>
+      </div>
+    </div>
+
+    <div class="rules">
+      <h3>Capital gains framework — Post-Budget 2024 (effective 23 July 2024)</h3>
+      <ul>
+        <li><strong>Listed equity / equity MF (STT paid):</strong> STCG (≤12 months) at <strong>20% under Section 111A</strong>; LTCG (&gt;12 months) at <strong>12.5% under Section 112A</strong>, with the first <strong>₹1.25 lakh</strong> of LTCG exempt per financial year.</li>
+        <li><strong>Immovable property:</strong> STCG (≤24 months) at slab rates; LTCG (&gt;24 months) at <strong>12.5% without indexation</strong> by default. <strong>Resident transferors</strong> who acquired the property before 23 July 2024 may instead opt for the older <strong>20% with indexation</strong> regime — whichever produces lower tax.</li>
+        <li><strong>Unlisted shares:</strong> STCG (≤24 months) at slab; LTCG (&gt;24 months) at 12.5% without indexation. Same 23 July 2024 transition relief applies for resident sellers.</li>
+        <li><strong>Gold / bonds / other capital assets:</strong> STCG (≤24 months) at slab; LTCG (&gt;24 months) at 12.5% without indexation, with the same 23 July 2024 grandfathering for resident sellers.</li>
+        <li><strong>Debt mutual fund (acquired after 1 April 2023):</strong> all gains taxed at <strong>slab rates</strong> regardless of holding period — no LTCG benefit. (Units acquired before 1 April 2023 retain old indexation rules.)</li>
+      </ul>
+      <p>Surcharge (10% / 15% / 25% / 37%) and 4% health &amp; education cess are levied on top of the rates above. Surcharge on LTCG under Section 112A is capped at 15% irrespective of total income. The first ₹1.25 lakh of LTCG under Section 112A is exempt — this is a yearly aggregate, not per-asset.</p>
+      <p>Exemptions are also available under <strong>Section 54</strong> (residential house re-investment), <strong>Section 54EC</strong> (NHAI / REC bonds, ₹50 lakh cap), and <strong>Section 54F</strong> (sale of any LTCA + invest in residential house) for those who qualify. This calculator does <strong>not</strong> apply these exemptions automatically; consult a CA for case-specific application.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Capital Gains Position Need Review?</h2>
+  <p>Edge cases — multi-asset transactions, joint ownership, NRI seller (Section 195 TDS), exemption under Sections 54/54EC/54F — need a CA review.</p>
+  <a class="btn-wa" href="https://wa.me/917678222474?text=Hi%20CA%20Kuldeep%2C%20I%20have%20a%20capital%20gains%20query." target="_blank" rel="noopener">Chat on WhatsApp →</a>
+</section>
+
+<footer>
+  <div class="disclaimer">
+    <p><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. The calculator outputs are indicative computations based on simplified rules and the inputs provided; specific professional consultation should be obtained before acting on any information herein.</p>
+  </div>
+  <p>&copy; 2026 <a href="/">Tax Pandey</a> — Chartered Accountants. All rights reserved.</p>
+  <div class="legal-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/">Home</a></div>
+</footer>
+
+<script>
+let asset='equity_listed';
+const TRANSITION=new Date('2024-07-23');
+function pickAsset(btn){
+  document.querySelectorAll('.asset-pill').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  asset=btn.dataset.asset;
+  document.getElementById('cii-group').style.display=(asset==='property'||asset==='unlisted'||asset==='gold_bond')?'block':'none';
+}
+function fmt(n){return '₹ '+(Math.round(Math.max(0,n))).toLocaleString('en-IN');}
+function calculate(){
+  const cost=parseFloat(document.getElementById('cost').value)||0;
+  const sale=parseFloat(document.getElementById('sale').value)||0;
+  const indexedCost=parseFloat(document.getElementById('cii').value)||0;
+  const purchaseDate=new Date(document.getElementById('purchaseDate').value);
+  const saleDate=new Date(document.getElementById('saleDate').value);
+  if(cost<=0||sale<=0||isNaN(purchaseDate.getTime())||isNaN(saleDate.getTime())){
+    alert('Please enter cost, sale, and both dates.');return;
+  }
+  if(saleDate<purchaseDate){alert('Sale date cannot be before purchase date.');return;}
+
+  const months=(saleDate.getFullYear()-purchaseDate.getFullYear())*12+(saleDate.getMonth()-purchaseDate.getMonth());
+  const days=(saleDate-purchaseDate)/(1000*60*60*24);
+  const monthsExact=days/30.4375;
+
+  // Holding-period thresholds
+  const ltThreshold={equity_listed:12,property:24,unlisted:24,gold_bond:24,debt_mf:Infinity}[asset];
+  const isLT=monthsExact>ltThreshold;
+
+  let rate=0,gain=sale-cost,exemptLTCGthreshold=0,classification='',ruleText='',displayedCost=cost;
+  let preTransition=saleDate<TRANSITION || purchaseDate<TRANSITION;
+  // Actually grandfathering applies if asset acquired before 23 Jul 2024 AND sold after that date — taxpayer can choose 20% with indexation
+  const grandfatherEligible=(purchaseDate<TRANSITION && saleDate>=TRANSITION);
+
+  if(asset==='debt_mf'){
+    classification='Slab Rate (Section 50AA)';
+    rate=null;
+    ruleText='<strong>Debt MF acquired after 1 April 2023:</strong> all gains are added to your total income and taxed at slab rate under Section 50AA, with no STCG/LTCG distinction. Use the Old vs New Regime calculator to compute the exact tax based on your slab.';
+  } else if(asset==='equity_listed'){
+    if(isLT){
+      classification='LTCG — Section 112A (>12 months)';
+      rate=0.125;exemptLTCGthreshold=125000;
+      ruleText='LTCG on listed equity / equity MF (STT paid) is taxed at <strong>12.5%</strong> on gains exceeding ₹1.25 lakh per financial year. Pre-23 July 2024 sales were taxed at 10% on gains exceeding ₹1 lakh.';
+    } else {
+      classification='STCG — Section 111A (≤12 months)';
+      rate=0.20;
+      ruleText='STCG on listed equity / equity MF (STT paid) was raised from 15% to <strong>20%</strong> by Finance (No. 2) Act, 2024 with effect from 23 July 2024.';
+    }
+  } else {
+    // Property / unlisted / gold-bond
+    if(isLT){
+      classification=`LTCG — ${asset==='property'?'Section 112':'Section 112'} (>24 months)`;
+      // Default: 12.5% without indexation
+      const taxNoIndex=Math.max(0,gain)*0.125;
+      let useIndexation=false;
+      if(grandfatherEligible && indexedCost>0){
+        const gainWithIndex=Math.max(0,sale-indexedCost);
+        const taxWithIndex=gainWithIndex*0.20;
+        if(taxWithIndex<taxNoIndex){
+          useIndexation=true;
+          gain=gainWithIndex;
+          rate=0.20;
+          displayedCost=indexedCost;
+          ruleText='Pre-23-July-2024 acquisition: <strong>20% with indexation</strong> regime selected — produces lower tax than the 12.5% without-indexation default. Available only for resident transferors per the third proviso to Section 112(1).';
+        }
+      }
+      if(!useIndexation){
+        rate=0.125;
+        ruleText='LTCG taxed at <strong>12.5% without indexation</strong> per Finance (No. 2) Act, 2024. ';
+        if(grandfatherEligible && indexedCost===0){
+          ruleText+='If you acquired this asset before 23 July 2024 and are a resident, you may also opt for <strong>20% with indexation</strong> under the third proviso to Section 112(1) — enter the indexed cost above and recompute to compare.';
+        } else if(grandfatherEligible && indexedCost>0){
+          ruleText+='The 20% with-indexation alternative was checked but produced higher tax — the default 12.5% applies.';
+        }
+      }
+    } else {
+      classification='STCG — Slab Rate (≤24 months)';
+      rate=null;
+      ruleText='STCG on this asset class is added to your income and taxed at <strong>slab rates</strong>. The exact tax depends on your other income — see the Old vs New Regime Calculator.';
+    }
+  }
+
+  const taxableGain=Math.max(0,gain-exemptLTCGthreshold);
+  const tax=(rate!==null)?taxableGain*rate:0;
+
+  document.getElementById('b-sale').textContent=fmt(sale);
+  document.getElementById('b-cost').textContent=fmt(cost);
+  if(displayedCost!==cost){document.getElementById('b-indexed-row').style.display='flex';document.getElementById('b-indexed').textContent=fmt(displayedCost);}
+  else document.getElementById('b-indexed-row').style.display='none';
+  const periodText=monthsExact<12?Math.round(days)+' days':(Math.floor(monthsExact)+' months');
+  document.getElementById('b-period').textContent=periodText;
+  document.getElementById('b-classification').textContent=classification;
+  document.getElementById('b-gain').textContent=fmt(gain);
+  if(exemptLTCGthreshold>0){document.getElementById('b-exempt-row').style.display='flex';document.getElementById('b-exempt').textContent=fmt(exemptLTCGthreshold);}
+  else document.getElementById('b-exempt-row').style.display='none';
+  document.getElementById('b-taxable').textContent=fmt(taxableGain);
+  document.getElementById('b-rate').textContent=(rate===null)?'Slab rate':((rate*100)+'%');
+  document.getElementById('b-tax').textContent=(rate===null)?'See slab':fmt(tax);
+  document.getElementById('taxOut').textContent=(rate===null)?'Slab Rate':fmt(tax);
+  document.getElementById('classification').textContent=classification;
+  document.getElementById('ruleNote').innerHTML=ruleText;
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+const hamburger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');navLinks.classList.toggle('open')});
+navLinks.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{hamburger.classList.remove('active');navLinks.classList.remove('open')})});
+</script>
+</body>
+</html>
