@@ -97,7 +97,7 @@ nav.scrolled{background:rgba(10,14,26,.95);backdrop-filter:blur(24px);padding:.7
 .hero-stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
 .hero-stat-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:1.6rem 1.3rem;backdrop-filter:blur(10px);transition:all .3s ease}
 .hero-stat-card:hover{background:rgba(201,168,76,.06);border-color:rgba(201,168,76,.2);transform:translateY(-3px)}
-.hero-stat-card h3{font-family:var(--font-display);font-size:2.2rem;font-weight:800;color:var(--gold);letter-spacing:-.02em;line-height:1}
+.hero-stat-card h3{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--gold);letter-spacing:-.01em;line-height:1.2}
 .hero-stat-card p{color:var(--gray-400);font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin-top:.4rem}
 .hero-stat-card .stat-icon{font-size:1.2rem;margin-bottom:.6rem;display:block}
 .hero-firm-badge{margin-top:1.2rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.15);border-radius:14px;padding:1.1rem 1.3rem;display:flex;align-items:center;gap:1rem}
@@ -667,8 +667,7 @@ navLinks.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{hambu
 const revealObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
-function animateCounters(){document.querySelectorAll('.hero-stat-card h3').forEach(el=>{const text=el.textContent,num=parseInt(text.replace(/[^0-9]/g,'')),suffix=text.replace(/[0-9,]/g,''),hasComma=text.includes(',');let cur=0;const step=Math.ceil(num/50),iv=setInterval(()=>{cur+=step;if(cur>=num){cur=num;clearInterval(iv)}el.textContent=(hasComma?cur.toLocaleString('en-IN'):cur)+suffix},30)})}
-setTimeout(animateCounters,1600);
+// Hero stat cards are now text labels (practice areas), no numeric counter animation needed.
 function toggleFAQ(btn){const item=btn.parentElement,wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open')}
 async function handleSubmit(e){e.preventDefault();const btn=document.getElementById('submitBtn');const form=e.target;btn.textContent='Sending...';btn.disabled=true;btn.style.opacity='.7';const name=form.name.value.trim();const phone=form.phone.value.trim();const email=form.email?form.email.value.trim():'';const service=form.service.value;const message=form.message?form.message.value.trim():'';let waMsg='*New Enquiry — Tax Pandey Website*%0A%0A';waMsg+='*Name:* '+encodeURIComponent(name)+'%0A';waMsg+='*Phone:* '+encodeURIComponent(phone)+'%0A';if(email)waMsg+='*Email:* '+encodeURIComponent(email)+'%0A';waMsg+='*Service:* '+encodeURIComponent(service)+'%0A';if(message)waMsg+='*Message:* '+encodeURIComponent(message);const waUrl='https://wa.me/917678222474?text='+waMsg;try{const formData=new FormData(form);fetch('https://api.web3forms.com/submit',{method:'POST',body:formData}).catch(()=>{})}catch(ex){}btn.textContent='✓ Redirecting to WhatsApp...';btn.style.background='#25D366';btn.style.color='#fff';btn.style.opacity='1';form.reset();setTimeout(()=>{window.open(waUrl,'_blank');btn.textContent='Submit Enquiry →';btn.style.background='';btn.style.color='';btn.disabled=false},600)}
 </script>
