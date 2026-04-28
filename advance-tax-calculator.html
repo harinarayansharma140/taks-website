@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advance Tax Calculator — Section 208 / 234C | Tax Pandey</title>
+<meta name="description" content="Free Advance Tax Calculator for FY 2025-26. Compute the four quarterly instalments (15% / 45% / 75% / 100%) under Section 208 of the Income Tax Act, 1961, with Section 234C interest on shortfall.">
+<meta name="keywords" content="advance tax calculator, Section 208, Section 234C interest, quarterly instalments, advance tax due dates, Tax Pandey">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxpandey.com/advance-tax-calculator.html">
+<meta property="og:title" content="Advance Tax Calculator — Section 208 / 234C | Tax Pandey">
+<meta property="og:description" content="Compute the four quarterly advance tax instalments under Section 208 of the Income Tax Act, 1961.">
+<meta property="og:url" content="https://taxpandey.com/advance-tax-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Advance Tax Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","url":"https://taxpandey.com/advance-tax-calculator.html","description":"Calculator for the four quarterly advance tax instalments under Section 208 of the Income Tax Act, 1961.","provider":{"@type":"AccountingService","name":"Tax Pandey, Chartered Accountants"}}
+</script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--midnight:#0a0e1a;--gold:#c9a84c;--gold-light:#e4c96a;--gold-dim:rgba(201,168,76,0.15);--cream:#f5f0e8;--white:#fff;--gray-50:#fafafa;--gray-100:#f7f7f8;--gray-200:#e8e8ec;--gray-400:#9295a3;--gray-600:#5a5d6e;--gray-800:#2a2d3e;--font-display:'Merriweather',Georgia,serif;--font-body:'Inter',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--cream);color:var(--gray-800);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 4%;display:flex;align-items:center;justify-content:space-between;transition:all .4s ease;background:rgba(10,14,26,.95);backdrop-filter:blur(24px);box-shadow:0 1px 30px rgba(0,0,0,.25)}
+.nav-logo{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:-.02em;display:flex;align-items:center;gap:.6rem}
+.nav-logo-icon{width:38px;height:38px;border-radius:8px;overflow:hidden;flex-shrink:0;background:var(--white);padding:3px}
+.nav-logo-icon img{width:100%;height:100%;object-fit:contain}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;transition:color .3s ease}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--gold)!important;color:var(--midnight)!important;padding:.55rem 1.4rem!important;border-radius:4px;font-weight:600!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;z-index:1001}
+.hamburger span{width:24px;height:2px;background:var(--white);transition:all .3s ease;border-radius:2px}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:960px){.hamburger{display:flex}.nav-links{position:fixed;top:0;right:-100%;width:75%;max-width:380px;height:100vh;background:var(--midnight);flex-direction:column;padding:6rem 2.5rem;gap:1.8rem;transition:right .4s ease;box-shadow:-20px 0 60px rgba(0,0,0,.5)}.nav-links.open{right:0}.nav-links a{font-size:1.1rem}}
+.calc-hero{background:var(--midnight);padding:8rem 5% 4rem;text-align:center;position:relative;overflow:hidden}
+.calc-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:60px 60px}
+.calc-hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:var(--white);line-height:1.15;letter-spacing:-.02em;position:relative;z-index:1}
+.calc-hero h1 .gold{color:var(--gold)}
+.calc-hero p{font-size:1rem;color:var(--gray-400);margin-top:1rem;position:relative;z-index:1;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.7}
+.calc-section{padding:4rem 5%}
+.calc-container{max-width:980px;margin:0 auto}
+.calc-card{background:var(--white);border-radius:16px;padding:clamp(1.5rem,3vw,2.5rem);box-shadow:0 4px 40px rgba(0,0,0,.06);border:1px solid var(--gray-200)}
+.calc-card h2{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--midnight);margin-bottom:.4rem}
+.calc-card .card-sub{font-size:.92rem;color:var(--gray-600);margin-bottom:1.8rem;line-height:1.6}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem;margin-top:1rem}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;font-weight:600;color:var(--gray-600);text-transform:uppercase;letter-spacing:.06em}
+.form-group input,.form-group select{padding:.75rem 1rem;border:1.5px solid var(--gray-200);border-radius:8px;font-family:var(--font-body);font-size:.95rem;color:var(--gray-800);background:var(--gray-50);outline:none;transition:border-color .3s ease}
+.form-group input:focus,.form-group select:focus{border-color:var(--gold);background:var(--white)}
+.form-group .hint{font-size:.72rem;color:var(--gray-400)}
+.btn-calculate{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--midnight);padding:.95rem 2.2rem;border:none;border-radius:8px;font-family:var(--font-body);font-size:.95rem;font-weight:700;cursor:pointer;transition:all .3s ease;margin-top:1.6rem}
+.btn-calculate:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,.3)}
+.results{margin-top:2.5rem;display:none}
+.results.show{display:block}
+.summary-band{background:var(--midnight);border:2px solid var(--gold);border-radius:14px;padding:1.4rem 1.8rem;margin-bottom:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:640px){.summary-band{grid-template-columns:1fr}}
+.summary-band .item{text-align:center}
+.summary-band .item h4{font-size:.74rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:.3rem}
+.summary-band .item .v{font-family:var(--font-display);font-size:1.4rem;font-weight:800;color:var(--gold)}
+.instalment-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:640px){.instalment-grid{grid-template-columns:1fr}}
+.instalment-card{background:var(--white);border:1.5px solid var(--gray-200);border-radius:12px;padding:1.4rem 1.5rem;transition:all .3s ease}
+.instalment-card.passed{opacity:.55}
+.instalment-card .due{font-family:var(--font-mono);font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem}
+.instalment-card .pct{font-family:var(--font-display);font-size:.95rem;font-weight:700;color:var(--gray-800);margin-bottom:.4rem}
+.instalment-card .amount{font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--midnight);font-variant-numeric:tabular-nums}
+.instalment-card .cumulative{font-size:.78rem;color:var(--gray-600);margin-top:.4rem}
+.note{margin-top:1.4rem;padding:1rem 1.2rem;background:var(--gold-dim);border-left:3px solid var(--gold);border-radius:6px;font-size:.85rem;color:var(--gray-800);line-height:1.6}
+.rules{background:var(--white);border:1px solid var(--gray-200);border-radius:14px;padding:1.6rem 1.8rem;margin-top:2rem;font-size:.9rem;line-height:1.7;color:var(--gray-600)}
+.rules h3{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--midnight);margin-bottom:.7rem}
+.rules ul{padding-left:1.2rem;margin-top:.5rem}
+.rules li{margin-bottom:.4rem}
+.rules strong{color:var(--midnight)}
+.cta-banner{background:var(--midnight);padding:4rem 5%;text-align:center;color:var(--white)}
+.cta-banner h2{font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2rem);font-weight:700;margin-bottom:.6rem}
+.cta-banner p{font-size:.95rem;color:var(--gray-400);margin-bottom:1.5rem;max-width:520px;margin-left:auto;margin-right:auto}
+.btn-wa{display:inline-flex;align-items:center;gap:.5rem;background:#25D366;color:var(--white);padding:.9rem 1.8rem;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:transform .2s ease}
+.btn-wa:hover{transform:translateY(-2px)}
+footer{background:var(--midnight);border-top:1px solid rgba(255,255,255,.06);padding:2rem 5% 1.5rem;text-align:center}
+footer .disclaimer{font-size:.78rem;line-height:1.7;color:var(--gray-400);max-width:920px;margin:0 auto 1.2rem;text-align:left;padding-bottom:1.2rem;border-bottom:1px solid rgba(255,255,255,.06)}
+footer .disclaimer strong{color:var(--gold-light)}
+footer p{font-size:.82rem;color:var(--gray-400);margin-bottom:.5rem}
+footer a{color:var(--gold);text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer .legal-links{font-size:.78rem;color:var(--gray-400);display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-top:.5rem}
+footer .legal-links a{color:var(--gray-400);font-weight:400}
+footer .legal-links a:hover{color:var(--gold);text-decoration:none}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="/" class="nav-logo"><div class="nav-logo-icon"><img src="logo.png" alt="Tax Pandey"></div>Tax<span>Pandey</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="/#services">Services</a>
+    <a href="/#specialised">Specialised</a>
+    <a href="/blog/">Articles</a>
+    <a href="/#faq">FAQs</a>
+    <a href="/#contact" class="nav-cta">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="calc-hero">
+  <h1>Advance Tax <span class="gold">Calculator</span></h1>
+  <p>Compute the four quarterly advance tax instalments under <strong>Section 208</strong> of the Income Tax Act, 1961, net of TDS / TCS already deducted. Applicable when the estimated tax liability exceeds <strong>₹10,000</strong> in a financial year.</p>
+</section>
+
+<section class="calc-section">
+  <div class="calc-container">
+    <div class="calc-card">
+      <h2>Estimate your annual tax &amp; instalments</h2>
+      <p class="card-sub">Enter your estimated annual income tax liability (after rebates and surcharge) and the TDS / TCS already deducted. The calculator splits the balance into the four statutory instalments due on 15 June, 15 September, 15 December, and 15 March.</p>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="taxLiab">Estimated Annual Tax Liability (₹)</label>
+          <input type="number" id="taxLiab" placeholder="e.g. 250000" min="0">
+          <span class="hint">After Section 87A rebate, surcharge, and 4% cess.</span>
+        </div>
+        <div class="form-group">
+          <label for="tds">TDS / TCS Already Deducted (₹)</label>
+          <input type="number" id="tds" placeholder="e.g. 50000" min="0">
+          <span class="hint">From salary, FD interest, contractual payments, etc.</span>
+        </div>
+        <div class="form-group">
+          <label for="taxpayerType">Taxpayer Type</label>
+          <select id="taxpayerType">
+            <option value="regular">Regular taxpayer</option>
+            <option value="presumptive">Presumptive taxation (44AD / 44ADA)</option>
+            <option value="senior">Resident Senior Citizen with no business income</option>
+          </select>
+          <span class="hint">Affects whether Section 208 applies and instalment cadence.</span>
+        </div>
+        <div class="form-group">
+          <label for="paidQ1">Already Paid: Q1 by 15 Jun (₹)</label>
+          <input type="number" id="paidQ1" placeholder="0" min="0">
+          <span class="hint">Optional — leave 0 if Q1 not yet paid.</span>
+        </div>
+      </div>
+
+      <button class="btn-calculate" onclick="calc()">Calculate Instalments →</button>
+
+      <div class="results" id="results">
+        <div class="summary-band">
+          <div class="item"><h4>Net Advance Tax Payable</h4><div class="v" id="netDue">₹ 0</div></div>
+          <div class="item"><h4>Already Paid (TDS + Q1)</h4><div class="v" id="alreadyPaid">₹ 0</div></div>
+        </div>
+
+        <div class="instalment-grid" id="grid">
+          <!-- populated by JS -->
+        </div>
+
+        <div class="note" id="exemptNote" style="display:none">
+          <strong>Section 208 not applicable:</strong> Your estimated tax liability after TDS is ₹10,000 or less, so advance tax is not required to be paid.
+        </div>
+        <div class="note" id="presumptiveNote" style="display:none">
+          <strong>Presumptive taxation note:</strong> Taxpayers under Section 44AD / 44ADA can pay 100% of advance tax in a single instalment by <strong>15 March</strong>. Quarterly instalments are not required.
+        </div>
+        <div class="note" id="seniorNote" style="display:none">
+          <strong>Senior citizen exemption:</strong> A resident senior citizen (60+) with no business or professional income is not required to pay advance tax under Section 207(2).
+        </div>
+      </div>
+    </div>
+
+    <div class="rules">
+      <h3>Section 208 — Advance Tax cadence</h3>
+      <p>Under Section 208 of the Income Tax Act, 1961, advance tax is payable in four instalments during the financial year if the estimated tax liability (after TDS/TCS) exceeds <strong>₹10,000</strong>:</p>
+      <ul>
+        <li><strong>15 June</strong> — at least 15% of advance tax payable</li>
+        <li><strong>15 September</strong> — at least 45% of advance tax payable (cumulative)</li>
+        <li><strong>15 December</strong> — at least 75% of advance tax payable (cumulative)</li>
+        <li><strong>15 March</strong> — 100% of advance tax payable (cumulative)</li>
+      </ul>
+      <p>Shortfall in any instalment attracts simple interest under <strong>Section 234C</strong> at 1% per month for three months (one month for the 15 March instalment) on the shortfall amount. Section 234B levies further 1% per month on any shortfall on assessment.</p>
+      <p><strong>Exceptions:</strong> Resident senior citizens (60+) with no business income are exempt from advance tax (Section 207(2)). Taxpayers opting for presumptive taxation under Section 44AD / 44ADA may pay 100% of advance tax by 15 March in a single instalment.</p>
+      <p>Capital gains, lottery winnings, and other one-time income are taxed in the instalment immediately following the receipt of such income, without Section 234C interest if the gain could not have been estimated earlier.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Need Help with Advance Tax Estimation?</h2>
+  <p>If your income changes mid-year — bonus, capital gains, business income — re-estimating advance tax avoids 234B and 234C interest on assessment.</p>
+  <a class="btn-wa" href="https://wa.me/917678222474?text=Hi%20CA%20Kuldeep%2C%20I%20need%20help%20with%20advance%20tax%20estimation." target="_blank" rel="noopener">Chat on WhatsApp →</a>
+</section>
+
+<footer>
+  <div class="disclaimer">
+    <p><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. The calculator outputs are indicative computations based on simplified rules and the inputs provided; specific professional consultation should be obtained before acting on any information herein.</p>
+  </div>
+  <p>&copy; 2026 <a href="/">Tax Pandey</a> — Chartered Accountants. All rights reserved.</p>
+  <div class="legal-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/">Home</a></div>
+</footer>
+
+<script>
+function fmt(n){return '₹ '+(Math.round(Math.max(0,n))).toLocaleString('en-IN');}
+function calc(){
+  const taxLiab=parseFloat(document.getElementById('taxLiab').value)||0;
+  const tds=parseFloat(document.getElementById('tds').value)||0;
+  const paidQ1=parseFloat(document.getElementById('paidQ1').value)||0;
+  const type=document.getElementById('taxpayerType').value;
+  const netDue=Math.max(0,taxLiab-tds);
+  document.getElementById('netDue').textContent=fmt(netDue);
+  document.getElementById('alreadyPaid').textContent=fmt(tds+paidQ1);
+  ['exemptNote','presumptiveNote','seniorNote'].forEach(id=>document.getElementById(id).style.display='none');
+
+  if(type==='senior'){
+    document.getElementById('seniorNote').style.display='block';
+    document.getElementById('grid').innerHTML='';
+    document.getElementById('results').classList.add('show');
+    return;
+  }
+  if(netDue<=10000){
+    document.getElementById('exemptNote').style.display='block';
+    document.getElementById('grid').innerHTML='';
+    document.getElementById('results').classList.add('show');
+    return;
+  }
+
+  // Build instalments
+  let instalments;
+  if(type==='presumptive'){
+    instalments=[{due:'15 March',pct:100,cum:1.0,note:'Single instalment under proviso to Section 211(1)'}];
+    document.getElementById('presumptiveNote').style.display='block';
+  } else {
+    instalments=[
+      {due:'15 June',pct:15,cum:0.15},
+      {due:'15 September',pct:30,cum:0.45},
+      {due:'15 December',pct:30,cum:0.75},
+      {due:'15 March',pct:25,cum:1.00}
+    ];
+  }
+  // Mark passed (assume current month is October 2026 for demo; actually use real date)
+  const now=new Date();
+  const due={'15 June':[5,15],'15 September':[8,15],'15 December':[11,15],'15 March':[2,15]};
+  // Note: months above are 0-indexed for Jun=5, Sep=8, Dec=11, Mar=2 (next year)
+  // We'll compute relative to FY: if current month is Apr-Mar, instalment dates fall in standard order
+
+  let html='';
+  let cumulative=0;
+  instalments.forEach(i=>{
+    const target=netDue*i.cum;
+    const amt=Math.max(0,target-cumulative-(i.due==='15 June'?paidQ1:0));
+    cumulative+=amt;
+    if(i.due==='15 June')cumulative+=paidQ1;
+    html+=`<div class="instalment-card"><div class="due">${i.due}</div><div class="pct">${i.pct}% of advance tax</div><div class="amount">${fmt(amt)}</div><div class="cumulative">Cumulative target: ${fmt(target)}</div></div>`;
+  });
+  document.getElementById('grid').innerHTML=html;
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+const hamburger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');navLinks.classList.toggle('open')});
+navLinks.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{hamburger.classList.remove('active');navLinks.classList.remove('open')})});
+</script>
+</body>
+</html>

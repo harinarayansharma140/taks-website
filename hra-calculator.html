@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRA Exemption Calculator — Section 10(13A) | Tax Pandey</title>
+<meta name="description" content="Free HRA Exemption Calculator under Section 10(13A) of the Income Tax Act, 1961. Calculate the exempt portion of your House Rent Allowance based on basic salary, rent paid, and metro/non-metro classification.">
+<meta name="keywords" content="HRA exemption calculator, Section 10(13A), house rent allowance, HRA tax exemption, metro non-metro HRA, salaried tax savings, Tax Pandey">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxpandey.com/hra-calculator.html">
+<meta property="og:title" content="HRA Exemption Calculator — Section 10(13A) | Tax Pandey">
+<meta property="og:description" content="Calculate the exempt portion of your House Rent Allowance under Section 10(13A) of the Income Tax Act, 1961.">
+<meta property="og:url" content="https://taxpandey.com/hra-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"HRA Exemption Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","url":"https://taxpandey.com/hra-calculator.html","description":"Calculator that computes the exempt portion of House Rent Allowance under Section 10(13A) of the Income Tax Act, 1961.","provider":{"@type":"AccountingService","name":"Tax Pandey, Chartered Accountants"}}
+</script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--midnight:#0a0e1a;--gold:#c9a84c;--gold-light:#e4c96a;--gold-dim:rgba(201,168,76,0.15);--cream:#f5f0e8;--white:#fff;--gray-50:#fafafa;--gray-100:#f7f7f8;--gray-200:#e8e8ec;--gray-400:#9295a3;--gray-600:#5a5d6e;--gray-800:#2a2d3e;--font-display:'Merriweather',Georgia,serif;--font-body:'Inter',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--cream);color:var(--gray-800);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 4%;display:flex;align-items:center;justify-content:space-between;transition:all .4s ease;background:rgba(10,14,26,.95);backdrop-filter:blur(24px);box-shadow:0 1px 30px rgba(0,0,0,.25)}
+.nav-logo{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:-.02em;display:flex;align-items:center;gap:.6rem}
+.nav-logo-icon{width:38px;height:38px;border-radius:8px;overflow:hidden;flex-shrink:0;background:var(--white);padding:3px}
+.nav-logo-icon img{width:100%;height:100%;object-fit:contain}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;transition:color .3s ease;position:relative}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--gold)!important;color:var(--midnight)!important;padding:.55rem 1.4rem!important;border-radius:4px;font-weight:600!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;z-index:1001}
+.hamburger span{width:24px;height:2px;background:var(--white);transition:all .3s ease;border-radius:2px}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:960px){.hamburger{display:flex}.nav-links{position:fixed;top:0;right:-100%;width:75%;max-width:380px;height:100vh;background:var(--midnight);flex-direction:column;padding:6rem 2.5rem;gap:1.8rem;transition:right .4s ease;box-shadow:-20px 0 60px rgba(0,0,0,.5)}.nav-links.open{right:0}.nav-links a{font-size:1.1rem}}
+
+.calc-hero{background:var(--midnight);padding:8rem 5% 4rem;text-align:center;position:relative;overflow:hidden}
+.calc-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:60px 60px}
+.calc-hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:var(--white);line-height:1.15;letter-spacing:-.02em;position:relative;z-index:1}
+.calc-hero h1 .gold{color:var(--gold)}
+.calc-hero p{font-size:1rem;color:var(--gray-400);margin-top:1rem;position:relative;z-index:1;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.7}
+
+.calc-section{padding:4rem 5%}
+.calc-container{max-width:980px;margin:0 auto}
+.calc-card{background:var(--white);border-radius:16px;padding:clamp(1.5rem,3vw,2.5rem);box-shadow:0 4px 40px rgba(0,0,0,.06);border:1px solid var(--gray-200)}
+.calc-card h2{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--midnight);margin-bottom:.4rem}
+.calc-card .card-sub{font-size:.92rem;color:var(--gray-600);margin-bottom:1.8rem;line-height:1.6}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem;margin-top:1rem}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;font-weight:600;color:var(--gray-600);text-transform:uppercase;letter-spacing:.06em}
+.form-group input,.form-group select{padding:.75rem 1rem;border:1.5px solid var(--gray-200);border-radius:8px;font-family:var(--font-body);font-size:.95rem;color:var(--gray-800);background:var(--gray-50);outline:none;transition:border-color .3s ease}
+.form-group input:focus,.form-group select:focus{border-color:var(--gold);background:var(--white)}
+.form-group .hint{font-size:.72rem;color:var(--gray-400)}
+.input-mode{display:flex;gap:.4rem;background:var(--gray-100);padding:.25rem;border-radius:8px;width:fit-content;margin-top:.4rem}
+.input-mode button{background:transparent;border:none;padding:.4rem 1rem;border-radius:6px;font-family:var(--font-body);font-size:.82rem;font-weight:600;color:var(--gray-600);cursor:pointer;transition:all .2s ease}
+.input-mode button.active{background:var(--white);color:var(--midnight);box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.btn-calculate{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--midnight);padding:.95rem 2.2rem;border:none;border-radius:8px;font-family:var(--font-body);font-size:.95rem;font-weight:700;cursor:pointer;transition:all .3s ease;margin-top:1.6rem}
+.btn-calculate:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,.3)}
+
+.results{margin-top:2.5rem;display:none}
+.results.show{display:block}
+.verdict{background:var(--midnight);border:2px solid var(--gold);border-radius:14px;padding:1.6rem 1.8rem;text-align:center;margin-bottom:2rem}
+.verdict h3{font-family:var(--font-display);font-size:.85rem;font-weight:600;color:var(--gray-400);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem}
+.verdict .amount{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:var(--gold)}
+.verdict .sub{font-size:.85rem;color:var(--gray-400);margin-top:.4rem}
+.breakdown{background:var(--white);border:1px solid var(--gray-200);border-radius:14px;padding:1.5rem 1.8rem}
+.breakdown h4{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--midnight);margin-bottom:1rem}
+.breakdown-row{display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid var(--gray-100);font-size:.9rem;gap:1rem}
+.breakdown-row:last-child{border-bottom:none}
+.breakdown-row .label{color:var(--gray-600);flex:1}
+.breakdown-row .value{font-weight:600;color:var(--gray-800);font-variant-numeric:tabular-nums;white-space:nowrap}
+.breakdown-row.winner{background:var(--gold-dim);margin:.3rem -.6rem;padding:.6rem .6rem;border-radius:6px;border-bottom:none}
+.breakdown-row.winner .value{color:var(--midnight);font-weight:800}
+.breakdown-row.total{border-top:2px solid var(--gray-200);border-bottom:none;padding-top:.8rem;margin-top:.4rem}
+.breakdown-row.total .label{font-weight:700;color:var(--midnight)}
+.breakdown-row.total .value{color:var(--gold);font-weight:800;font-size:1.05rem}
+.note{margin-top:1.2rem;padding:1rem 1.2rem;background:var(--gold-dim);border-left:3px solid var(--gold);border-radius:6px;font-size:.85rem;color:var(--gray-800);line-height:1.6}
+
+.rules{background:var(--white);border:1px solid var(--gray-200);border-radius:14px;padding:1.6rem 1.8rem;margin-top:2rem;font-size:.9rem;line-height:1.7;color:var(--gray-600)}
+.rules h3{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--midnight);margin-bottom:.7rem}
+.rules ul{padding-left:1.2rem;margin-top:.5rem}
+.rules li{margin-bottom:.4rem}
+.rules strong{color:var(--midnight)}
+
+.cta-banner{background:var(--midnight);padding:4rem 5%;text-align:center;color:var(--white)}
+.cta-banner h2{font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2rem);font-weight:700;margin-bottom:.6rem}
+.cta-banner p{font-size:.95rem;color:var(--gray-400);margin-bottom:1.5rem;max-width:520px;margin-left:auto;margin-right:auto}
+.btn-wa{display:inline-flex;align-items:center;gap:.5rem;background:#25D366;color:var(--white);padding:.9rem 1.8rem;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:transform .2s ease}
+.btn-wa:hover{transform:translateY(-2px)}
+
+footer{background:var(--midnight);border-top:1px solid rgba(255,255,255,.06);padding:2rem 5% 1.5rem;text-align:center}
+footer .disclaimer{font-size:.78rem;line-height:1.7;color:var(--gray-400);max-width:920px;margin:0 auto 1.2rem;text-align:left;padding-bottom:1.2rem;border-bottom:1px solid rgba(255,255,255,.06)}
+footer .disclaimer strong{color:var(--gold-light)}
+footer p{font-size:.82rem;color:var(--gray-400);margin-bottom:.5rem}
+footer a{color:var(--gold);text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer .legal-links{font-size:.78rem;color:var(--gray-400);display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-top:.5rem}
+footer .legal-links a{color:var(--gray-400);font-weight:400}
+footer .legal-links a:hover{color:var(--gold);text-decoration:none}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="/" class="nav-logo"><div class="nav-logo-icon"><img src="logo.png" alt="Tax Pandey"></div>Tax<span>Pandey</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="/#services">Services</a>
+    <a href="/#specialised">Specialised</a>
+    <a href="/blog/">Articles</a>
+    <a href="/#faq">FAQs</a>
+    <a href="/#contact" class="nav-cta">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="calc-hero">
+  <h1>HRA Exemption <span class="gold">Calculator</span></h1>
+  <p>Calculate the exempt portion of your House Rent Allowance under <strong>Section 10(13A)</strong> of the Income Tax Act, 1961. Available only under the <strong>old tax regime</strong>.</p>
+</section>
+
+<section class="calc-section">
+  <div class="calc-container">
+    <div class="calc-card">
+      <h2>Enter your salary &amp; rent details</h2>
+      <p class="card-sub">All amounts can be entered as monthly or annual figures using the toggle. The calculator computes the HRA exemption as the least of the three statutory amounts under Section 10(13A) read with Rule 2A.</p>
+
+      <div class="input-mode">
+        <button type="button" id="mode-monthly" class="active" onclick="setMode('monthly')">Monthly</button>
+        <button type="button" id="mode-annual" onclick="setMode('annual')">Annual</button>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="basic">Basic Salary + DA <span id="period-1">(monthly)</span></label>
+          <input type="number" id="basic" placeholder="e.g. 50000" min="0">
+          <span class="hint">Include only Basic and any DA forming part of retirement benefits.</span>
+        </div>
+        <div class="form-group">
+          <label for="hra">HRA Received <span id="period-2">(monthly)</span></label>
+          <input type="number" id="hra" placeholder="e.g. 25000" min="0">
+          <span class="hint">As per your salary slip / Form 16.</span>
+        </div>
+        <div class="form-group">
+          <label for="rent">Actual Rent Paid <span id="period-3">(monthly)</span></label>
+          <input type="number" id="rent" placeholder="e.g. 22000" min="0">
+          <span class="hint">Rent actually paid for the period.</span>
+        </div>
+        <div class="form-group">
+          <label for="city">City Type</label>
+          <select id="city">
+            <option value="metro">Metro (Delhi, Mumbai, Kolkata, Chennai)</option>
+            <option value="nonmetro">Non-Metro (everywhere else)</option>
+          </select>
+          <span class="hint">Determines whether 50% or 40% of basic applies.</span>
+        </div>
+      </div>
+
+      <button class="btn-calculate" onclick="calculate()">Calculate HRA Exemption →</button>
+
+      <div class="results" id="results">
+        <div class="verdict">
+          <h3>HRA Exempt under Section 10(13A)</h3>
+          <div class="amount" id="exempt-annual">₹ 0</div>
+          <div class="sub">per year &nbsp;·&nbsp; <span id="exempt-monthly">₹ 0</span> per month</div>
+        </div>
+
+        <div class="breakdown">
+          <h4>Computation — least of the following three</h4>
+          <div class="breakdown-row" id="row-1">
+            <div class="label">1. Actual HRA received</div>
+            <div class="value" id="amt-1">₹ 0</div>
+          </div>
+          <div class="breakdown-row" id="row-2">
+            <div class="label">2. <span id="city-pct">50%</span> of (Basic + DA)</div>
+            <div class="value" id="amt-2">₹ 0</div>
+          </div>
+          <div class="breakdown-row" id="row-3">
+            <div class="label">3. Actual rent paid &minus; 10% of (Basic + DA)</div>
+            <div class="value" id="amt-3">₹ 0</div>
+          </div>
+          <div class="breakdown-row total">
+            <div class="label">Exempt HRA (least of the three)</div>
+            <div class="value" id="exempt-total">₹ 0</div>
+          </div>
+          <div class="breakdown-row" style="margin-top:.6rem">
+            <div class="label">Taxable portion of HRA received</div>
+            <div class="value" id="taxable-portion">₹ 0</div>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Note:</strong> HRA exemption is available only under the <strong>old tax regime</strong>. Under the new regime (default from AY 2024-25), HRA is fully taxable. If your annual rent exceeds ₹1,00,000, the landlord's PAN must be reported to your employer for the exemption to be allowed.
+        </div>
+      </div>
+    </div>
+
+    <div class="rules">
+      <h3>How HRA exemption works</h3>
+      <p>Under Section 10(13A) read with Rule 2A of the Income Tax Rules, 1962, House Rent Allowance is exempt to the extent of the <strong>least of the following three amounts</strong>:</p>
+      <ul>
+        <li>The actual HRA received from the employer for the period.</li>
+        <li><strong>50%</strong> of (Basic Salary + DA forming part of retirement benefits) — if the rented accommodation is in a Metro city (Delhi, Mumbai, Kolkata, Chennai). For all other cities, the limit is <strong>40%</strong>.</li>
+        <li>Actual rent paid <strong>minus</strong> 10% of (Basic + DA).</li>
+      </ul>
+      <p>Where employee-paid rent does not exceed 10% of (Basic + DA), the third amount becomes zero or negative and HRA exemption is nil. Where the period of stay or rent amount changes during the year, HRA must be computed on a monthly basis and aggregated. This calculator assumes uniform values across the period entered.</p>
+      <p><strong>HRA exemption is not available under the new tax regime under Section 115BAC.</strong> If you opt for the new regime, the entire HRA received is added to your taxable salary.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Confirm Your HRA Position with a CA</h2>
+  <p>This calculator gives the statutory least-of-three amount. Edge cases — partial-year stay, joint tenancy, rent paid to family member, multi-employer HRA — need a CA review.</p>
+  <a class="btn-wa" href="https://wa.me/917678222474?text=Hi%20CA%20Kuldeep%2C%20I%20have%20an%20HRA%20exemption%20query." target="_blank" rel="noopener">Chat on WhatsApp →</a>
+</section>
+
+<footer>
+  <div class="disclaimer">
+    <p><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. The calculator outputs are indicative computations based on simplified rules and the inputs provided; specific professional consultation should be obtained before acting on any information herein.</p>
+  </div>
+  <p>&copy; 2026 <a href="/">Tax Pandey</a> — Chartered Accountants. All rights reserved.</p>
+  <div class="legal-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/">Home</a></div>
+</footer>
+
+<script>
+let mode='monthly';
+function setMode(m){
+  mode=m;
+  document.getElementById('mode-monthly').classList.toggle('active',m==='monthly');
+  document.getElementById('mode-annual').classList.toggle('active',m==='annual');
+  ['period-1','period-2','period-3'].forEach(id=>{document.getElementById(id).textContent='('+m+')';});
+}
+function fmt(n){return '₹ '+(Math.round(n)).toLocaleString('en-IN');}
+function calculate(){
+  const basic=parseFloat(document.getElementById('basic').value)||0;
+  const hra=parseFloat(document.getElementById('hra').value)||0;
+  const rent=parseFloat(document.getElementById('rent').value)||0;
+  const city=document.getElementById('city').value;
+  if(basic<=0||hra<=0){alert('Please enter Basic + DA and HRA amounts.');return;}
+  const factor=(mode==='monthly')?12:1;
+  const annualBasic=basic*factor;
+  const annualHRA=hra*factor;
+  const annualRent=rent*factor;
+  const cityPct=(city==='metro')?0.5:0.4;
+  const a=annualHRA;
+  const b=cityPct*annualBasic;
+  const c=Math.max(0,annualRent-0.1*annualBasic);
+  const exempt=Math.max(0,Math.min(a,b,c));
+  const taxable=Math.max(0,annualHRA-exempt);
+  document.getElementById('amt-1').textContent=fmt(a);
+  document.getElementById('amt-2').textContent=fmt(b);
+  document.getElementById('amt-3').textContent=fmt(c);
+  document.getElementById('city-pct').textContent=(cityPct*100)+'%';
+  document.getElementById('exempt-total').textContent=fmt(exempt);
+  document.getElementById('taxable-portion').textContent=fmt(taxable);
+  document.getElementById('exempt-annual').textContent=fmt(exempt);
+  document.getElementById('exempt-monthly').textContent=fmt(exempt/12);
+  // Highlight winner row
+  ['row-1','row-2','row-3'].forEach(id=>document.getElementById(id).classList.remove('winner'));
+  if(exempt===a)document.getElementById('row-1').classList.add('winner');
+  else if(exempt===b)document.getElementById('row-2').classList.add('winner');
+  else document.getElementById('row-3').classList.add('winner');
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+const hamburger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');navLinks.classList.toggle('open')});
+navLinks.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{hamburger.classList.remove('active');navLinks.classList.remove('open')})});
+</script>
+</body>
+</html>
