@@ -114,6 +114,14 @@ footer{background:var(--midnight);padding:2.5rem 5% 1.5rem;color:var(--gray-400)
 .mid-cta a{display:inline-flex;align-items:center;gap:.4rem;background:var(--midnight);color:var(--gold);padding:.7rem 1.3rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:.85rem;white-space:nowrap;transition:transform .2s ease}
 .mid-cta a:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.15)}
 
+/* RELATED SERVICE TILE */
+.related-service{max-width:780px;margin:2.5rem auto 0;padding:1.4rem 1.6rem;background:var(--midnight);color:var(--gray-400);border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:1.4rem;flex-wrap:wrap}
+.related-service-text{flex:1;min-width:240px;font-size:.88rem;line-height:1.55}
+.related-service-text .label{display:block;font-family:var(--font-mono);font-size:.7rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.4rem}
+.related-service-text strong{color:var(--white);font-family:var(--font-display);font-size:1.05rem;display:block;margin-bottom:.3rem}
+.related-service a.related-service-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--gold);color:var(--midnight);padding:.7rem 1.3rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:.85rem;white-space:nowrap;transition:transform .2s ease}
+.related-service a.related-service-link:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,168,76,.3)}
+
 /* AUTHOR BIO */
 .author-bio{max-width:780px;margin:3rem auto 0;padding:2rem;background:var(--white);border:1px solid var(--gray-200);border-radius:14px;display:flex;gap:1.5rem;align-items:flex-start}
 .author-bio-photo{width:90px;height:110px;border-radius:8px;overflow:hidden;flex-shrink:0;background:var(--gold-dim)}
