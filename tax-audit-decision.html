@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do I Need a Tax Audit? — Section 44AB Decision Tool | Tax Pandey</title>
+<meta name="description" content="Find out if your business or profession requires a Tax Audit under Section 44AB of the Income Tax Act, 1961. Free decision tool covering turnover thresholds, digital-transactions cap, presumptive taxation under Section 44AD/44ADA, and Statutory Audit under the Companies Act, 2013.">
+<meta name="keywords" content="Section 44AB, tax audit threshold, presumptive taxation 44AD 44ADA, statutory audit Companies Act, digital turnover 10 crore, Tax Pandey">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://taxpandey.com/tax-audit-decision.html">
+<meta property="og:title" content="Do I Need a Tax Audit? — Section 44AB Decision Tool | Tax Pandey">
+<meta property="og:description" content="Find out if your business or profession requires a Tax Audit under Section 44AB of the Income Tax Act, 1961.">
+<meta property="og:url" content="https://taxpandey.com/tax-audit-decision.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Tax Audit Decision Tool (Section 44AB)","applicationCategory":"FinanceApplication","operatingSystem":"Web","url":"https://taxpandey.com/tax-audit-decision.html","description":"Decision tool that determines applicability of Tax Audit under Section 44AB of the Income Tax Act, 1961, and Statutory Audit under the Companies Act, 2013.","provider":{"@type":"AccountingService","name":"Tax Pandey, Chartered Accountants"}}
+</script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--midnight:#0a0e1a;--gold:#c9a84c;--gold-light:#e4c96a;--gold-dim:rgba(201,168,76,0.15);--cream:#f5f0e8;--white:#fff;--gray-50:#fafafa;--gray-100:#f7f7f8;--gray-200:#e8e8ec;--gray-400:#9295a3;--gray-600:#5a5d6e;--gray-800:#2a2d3e;--emerald:#2d8a6e;--rose:#c44747;--font-display:'Merriweather',Georgia,serif;--font-body:'Inter',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--cream);color:var(--gray-800);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 4%;display:flex;align-items:center;justify-content:space-between;transition:all .4s ease;background:rgba(10,14,26,.95);backdrop-filter:blur(24px);box-shadow:0 1px 30px rgba(0,0,0,.25)}
+.nav-logo{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:-.02em;display:flex;align-items:center;gap:.6rem}
+.nav-logo-icon{width:38px;height:38px;border-radius:8px;overflow:hidden;flex-shrink:0;background:var(--white);padding:3px}
+.nav-logo-icon img{width:100%;height:100%;object-fit:contain}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;transition:color .3s ease}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--gold)!important;color:var(--midnight)!important;padding:.55rem 1.4rem!important;border-radius:4px;font-weight:600!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;z-index:1001}
+.hamburger span{width:24px;height:2px;background:var(--white);transition:all .3s ease;border-radius:2px}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:960px){.hamburger{display:flex}.nav-links{position:fixed;top:0;right:-100%;width:75%;max-width:380px;height:100vh;background:var(--midnight);flex-direction:column;padding:6rem 2.5rem;gap:1.8rem;transition:right .4s ease;box-shadow:-20px 0 60px rgba(0,0,0,.5)}.nav-links.open{right:0}.nav-links a{font-size:1.1rem}}
+.calc-hero{background:var(--midnight);padding:8rem 5% 4rem;text-align:center;position:relative;overflow:hidden}
+.calc-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:60px 60px}
+.calc-hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:var(--white);line-height:1.15;letter-spacing:-.02em;position:relative;z-index:1}
+.calc-hero h1 .gold{color:var(--gold)}
+.calc-hero p{font-size:1rem;color:var(--gray-400);margin-top:1rem;position:relative;z-index:1;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.7}
+.calc-section{padding:4rem 5%}
+.calc-container{max-width:780px;margin:0 auto}
+.calc-card{background:var(--white);border-radius:16px;padding:clamp(1.5rem,3vw,2.5rem);box-shadow:0 4px 40px rgba(0,0,0,.06);border:1px solid var(--gray-200)}
+.calc-card h2{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--midnight);margin-bottom:.4rem}
+.calc-card .card-sub{font-size:.92rem;color:var(--gray-600);margin-bottom:1.4rem;line-height:1.6}
+.step{display:none}
+.step.active{display:block}
+.step-label{font-family:var(--font-mono);font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
+.q-text{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--midnight);margin-bottom:1.2rem;line-height:1.4}
+.option-row{display:grid;gap:.7rem;margin-bottom:1.4rem}
+.opt{background:var(--gray-50);border:1.5px solid var(--gray-200);border-radius:10px;padding:1rem 1.2rem;cursor:pointer;display:flex;align-items:center;gap:.8rem;font-size:.92rem;font-weight:500;color:var(--gray-800);transition:all .25s ease}
+.opt:hover{border-color:var(--gold);background:var(--gold-dim)}
+.opt input[type="radio"]{accent-color:var(--gold);transform:scale(1.15);flex-shrink:0}
+.opt .desc{display:block;font-size:.78rem;color:var(--gray-600);font-weight:400;margin-top:.2rem;line-height:1.45}
+.input-row{display:grid;grid-template-columns:1fr;gap:.7rem;margin-bottom:1.2rem}
+.input-row label{font-size:.82rem;font-weight:600;color:var(--gray-600);margin-bottom:.2rem;display:block}
+.input-row input{padding:.75rem 1rem;border:1.5px solid var(--gray-200);border-radius:8px;font-family:var(--font-body);font-size:.95rem;color:var(--gray-800);background:var(--gray-50);outline:none;width:100%}
+.input-row input:focus{border-color:var(--gold);background:var(--white)}
+.btn-row{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.6rem}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.8rem 1.6rem;border:none;border-radius:8px;font-family:var(--font-body);font-size:.9rem;font-weight:700;cursor:pointer;transition:all .25s ease;text-decoration:none}
+.btn-primary{background:var(--gold);color:var(--midnight)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,168,76,.3)}
+.btn-secondary{background:var(--gray-100);color:var(--gray-800)}
+.btn-secondary:hover{background:var(--gray-200)}
+.verdict-card{background:var(--midnight);border-radius:14px;padding:2rem;color:var(--white);margin-top:.5rem}
+.verdict-card.required{border:2px solid #c44747}
+.verdict-card.notrequired{border:2px solid var(--emerald)}
+.verdict-card.maybe{border:2px solid var(--gold)}
+.verdict-icon{font-size:2rem;margin-bottom:.5rem}
+.verdict-card h3{font-family:var(--font-display);font-size:1.25rem;font-weight:700;margin-bottom:.6rem}
+.verdict-card.required h3{color:#ff8b8b}
+.verdict-card.notrequired h3{color:#7fd1b3}
+.verdict-card.maybe h3{color:var(--gold)}
+.verdict-card p{font-size:.92rem;color:var(--gray-400);line-height:1.7;margin-bottom:.7rem}
+.verdict-card ul{padding-left:1.2rem;color:var(--gray-400);font-size:.88rem;line-height:1.7}
+.verdict-card .deadline{background:rgba(201,168,76,.12);border-left:3px solid var(--gold);padding:.7rem 1rem;border-radius:6px;font-size:.85rem;color:var(--white);margin-top:1rem}
+.verdict-card .deadline strong{color:var(--gold)}
+
+.rules{background:var(--white);border:1px solid var(--gray-200);border-radius:14px;padding:1.6rem 1.8rem;margin-top:2rem;font-size:.9rem;line-height:1.7;color:var(--gray-600)}
+.rules h3{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--midnight);margin-bottom:.7rem}
+.rules ul{padding-left:1.2rem;margin-top:.5rem}
+.rules li{margin-bottom:.4rem}
+.rules strong{color:var(--midnight)}
+.cta-banner{background:var(--midnight);padding:4rem 5%;text-align:center;color:var(--white)}
+.cta-banner h2{font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2rem);font-weight:700;margin-bottom:.6rem}
+.cta-banner p{font-size:.95rem;color:var(--gray-400);margin-bottom:1.5rem;max-width:520px;margin-left:auto;margin-right:auto}
+.btn-wa{display:inline-flex;align-items:center;gap:.5rem;background:#25D366;color:var(--white);padding:.9rem 1.8rem;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:transform .2s ease}
+.btn-wa:hover{transform:translateY(-2px)}
+footer{background:var(--midnight);border-top:1px solid rgba(255,255,255,.06);padding:2rem 5% 1.5rem;text-align:center}
+footer .disclaimer{font-size:.78rem;line-height:1.7;color:var(--gray-400);max-width:920px;margin:0 auto 1.2rem;text-align:left;padding-bottom:1.2rem;border-bottom:1px solid rgba(255,255,255,.06)}
+footer .disclaimer strong{color:var(--gold-light)}
+footer p{font-size:.82rem;color:var(--gray-400);margin-bottom:.5rem}
+footer a{color:var(--gold);text-decoration:none}
+footer .legal-links{font-size:.78rem;color:var(--gray-400);display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-top:.5rem}
+footer .legal-links a{color:var(--gray-400);font-weight:400}
+footer .legal-links a:hover{color:var(--gold);text-decoration:none}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="/" class="nav-logo"><div class="nav-logo-icon"><img src="logo.png" alt="Tax Pandey"></div>Tax<span>Pandey</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="/#services">Services</a>
+    <a href="/#specialised">Specialised</a>
+    <a href="/blog/">Articles</a>
+    <a href="/#faq">FAQs</a>
+    <a href="/#contact" class="nav-cta">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="calc-hero">
+  <h1>Do I Need a <span class="gold">Tax Audit?</span></h1>
+  <p>Three-question decision tool covering Tax Audit applicability under <strong>Section 44AB</strong> of the Income Tax Act, 1961, and Statutory Audit under the <strong>Companies Act, 2013</strong>. For FY 2025-26 / AY 2026-27.</p>
+</section>
+
+<section class="calc-section">
+  <div class="calc-container">
+    <div class="calc-card">
+
+      <!-- STEP 1 -->
+      <div class="step active" id="step1">
+        <div class="step-label">Step 1 of 3</div>
+        <div class="q-text">What is your taxpayer type?</div>
+        <div class="option-row">
+          <label class="opt"><input type="radio" name="t" value="company"><span><strong>Company / OPC</strong><span class="desc">Pvt Ltd, Public Ltd, OPC, Section 8 — registered under the Companies Act, 2013</span></span></label>
+          <label class="opt"><input type="radio" name="t" value="llp"><span><strong>LLP</strong><span class="desc">Limited Liability Partnership registered under the LLP Act, 2008</span></span></label>
+          <label class="opt"><input type="radio" name="t" value="indv"><span><strong>Individual / HUF / Firm</strong><span class="desc">Sole proprietorship, partnership firm, or HUF carrying on business or profession</span></span></label>
+        </div>
+        <div class="btn-row"><button class="btn btn-primary" onclick="next(1)">Next →</button></div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step" id="step2">
+        <div class="step-label">Step 2 of 3</div>
+        <div class="q-text">What kind of activity do you carry on?</div>
+        <div class="option-row">
+          <label class="opt"><input type="radio" name="a" value="business"><span><strong>Business</strong><span class="desc">Trading, manufacturing, services other than specified profession</span></span></label>
+          <label class="opt"><input type="radio" name="a" value="profession"><span><strong>Specified Profession</strong><span class="desc">Legal, medical, engineering, architectural, accountancy, technical consultancy, interior decoration, or other notified profession under Section 44AA(1)</span></span></label>
+          <label class="opt"><input type="radio" name="a" value="none"><span><strong>No business or profession</strong><span class="desc">Salary, capital gains, rental income, other sources only</span></span></label>
+        </div>
+        <div class="btn-row"><button class="btn btn-secondary" onclick="back(2)">← Back</button><button class="btn btn-primary" onclick="next(2)">Next →</button></div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="step" id="step3">
+        <div class="step-label">Step 3 of 3</div>
+        <div class="q-text" id="step3q">Enter your numbers for the financial year</div>
+        <div id="businessQ" style="display:none">
+          <div class="input-row"><label>Annual turnover / gross receipts (₹)</label><input type="number" id="turnover" placeholder="e.g. 12000000" min="0"></div>
+          <div class="option-row" style="margin-top:.4rem">
+            <label class="opt"><input type="radio" name="d" value="yes"><span><strong>95%+ of receipts &amp; payments are digital</strong><span class="desc">No more than 5% in cash — proviso to Section 44AB(a) raises threshold to ₹10 crore</span></span></label>
+            <label class="opt"><input type="radio" name="d" value="no"><span><strong>Cash transactions exceed 5%</strong><span class="desc">Standard ₹1 crore threshold applies</span></span></label>
+          </div>
+          <div class="option-row">
+            <label class="opt"><input type="radio" name="p" value="yes"><span><strong>Currently using 44AD presumptive scheme &amp; declaring 6%/8% profit</strong></span></label>
+            <label class="opt"><input type="radio" name="p" value="optedout"><span><strong>Used 44AD earlier, now declaring lower / opting out</strong><span class="desc">Section 44AB(e) lock-in window may apply</span></span></label>
+            <label class="opt"><input type="radio" name="p" value="no" checked><span><strong>Not using 44AD</strong></span></label>
+          </div>
+        </div>
+        <div id="professionQ" style="display:none">
+          <div class="input-row"><label>Annual gross professional receipts (₹)</label><input type="number" id="receipts" placeholder="e.g. 4500000" min="0"></div>
+          <div class="option-row" style="margin-top:.4rem">
+            <label class="opt"><input type="radio" name="pp" value="yes"><span><strong>Using 44ADA presumptive (50% of receipts)</strong></span></label>
+            <label class="opt"><input type="radio" name="pp" value="lower"><span><strong>Declaring profit lower than 50% of receipts</strong><span class="desc">Section 44AB(d) — audit triggered if income exceeds basic exemption</span></span></label>
+            <label class="opt"><input type="radio" name="pp" value="no" checked><span><strong>Maintaining regular books, not using 44ADA</strong></span></label>
+          </div>
+        </div>
+        <div class="btn-row"><button class="btn btn-secondary" onclick="back(3)">← Back</button><button class="btn btn-primary" onclick="decide()">See Verdict →</button></div>
+      </div>
+
+      <!-- RESULT -->
+      <div class="step" id="result">
+        <div id="verdictWrap"></div>
+        <div class="btn-row" style="margin-top:1.4rem"><button class="btn btn-secondary" onclick="reset()">↻ Start Over</button></div>
+      </div>
+
+    </div>
+
+    <div class="rules">
+      <h3>Section 44AB thresholds at a glance</h3>
+      <ul>
+        <li><strong>Business — clause (a):</strong> Tax audit mandatory if turnover &gt; ₹1 crore. Threshold raised to <strong>₹10 crore</strong> if cash receipts and cash payments do not exceed 5% of total.</li>
+        <li><strong>Profession — clause (b):</strong> Tax audit mandatory if gross receipts &gt; <strong>₹50 lakh</strong>.</li>
+        <li><strong>Section 44AD — clause (e):</strong> Audit triggered for a business taxpayer who earlier opted into Section 44AD, then opts out, and total income exceeds basic exemption — lock-in for 5 years.</li>
+        <li><strong>Section 44ADA — clause (d):</strong> Audit triggered for a profession declaring profit lower than 50% of receipts when total income exceeds the basic exemption.</li>
+        <li><strong>Companies Act statutory audit:</strong> Every company (Pvt Ltd, Public Ltd, OPC, Section 8) regardless of turnover, under Section 139 of the Companies Act, 2013.</li>
+        <li><strong>LLP audit:</strong> Mandatory if turnover &gt; ₹40 lakh or contribution &gt; ₹25 lakh (Section 34(4) of the LLP Act, 2008).</li>
+      </ul>
+      <p><strong>Filing deadline:</strong> Tax audit report (Form 3CA / 3CB and 3CD) is due by <strong>30 September</strong> following the financial year (extended date applies for transfer pricing audit cases). Penalty under Section 271B for non-compliance is 0.5% of turnover, capped at ₹1.5 lakh.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Need a Tax Audit Engagement?</h2>
+  <p>Tax Pandey conducts Tax Audit u/s 44AB and Statutory Audit under the Companies Act for businesses across multiple industries. Engagement is partner-led with a written letter of engagement.</p>
+  <a class="btn-wa" href="https://wa.me/917678222474?text=Hi%20CA%20Kuldeep%2C%20I%20need%20to%20discuss%20a%20tax%20audit%20engagement." target="_blank" rel="noopener">Chat on WhatsApp →</a>
+</section>
+
+<footer>
+  <div class="disclaimer">
+    <p><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. The decision tool's verdict is indicative based on simplified rules and the inputs provided; specific professional consultation should be obtained before acting on any information herein.</p>
+  </div>
+  <p>&copy; 2026 <a href="/">Tax Pandey</a> — Chartered Accountants. All rights reserved.</p>
+  <div class="legal-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/">Home</a></div>
+</footer>
+
+<script>
+const state={};
+function show(id){document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+function getRadio(name){const r=document.querySelector(`input[name="${name}"]:checked`);return r?r.value:null;}
+function next(step){
+  if(step===1){
+    const t=getRadio('t');if(!t){alert('Please pick a taxpayer type.');return;}
+    state.t=t;
+    if(t==='company'){verdict('required','Statutory Audit Required',
+      ['Every company registered under the Companies Act, 2013 must get its accounts audited every financial year, regardless of turnover.',
+       'The auditor must be a practising Chartered Accountant. Form ADT-1 is filed with the MCA on appointment.',
+       'In addition, Tax Audit under Section 44AB applies if business turnover exceeds the prescribed thresholds (see below).'],
+      'AOC-4 + MGT-7 to be filed within 30 / 60 days of the AGM. Tax Audit Report (Form 3CA + 3CD) by 30 September.');return;
+    }
+    if(t==='llp'){verdict('maybe','LLP Audit — Threshold Test',
+      ['LLPs must get their accounts audited under <strong>Section 34(4) of the LLP Act, 2008</strong> if either: (a) annual turnover exceeds ₹40 lakh, or (b) total partner contribution exceeds ₹25 lakh.',
+       'In addition, Tax Audit under Section 44AB applies if business turnover exceeds ₹1 crore (or ₹10 crore with 95%+ digital transactions).',
+       'For LLPs that fall below both thresholds, audit is optional but often recommended for credibility with banks and counterparties.'],
+      'LLP audit + Form 8 / 11 filings have separate MCA deadlines. Tax Audit (if applicable) by 30 September.');return;
+    }
+    show('step2');return;
+  }
+  if(step===2){
+    const a=getRadio('a');if(!a){alert('Please pick an activity type.');return;}
+    state.a=a;
+    if(a==='none'){verdict('notrequired','No Tax Audit Required',
+      ['You have indicated no business or profession income. Tax Audit under Section 44AB is triggered only by business turnover or professional receipts crossing the prescribed thresholds.',
+       'You may still need to file an ITR — typically ITR-2 for individuals with salary, capital gains, or other sources — but no audit is required.',
+       'If you are a partner in a firm or LLP, the firm-level audit (if applicable) is separate and does not affect your individual position.']);return;
+    }
+    document.getElementById('businessQ').style.display=(a==='business')?'block':'none';
+    document.getElementById('professionQ').style.display=(a==='profession')?'block':'none';
+    show('step3');return;
+  }
+}
+function back(from){if(from===2)show('step1');else show('step2');}
+function decide(){
+  if(state.a==='business'){
+    const t=parseFloat(document.getElementById('turnover').value)||0;
+    const d=getRadio('d');const p=getRadio('p');
+    if(t<=0){alert('Please enter your turnover.');return;}
+    if(!d){alert('Please indicate digital-transactions status.');return;}
+    if(p==='optedout'){verdict('required','Tax Audit Required — Section 44AB(e)',
+      ['You have opted out of the Section 44AD presumptive scheme after using it earlier. Section 44AD has a 5-year lock-in: once you opt out, you cannot re-enter for the next 5 assessment years.',
+       'Tax Audit under Section 44AB(e) is mandatory in this opt-out window if your total income exceeds the basic exemption limit, regardless of turnover.',
+       `Reported turnover: ₹${t.toLocaleString('en-IN')}.`]);return;
+    }
+    const threshold=(d==='yes')?10000000:1000000; const tname=(d==='yes')?'₹10 crore (digital-transactions threshold)':'₹1 crore';
+    if(t>threshold*10){verdict('required','Tax Audit Required — Section 44AB(a)',
+      [`Turnover of ₹${t.toLocaleString('en-IN')} exceeds the applicable threshold of ${tname}.`,
+       'Tax Audit Report (Form 3CA / 3CB + 3CD) must be furnished by a practising Chartered Accountant.',
+       'Form 3CD covers ~40 disclosure clauses including ICDS compliance, transfer pricing, GST reconciliation, and clause-level depreciation.'],
+      'Filing deadline: 30 September following the financial year. Penalty under Section 271B: 0.5% of turnover up to ₹1.5 lakh.');return;
+    }
+    verdict('notrequired','Tax Audit Not Required',
+      [`Turnover of ₹${t.toLocaleString('en-IN')} is within the applicable threshold of ${tname}.`,
+       'You can file your ITR without a tax audit — typically ITR-3 (regular) or ITR-4 (Sugam, presumptive 44AD).',
+       'Note: maintaining proper books under Section 44AA is still required if income exceeds ₹2.5 lakh or turnover exceeds ₹25 lakh in any of the three preceding years.']);return;
+  }
+  if(state.a==='profession'){
+    const r=parseFloat(document.getElementById('receipts').value)||0;
+    const pp=getRadio('pp');
+    if(r<=0){alert('Please enter your gross receipts.');return;}
+    if(r>5000000){verdict('required','Tax Audit Required — Section 44AB(b)',
+      [`Gross professional receipts of ₹${r.toLocaleString('en-IN')} exceed the ₹50 lakh threshold under Section 44AB(b).`,
+       'Tax Audit Report (Form 3CA / 3CB + 3CD) must be furnished by a practising Chartered Accountant.'],
+      'Filing deadline: 30 September following the financial year.');return;
+    }
+    if(pp==='lower'){verdict('maybe','Likely Required — Section 44AB(d)',
+      [`Receipts ₹${r.toLocaleString('en-IN')} are within the ₹50 lakh limit, but you are declaring profit lower than the 50%-of-receipts presumption under Section 44ADA.`,
+       'Section 44AB(d) triggers Tax Audit if total income exceeds the basic exemption limit. Confirm your overall income position to determine final applicability.']);return;
+    }
+    verdict('notrequired','Tax Audit Not Required',
+      [`Gross receipts of ₹${r.toLocaleString('en-IN')} are within the ₹50 lakh threshold under Section 44AB(b).`,
+       (pp==='yes')?'You can file under Section 44ADA presumptive scheme using ITR-4.':'You can file ITR-3 with regular books of account.',
+       'Maintain books under Section 44AA — required for specified professions regardless of receipts level.']);return;
+  }
+}
+function verdict(kind,title,paragraphs,deadline){
+  const cls={required:'required',notrequired:'notrequired',maybe:'maybe'}[kind];
+  const icon={required:'🔴',notrequired:'🟢',maybe:'🟡'}[kind];
+  let html=`<div class="verdict-card ${cls}"><div class="verdict-icon">${icon}</div><h3>${title}</h3>`;
+  paragraphs.forEach(p=>{html+=`<p>${p}</p>`;});
+  if(deadline)html+=`<div class="deadline"><strong>Deadline:</strong> ${deadline}</div>`;
+  html+='</div>';
+  document.getElementById('verdictWrap').innerHTML=html;
+  show('result');
+}
+function reset(){document.querySelectorAll('input[type="radio"]').forEach(r=>r.checked=false);document.querySelectorAll('input[type="number"]').forEach(i=>i.value='');document.querySelector('input[name="p"][value="no"]').checked=true;document.querySelector('input[name="pp"][value="no"]').checked=true;show('step1');}
+const hamburger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');navLinks.classList.toggle('open')});
+navLinks.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{hamburger.classList.remove('active');navLinks.classList.remove('open')})});
+</script>
+</body>
+</html>
