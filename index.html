@@ -153,7 +153,30 @@ h2.section-title,.section-title{font-family:var(--font-display);font-size:clamp(
 .ca-contact-row{display:flex;gap:1rem;margin-top:1.8rem;flex-wrap:wrap}
 .ca-contact-pill{display:flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:.55rem 1.1rem;border-radius:100px;font-size:.83rem;color:var(--gray-400);text-decoration:none;transition:all .3s ease}
 .ca-contact-pill:hover{border-color:var(--gold);color:var(--gold)}
+.ca-contact-pill .pill-icon{display:inline-flex;align-items:center;justify-content:center;font-size:.95rem}
+.ca-contact-pill .pill-li{width:18px;height:18px;background:#0a66c2;color:#fff;border-radius:3px;font-family:Georgia,serif;font-size:.75rem;font-weight:700;font-style:normal}
+.ca-section-subtitle{color:var(--gray-400);font-size:1rem;line-height:1.7;max-width:720px;margin:.6rem 0 0}
+.ca-section-subtitle strong{color:var(--gold-light);font-weight:600}
+.ca-halo{position:absolute;top:50%;left:50%;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.18) 0%,rgba(201,168,76,0) 65%);transform:translate(-50%,-58%);pointer-events:none;animation:ca-halo-pulse 4s ease-in-out infinite}
+@keyframes ca-halo-pulse{0%,100%{opacity:.7;transform:translate(-50%,-58%) scale(1)}50%{opacity:1;transform:translate(-50%,-58%) scale(1.06)}}
+.ca-verified-badge{display:inline-flex;align-items:center;gap:.45rem;background:rgba(45,138,110,.12);border:1px solid rgba(45,138,110,.4);color:#7fd1b3;padding:.32rem .85rem;border-radius:100px;font-size:.7rem;font-weight:600;letter-spacing:.04em;text-decoration:none;margin-top:.2rem;transition:all .3s ease;text-transform:uppercase}
+.ca-verified-badge:hover{background:rgba(45,138,110,.2);transform:translateY(-1px)}
+.ca-verified-badge .dot{width:7px;height:7px;border-radius:50%;background:#2d8a6e;box-shadow:0 0 0 0 rgba(45,138,110,.6);animation:ca-dot-pulse 2s ease-in-out infinite}
+@keyframes ca-dot-pulse{0%{box-shadow:0 0 0 0 rgba(45,138,110,.6)}70%{box-shadow:0 0 0 8px rgba(45,138,110,0)}100%{box-shadow:0 0 0 0 rgba(45,138,110,0)}}
+.ca-credentials{flex-wrap:wrap}
+.ca-cred-val .ca-verify-tick{display:inline-block;color:#7fd1b3;font-weight:700;margin-left:.15rem}
+.ca-principle{background:rgba(201,168,76,.04);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:1.1rem 1.4rem 1.1rem 2.4rem;margin:1.5rem 0;position:relative;font-style:italic;color:var(--gray-400);line-height:1.7;font-size:.92rem}
+.ca-principle-mark{position:absolute;top:.2rem;left:.7rem;font-family:var(--font-display);font-size:2.2rem;color:var(--gold);font-weight:800;line-height:1}
+.ca-principle p{margin:0;color:var(--gray-400)}
+.ca-section-h{font-family:var(--font-display);font-size:.78rem;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:.12em;margin:1.6rem 0 .8rem}
+.ca-highlight{display:flex;gap:.8rem;align-items:flex-start}
+.ca-h-icon{flex-shrink:0;width:36px;height:36px;background:var(--gold-dim);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.ca-affiliations{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.06)}
+.ca-affiliation-label{font-family:var(--font-mono);font-size:.7rem;color:var(--gold);font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.7rem}
+.ca-affiliation-pills{display:flex;gap:.45rem;flex-wrap:wrap}
+.ca-aff{font-size:.74rem;color:var(--gray-400);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:.35rem .8rem;border-radius:6px;font-weight:500}
 @media(max-width:960px){.ca-grid{grid-template-columns:1fr;gap:2.5rem}.ca-floating-card{right:10px}}
+@media(max-width:600px){.ca-credentials{gap:.8rem;padding:.85rem .6rem}.ca-cred-val{font-size:.7rem}.ca-cred-label{font-size:.58rem}}
 
 /* SERVICES */
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3.5rem}
@@ -422,36 +445,60 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
   <div class="container">
     <div class="section-label reveal">// Meet Your CA</div>
     <h2 class="section-title reveal" style="color:var(--white)">The Professional Behind Every Filing</h2>
+    <p class="ca-section-subtitle reveal">Engagement is partner-led. <strong>CA Kuldeep Pandey</strong> personally reviews every filing, computation, and report before submission — under a written engagement letter that sets out scope, deliverables, and timelines.</p>
     <div class="ca-grid">
       <div class="ca-portrait reveal">
         <div class="ca-floating-card">⚖ Est. 2018</div>
         <div class="ca-portrait-frame">
           <div class="ca-portrait-inner">
+            <div class="ca-halo"></div>
             <div class="ca-avatar"><img src="ca-photo.png" alt="CA Kuldeep Pandey"></div>
             <div class="ca-avatar-name">CA Kuldeep Pandey</div>
-            <div class="ca-avatar-sub">Founder & Managing Partner</div>
+            <div class="ca-avatar-sub">FCA, LLB · Founder &amp; Managing Partner</div>
+            <a href="https://www.icai.org/post/find-a-member" target="_blank" rel="noopener" class="ca-verified-badge" aria-label="Verify ICAI membership"><span class="dot"></span> ICAI Verified Member</a>
           </div>
           <div class="ca-credentials">
-            <div class="ca-cred"><a href="https://www.icai.org/post/find-a-member" target="_blank" rel="noopener" style="text-decoration:none"><div class="ca-cred-val">548802 <span style="font-size:.6rem;color:var(--gold-light)">✓ Verify</span></div><div class="ca-cred-label">Membership No.</div></a></div>
-            <div class="ca-cred"><div class="ca-cred-val">030474N</div><div class="ca-cred-label">Firm Reg. No.</div></div>
+            <div class="ca-cred"><a href="https://www.icai.org/post/find-a-member" target="_blank" rel="noopener" style="text-decoration:none"><div class="ca-cred-val">548802 <span class="ca-verify-tick">✓</span></div><div class="ca-cred-label">Membership No.</div></a></div>
+            <div class="ca-cred"><div class="ca-cred-val">030474N</div><div class="ca-cred-label">Firm Reg.</div></div>
+            <div class="ca-cred"><div class="ca-cred-val">FCA</div><div class="ca-cred-label">Designation</div></div>
             <div class="ca-cred"><div class="ca-cred-val">2018</div><div class="ca-cred-label">Established</div></div>
           </div>
         </div>
       </div>
       <div class="ca-info reveal">
         <h3>CA Kuldeep Pandey</h3>
-        <div class="ca-designation">LLB, FCA · Founder, Tax Pandey</div>
+        <div class="ca-designation">FCA, LLB · Founder, Tax Pandey, Chartered Accountants</div>
         <p>CA Kuldeep Pandey practices across direct taxation, indirect taxes, statutory audit, and corporate compliance. <strong>Tax Pandey</strong>, founded in 2018, engages with individuals, businesses, and corporates on routine and specialised assignments — from individual ITRs and GST structuring to statutory audits and assessment representation.</p>
-        <p>Every engagement is personally reviewed by CA Kuldeep Pandey before submission. Each filing, computation, and report is prepared and signed in accordance with ICAI Standards on Auditing and applicable provisions of the Income Tax Act, 1961, the CGST Act, 2017, and the Companies Act, 2013.</p>
-        <div class="ca-highlights">
-          <div class="ca-highlight"><h4>Audit & Assurance</h4><p>Statutory, Tax & Internal Audit across industries</p></div>
-          <div class="ca-highlight"><h4>Direct & Indirect Tax</h4><p>Income Tax, GST, TDS — individuals to corporates</p></div>
-          <div class="ca-highlight"><h4>Corporate Law & MCA</h4><p>Incorporation, ROC, restructuring, compliance</p></div>
-          <div class="ca-highlight"><h4>Assessment & Notices</h4><p>IT scrutiny, appeals, and departmental representation</p></div>
+        <p>Every engagement is personally reviewed before submission. Filings, computations, and reports are prepared and signed in accordance with ICAI Standards on Auditing and applicable provisions of the Income Tax Act, 1961, the CGST Act, 2017, and the Companies Act, 2013.</p>
+
+        <div class="ca-principle">
+          <div class="ca-principle-mark">"</div>
+          <p>Compliance is not paperwork — it is the discipline that protects a business and its founders. We engage on that footing, with a written letter of engagement, partner-led review, and standards-grounded work.</p>
         </div>
+
+        <div class="ca-section-h">// Practice Areas</div>
+        <div class="ca-highlights">
+          <div class="ca-highlight"><span class="ca-h-icon">🔍</span><div><h4>Audit &amp; Assurance</h4><p>Statutory, Tax &amp; Internal Audit across industries</p></div></div>
+          <div class="ca-highlight"><span class="ca-h-icon">📊</span><div><h4>Direct &amp; Indirect Tax</h4><p>Income Tax, GST, TDS — individuals to corporates</p></div></div>
+          <div class="ca-highlight"><span class="ca-h-icon">🏢</span><div><h4>Corporate Law &amp; MCA</h4><p>Incorporation, ROC, restructuring, compliance</p></div></div>
+          <div class="ca-highlight"><span class="ca-h-icon">⚖️</span><div><h4>Assessment &amp; Notices</h4><p>IT scrutiny, appeals, and departmental representation</p></div></div>
+        </div>
+
+        <div class="ca-affiliations">
+          <div class="ca-affiliation-label">Affiliations &amp; Registrations</div>
+          <div class="ca-affiliation-pills">
+            <span class="ca-aff">ICAI · Member 548802</span>
+            <span class="ca-aff">Firm Reg. 030474N</span>
+            <span class="ca-aff">Faridabad Branch · NIRC of ICAI</span>
+            <span class="ca-aff">MCA-Registered DSC &amp; DIN</span>
+          </div>
+        </div>
+
         <div class="ca-contact-row">
           <a href="tel:+917678222474" class="ca-contact-pill"><span class="pill-icon">📞</span> +91 76782 22474</a>
           <a href="mailto:contact@taxpandey.com" class="ca-contact-pill"><span class="pill-icon">✉️</span> contact@taxpandey.com</a>
+          <a href="https://www.linkedin.com/in/ca-kuldeep-pandey-65750763" target="_blank" rel="noopener" class="ca-contact-pill"><span class="pill-icon pill-li">in</span> LinkedIn</a>
+          <a href="/blog/" class="ca-contact-pill"><span class="pill-icon">📝</span> Articles</a>
         </div>
       </div>
     </div>
