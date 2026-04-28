@@ -149,10 +149,16 @@ nav.scrolled{padding:.7rem 4%}
 .btn-whatsapp svg{width:20px;height:20px;fill:currentColor}
 
 /* FOOTER */
-footer{background:var(--midnight);border-top:1px solid rgba(255,255,255,.06);padding:2rem 5%;text-align:center}
-footer p{font-size:.82rem;color:var(--gray-400)}
+footer{background:var(--midnight);border-top:1px solid rgba(255,255,255,.06);padding:2rem 5% 1.5rem;text-align:center}
+footer .disclaimer{font-size:.78rem;line-height:1.7;color:var(--gray-400);max-width:920px;margin:0 auto 1.2rem;text-align:left;padding-bottom:1.2rem;border-bottom:1px solid rgba(255,255,255,.06)}
+footer .disclaimer strong{color:var(--gold-light)}
+footer .calc-disclaimer{font-size:.78rem;line-height:1.7;color:var(--gray-400);max-width:920px;margin:0 auto 1rem;text-align:left}
+footer p{font-size:.82rem;color:var(--gray-400);margin-bottom:.5rem}
 footer a{color:var(--gold);text-decoration:none}
 footer a:hover{text-decoration:underline}
+footer .legal-links{font-size:.78rem;color:var(--gray-400);display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-top:.5rem}
+footer .legal-links a{color:var(--gray-400);font-weight:400}
+footer .legal-links a:hover{color:var(--gold);text-decoration:none}
 
 /* UTILITY */
 @media(max-width:480px){
@@ -354,7 +360,11 @@ footer a:hover{text-decoration:underline}
 
 <!-- FOOTER -->
 <footer>
+  <div class="disclaimer">
+    <p><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. The calculator outputs are indicative computations based on simplified rules and the inputs provided; specific professional consultation should be obtained before acting on any information herein.</p>
+  </div>
   <p>&copy; 2026 <a href="/">Tax Pandey</a> — Chartered Accountants. All rights reserved.</p>
+  <div class="legal-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/">Home</a></div>
 </footer>
 
 <script>
