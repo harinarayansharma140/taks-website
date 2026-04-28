@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /memory/
+
+Sitemap: https://taxpandey.com/sitemap.xml
