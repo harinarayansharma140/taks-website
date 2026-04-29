@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Do I Need a Tax Audit? — Section 44AB Decision Tool | Tax Pandey</title>
-<meta name="description" content="Find out if your business or profession requires a Tax Audit under Section 44AB of the Income Tax Act, 1961. Decision tool covering turnover thresholds, digital-transactions cap, presumptive taxation under Section 44AD/44ADA, and Statutory Audit under the Companies Act, 2013.">
-<meta name="keywords" content="Section 44AB, tax audit threshold, presumptive taxation 44AD 44ADA, statutory audit Companies Act, digital turnover 10 crore, Tax Pandey">
+<title>Do I Need a Tax Audit? — Section 63 (IT Act 2025) / 44AB Decision Tool | Tax Pandey</title>
+<meta name="description" content="Find out if your business or profession requires a Tax Audit under Section 63 of the Income-tax Act, 2025 (earlier Section 44AB of the 1961 Act). Decision tool covering turnover thresholds, digital-transactions cap, presumptive taxation, Form 26 reporting (replaces 3CA/3CB/3CD), and Statutory Audit under the Companies Act, 2013.">
+<meta name="keywords" content="Section 63 Income-tax Act 2025, Section 44AB, tax audit threshold, Form 26 tax audit, presumptive taxation 44AD 44ADA, statutory audit Companies Act, digital turnover 10 crore, Tax Pandey">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://taxpandey.com/tax-audit-decision.html">
-<meta property="og:title" content="Do I Need a Tax Audit? — Section 44AB Decision Tool | Tax Pandey">
-<meta property="og:description" content="Find out if your business or profession requires a Tax Audit under Section 44AB of the Income Tax Act, 1961.">
+<meta property="og:title" content="Do I Need a Tax Audit? — Section 63 (IT Act 2025) / 44AB Decision Tool | Tax Pandey">
+<meta property="og:description" content="Find out if your business or profession requires a Tax Audit under Section 63 of the Income-tax Act, 2025 (earlier Section 44AB of the 1961 Act).">
 <meta property="og:url" content="https://taxpandey.com/tax-audit-decision.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_IN">
@@ -18,7 +18,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Tax Audit Decision Tool (Section 44AB)","applicationCategory":"FinanceApplication","operatingSystem":"Web","url":"https://taxpandey.com/tax-audit-decision.html","description":"Decision tool that determines applicability of Tax Audit under Section 44AB of the Income Tax Act, 1961, and Statutory Audit under the Companies Act, 2013.","provider":{"@type":"AccountingService","name":"Tax Pandey, Chartered Accountants"}}
+{"@context":"https://schema.org","@type":"WebApplication","name":"Tax Audit Decision Tool (Section 63 of the Income-tax Act, 2025; earlier Section 44AB)","applicationCategory":"FinanceApplication","operatingSystem":"Web","url":"https://taxpandey.com/tax-audit-decision.html","description":"Decision tool that determines applicability of Tax Audit under Section 63 of the Income-tax Act, 2025 (earlier Section 44AB of the 1961 Act), with Form 26 reporting (replaces Form 3CA/3CB/3CD), and Statutory Audit under the Companies Act, 2013.","provider":{"@type":"AccountingService","name":"Tax Pandey, Chartered Accountants"}}
 </script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -94,13 +94,35 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 4%;display:f
 .btn-wa{display:inline-flex;align-items:center;gap:.5rem;background:#25D366;color:var(--white);padding:.9rem 1.8rem;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:transform .2s ease}
 .btn-wa:hover{transform:translateY(-2px)}
 footer{background:var(--midnight);border-top:1px solid rgba(255,255,255,.06);padding:2rem 5% 1.5rem;text-align:center}
-footer .disclaimer{font-size:.78rem;line-height:1.7;color:var(--gray-400);max-width:920px;margin:0 auto 1.2rem;text-align:left;padding-bottom:1.2rem;border-bottom:1px solid rgba(255,255,255,.06)}
-footer .disclaimer strong{color:var(--gold-light)}
+.footer-disclaimer{margin-top:1rem;border-top:1px solid rgba(255,255,255,.06);padding:.55rem 0;overflow:hidden;position:relative;background:rgba(0,0,0,.18)}
+.footer-disclaimer::before,.footer-disclaimer::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none}
+.footer-disclaimer::before{left:0;background:linear-gradient(to right,var(--midnight),transparent)}
+.footer-disclaimer::after{right:0;background:linear-gradient(to left,var(--midnight),transparent)}
+.disclaimer-track{display:inline-flex;gap:3rem;white-space:nowrap;animation:disclaimerMarquee 60s linear infinite;font-size:.68rem;line-height:1.5;color:var(--gray-400);font-style:italic;padding-left:100%;will-change:transform}
+.footer-disclaimer:hover .disclaimer-track{animation-play-state:paused}
+.disclaimer-track span{flex-shrink:0}
+.disclaimer-track strong{color:var(--gold-light);font-style:normal;font-weight:600;letter-spacing:.02em}
+.disclaimer-track .sep{color:rgba(201,168,76,.4);font-style:normal}
+@keyframes disclaimerMarquee{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.disclaimer-track{animation:none;white-space:normal;padding:0 5%;font-style:italic}}
 footer p{font-size:.82rem;color:var(--gray-400);margin-bottom:.5rem}
 footer a{color:var(--gold);text-decoration:none}
 footer .legal-links{font-size:.78rem;color:var(--gray-400);display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-top:.5rem}
 footer .legal-links a{color:var(--gray-400);font-weight:400}
 footer .legal-links a:hover{color:var(--gold);text-decoration:none}
+
+/* YEAR SELECTOR */
+.fy-selector{background:linear-gradient(135deg,rgba(201,168,76,.06),rgba(201,168,76,.02));border:1.5px solid rgba(201,168,76,.25);border-radius:12px;padding:1rem 1.2rem;margin-bottom:1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1rem}
+.fy-selector .fy-label{font-family:var(--font-body);font-size:.7rem;font-weight:700;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;flex-shrink:0}
+.fy-options{display:inline-flex;background:var(--white);border:1.5px solid var(--gray-200);border-radius:100px;padding:.25rem;gap:.25rem;flex-wrap:wrap}
+.fy-options label{cursor:pointer;padding:.5rem 1rem;border-radius:100px;font-size:.78rem;font-weight:600;color:var(--gray-600);transition:all .25s ease;display:inline-flex;align-items:center;gap:.4rem;line-height:1;white-space:nowrap;background:none;border:none}
+.fy-options input{display:none}
+.fy-options label:has(input:checked){background:var(--midnight);color:var(--gold);box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.fy-options label .act-tag{font-size:.62rem;font-weight:600;color:var(--gray-400);text-transform:uppercase;letter-spacing:.05em}
+.fy-options label:has(input:checked) .act-tag{color:var(--gold-light)}
+.fy-act-line{flex-basis:100%;font-size:.76rem;color:var(--gray-600);line-height:1.5;margin-top:.1rem}
+.fy-act-line strong{color:var(--midnight);font-weight:700}
+@media(max-width:480px){.fy-options{width:100%}.fy-options label{flex:1;justify-content:center}}
 </style>
 </head>
 <body>
@@ -118,13 +140,22 @@ footer .legal-links a:hover{color:var(--gold);text-decoration:none}
 </nav>
 
 <section class="calc-hero">
-  <h1>Do I Need a <span class="gold">Tax Audit?</span></h1>
-  <p>Three-question decision tool covering Tax Audit applicability under <strong>Section 44AB</strong> of the Income Tax Act, 1961, and Statutory Audit under the <strong>Companies Act, 2013</strong>. For FY 2025-26 / AY 2026-27.</p>
+  <h1>Do I Need a <span class="gold">Tax Audit?</span> — <span class="gold fy-display">FY 2025-26</span></h1>
+  <p>Three-question decision tool covering Tax Audit applicability under the <strong class="act-display">Income-tax Act, 1961</strong> (Section 44AB) for FY 2025-26 and the <strong>Income-tax Act, 2025</strong> (Section 63 of the new Act) for FY 2026-27 onwards, and Statutory Audit under the <strong>Companies Act, 2013</strong>. Tax audit reports for FY 2025-26 use Form 3CA / 3CB / 3CD; from FY 2026-27, the new consolidated <strong>Form 26</strong> applies.</p>
 </section>
 
 <section class="calc-section">
   <div class="calc-container">
     <div class="calc-card">
+
+      <div class="fy-selector" role="radiogroup" aria-label="Financial year">
+        <span class="fy-label">Financial Year</span>
+        <div class="fy-options">
+          <label><input type="radio" name="fy" value="2025-26" checked onchange="onFYChange()"><span>FY 2025-26 <span class="act-tag">IT Act 1961</span></span></label>
+          <label><input type="radio" name="fy" value="2026-27" onchange="onFYChange()"><span>FY 2026-27 <span class="act-tag">IT Act 2025</span></span></label>
+        </div>
+        <p class="fy-act-line" id="fyActLine">For <strong>FY 2025-26</strong> (assessed in AY 2026-27), Tax Audit applies under <strong>Section 44AB</strong> of the Income-tax Act, 1961, and the report is filed in Form 3CA / 3CB / 3CD. From <strong>FY 2026-27</strong>, the new <strong>Income-tax Act, 2025</strong> applies — Section 63 with the consolidated Form 26.</p>
+      </div>
 
       <!-- STEP 1 -->
       <div class="step active" id="step1">
@@ -157,12 +188,12 @@ footer .legal-links a:hover{color:var(--gold);text-decoration:none}
         <div id="businessQ" style="display:none">
           <div class="input-row"><label>Annual turnover / gross receipts (₹)</label><input type="number" id="turnover" placeholder="e.g. 12000000" min="0"></div>
           <div class="option-row" style="margin-top:.4rem">
-            <label class="opt"><input type="radio" name="d" value="yes"><span><strong>95%+ of receipts &amp; payments are digital</strong><span class="desc">No more than 5% in cash — proviso to Section 44AB(a) raises threshold to ₹10 crore</span></span></label>
+            <label class="opt"><input type="radio" name="d" value="yes"><span><strong>95%+ of receipts &amp; payments are digital</strong><span class="desc">No more than 5% in cash — proviso to Section 63 (clause a) of the Income-tax Act, 2025 [earlier 44AB(a)] raises threshold to ₹10 crore</span></span></label>
             <label class="opt"><input type="radio" name="d" value="no"><span><strong>Cash transactions exceed 5%</strong><span class="desc">Standard ₹1 crore threshold applies</span></span></label>
           </div>
           <div class="option-row">
             <label class="opt"><input type="radio" name="p" value="yes"><span><strong>Currently using 44AD presumptive scheme &amp; declaring 6%/8% profit</strong></span></label>
-            <label class="opt"><input type="radio" name="p" value="optedout"><span><strong>Used 44AD earlier, now declaring lower / opting out</strong><span class="desc">Section 44AB(e) lock-in window may apply</span></span></label>
+            <label class="opt"><input type="radio" name="p" value="optedout"><span><strong>Used 44AD earlier, now declaring lower / opting out</strong><span class="desc">Section 63 (clause e) of the Income-tax Act, 2025 [earlier 44AB(e)] lock-in window may apply</span></span></label>
             <label class="opt"><input type="radio" name="p" value="no" checked><span><strong>Not using 44AD</strong></span></label>
           </div>
         </div>
@@ -170,7 +201,7 @@ footer .legal-links a:hover{color:var(--gold);text-decoration:none}
           <div class="input-row"><label>Annual gross professional receipts (₹)</label><input type="number" id="receipts" placeholder="e.g. 4500000" min="0"></div>
           <div class="option-row" style="margin-top:.4rem">
             <label class="opt"><input type="radio" name="pp" value="yes"><span><strong>Using 44ADA presumptive (50% of receipts)</strong></span></label>
-            <label class="opt"><input type="radio" name="pp" value="lower"><span><strong>Declaring profit lower than 50% of receipts</strong><span class="desc">Section 44AB(d) — audit triggered if income exceeds basic exemption</span></span></label>
+            <label class="opt"><input type="radio" name="pp" value="lower"><span><strong>Declaring profit lower than 50% of receipts</strong><span class="desc">Section 63 (clause d) of the Income-tax Act, 2025 [earlier 44AB(d)] — audit triggered if income exceeds basic exemption</span></span></label>
             <label class="opt"><input type="radio" name="pp" value="no" checked><span><strong>Maintaining regular books, not using 44ADA</strong></span></label>
           </div>
         </div>
@@ -186,32 +217,39 @@ footer .legal-links a:hover{color:var(--gold);text-decoration:none}
     </div>
 
     <div class="rules">
-      <h3>Section 44AB thresholds at a glance</h3>
+      <h3>Tax Audit thresholds at a glance — Section 63 of the Income-tax Act, 2025 (earlier Section 44AB)</h3>
+      <p style="font-size:.82rem;color:var(--gray-600);margin-bottom:.6rem"><em>The Income-tax Act, 2025 came into force on 1 April 2026 and replaces the 1961 Act. The substantive thresholds and triggers below remain the same; the section number is renumbered (44AB → 63) and the report form is consolidated (3CA / 3CB / 3CD → <strong>Form 26</strong>).</em></p>
       <ul>
-        <li><strong>Business — clause (a):</strong> Tax audit mandatory if turnover &gt; ₹1 crore. Threshold raised to <strong>₹10 crore</strong> if cash receipts and cash payments do not exceed 5% of total.</li>
-        <li><strong>Profession — clause (b):</strong> Tax audit mandatory if gross receipts &gt; <strong>₹50 lakh</strong>.</li>
-        <li><strong>Section 44AD — clause (e):</strong> Audit triggered for a business taxpayer who earlier opted into Section 44AD, then opts out, and total income exceeds basic exemption — lock-in for 5 years.</li>
-        <li><strong>Section 44ADA — clause (d):</strong> Audit triggered for a profession declaring profit lower than 50% of receipts when total income exceeds the basic exemption.</li>
+        <li><strong>Business — clause (a) [earlier 44AB(a)]:</strong> Tax audit mandatory if turnover &gt; ₹1 crore. Threshold raised to <strong>₹10 crore</strong> if cash receipts and cash payments do not exceed 5% of total.</li>
+        <li><strong>Profession — clause (b) [earlier 44AB(b)]:</strong> Tax audit mandatory if gross receipts &gt; <strong>₹50 lakh</strong>.</li>
+        <li><strong>Presumptive business opt-out — clause (e) [earlier 44AB(e)]:</strong> Audit triggered for a business taxpayer who earlier opted into the 44AD presumptive scheme, then opts out, and total income exceeds basic exemption — lock-in for 5 years.</li>
+        <li><strong>Profession lower-than-presumed profit — clause (d) [earlier 44AB(d)]:</strong> Audit triggered for a profession declaring profit lower than 50% of receipts when total income exceeds the basic exemption.</li>
         <li><strong>Companies Act statutory audit:</strong> Every company (Pvt Ltd, Public Ltd, OPC, Section 8) regardless of turnover, under Section 139 of the Companies Act, 2013.</li>
         <li><strong>LLP audit:</strong> Mandatory if turnover &gt; ₹40 lakh or contribution &gt; ₹25 lakh (Section 34(4) of the LLP Act, 2008).</li>
       </ul>
-      <p><strong>Filing deadline:</strong> Tax audit report (Form 3CA / 3CB and 3CD) is due by <strong>30 September</strong> following the financial year (extended date applies for transfer pricing audit cases). Penalty under Section 271B for non-compliance is 0.5% of turnover, capped at ₹1.5 lakh.</p>
+      <p><strong>Filing deadline:</strong> Tax audit report (<strong>Form 26</strong> — consolidated; replaces Form 3CA / 3CB / 3CD from FY 2025-26 onward) is due by <strong>30 September</strong> following the financial year (extended date applies for transfer pricing audit cases). Penalty for non-compliance is 0.5% of turnover, capped at ₹1.5 lakh, under the penalty provisions of the Income-tax Act, 2025 (corresponding to earlier Section 271B of the 1961 Act).</p>
     </div>
   </div>
 </section>
 
 <section class="cta-banner">
   <h2>Need a Tax Audit Engagement?</h2>
-  <p>Tax Pandey conducts Tax Audit u/s 44AB and Statutory Audit under the Companies Act for businesses across multiple industries. Engagement is partner-led with a written letter of engagement.</p>
+  <p>Tax Pandey conducts Tax Audit under Section 63 of the Income-tax Act, 2025 (earlier Section 44AB) and Statutory Audit under the Companies Act, 2013 for businesses across multiple industries. Engagement is partner-led with a written letter of engagement.</p>
   <a class="btn-wa" href="https://wa.me/917678222474?text=Hi%20CA%20Kuldeep%2C%20I%20need%20to%20discuss%20a%20tax%20audit%20engagement." target="_blank" rel="noopener">Chat on WhatsApp →</a>
 </section>
 
 <footer>
-  <div class="disclaimer">
-    <p><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. The decision tool's verdict is indicative based on simplified rules and the inputs provided; specific professional consultation should be obtained before acting on any information herein.</p>
-  </div>
   <p>&copy; 2026 <a href="/">Tax Pandey</a> — Chartered Accountants. All rights reserved.</p>
   <div class="legal-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/">Home</a></div>
+  <div class="footer-disclaimer" role="region" aria-label="Disclaimer per ICAI Council Guidelines">
+    <div class="disclaimer-track">
+      <span><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</span>
+      <span class="sep">◆</span>
+      <span><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</span>
+      <span class="sep">◆</span>
+    </div>
+  </div>
+
 </footer>
 
 <script>
@@ -225,12 +263,12 @@ function next(step){
     if(t==='company'){verdict('required','Statutory Audit Required',
       ['Every company registered under the Companies Act, 2013 must get its accounts audited every financial year, regardless of turnover.',
        'The auditor must be a practising Chartered Accountant. Form ADT-1 is filed with the MCA on appointment.',
-       'In addition, Tax Audit under Section 44AB applies if business turnover exceeds the prescribed thresholds (see below).'],
-      'AOC-4 + MGT-7 to be filed within 30 / 60 days of the AGM. Tax Audit Report (Form 3CA + 3CD) by 30 September.');return;
+       'In addition, Tax Audit under Section 63 of the Income-tax Act, 2025 (earlier Section 44AB) applies if business turnover exceeds the prescribed thresholds (see below).'],
+      'AOC-4 + MGT-7 to be filed within 30 / 60 days of the AGM. Tax Audit Report (Form 26 — consolidated; replaces Form 3CA + 3CD) by 30 September.');return;
     }
     if(t==='llp'){verdict('maybe','LLP Audit — Threshold Test',
       ['LLPs must get their accounts audited under <strong>Section 34(4) of the LLP Act, 2008</strong> if either: (a) annual turnover exceeds ₹40 lakh, or (b) total partner contribution exceeds ₹25 lakh.',
-       'In addition, Tax Audit under Section 44AB applies if business turnover exceeds ₹1 crore (or ₹10 crore with 95%+ digital transactions).',
+       'In addition, Tax Audit under Section 63 of the Income-tax Act, 2025 (earlier Section 44AB) applies if business turnover exceeds ₹1 crore (or ₹10 crore with 95%+ digital transactions).',
        'For LLPs that fall below both thresholds, audit is optional but often recommended for credibility with banks and counterparties.'],
       'LLP audit + Form 8 / 11 filings have separate MCA deadlines. Tax Audit (if applicable) by 30 September.');return;
     }
@@ -240,7 +278,7 @@ function next(step){
     const a=getRadio('a');if(!a){alert('Please pick an activity type.');return;}
     state.a=a;
     if(a==='none'){verdict('notrequired','No Tax Audit Required',
-      ['You have indicated no business or profession income. Tax Audit under Section 44AB is triggered only by business turnover or professional receipts crossing the prescribed thresholds.',
+      ['You have indicated no business or profession income. Tax Audit under Section 63 of the Income-tax Act, 2025 (earlier Section 44AB) is triggered only by business turnover or professional receipts crossing the prescribed thresholds.',
        'You may still need to file an ITR — typically ITR-2 for individuals with salary, capital gains, or other sources — but no audit is required.',
        'If you are a partner in a firm or LLP, the firm-level audit (if applicable) is separate and does not affect your individual position.']);return;
     }
@@ -256,40 +294,40 @@ function decide(){
     const d=getRadio('d');const p=getRadio('p');
     if(t<=0){alert('Please enter your turnover.');return;}
     if(!d){alert('Please indicate digital-transactions status.');return;}
-    if(p==='optedout'){verdict('required','Tax Audit Required — Section 44AB(e)',
-      ['You have opted out of the Section 44AD presumptive scheme after using it earlier. Section 44AD has a 5-year lock-in: once you opt out, you cannot re-enter for the next 5 assessment years.',
-       'Tax Audit under Section 44AB(e) is mandatory in this opt-out window if your total income exceeds the basic exemption limit, regardless of turnover.',
+    if(p==='optedout'){verdict('required','Tax Audit Required — Section 63 (clause e) of the Income-tax Act, 2025 [earlier 44AB(e)]',
+      ['You have opted out of the presumptive scheme (earlier Section 44AD of the 1961 Act) after using it earlier. The scheme has a 5-year lock-in: once you opt out, you cannot re-enter for the next 5 assessment years.',
+       'Tax Audit under Section 63 (clause e) of the Income-tax Act, 2025 (earlier Section 44AB(e) of the 1961 Act) is mandatory in this opt-out window if your total income exceeds the basic exemption limit, regardless of turnover.',
        `Reported turnover: ₹${t.toLocaleString('en-IN')}.`]);return;
     }
     const threshold=(d==='yes')?10000000:1000000; const tname=(d==='yes')?'₹10 crore (digital-transactions threshold)':'₹1 crore';
-    if(t>threshold*10){verdict('required','Tax Audit Required — Section 44AB(a)',
+    if(t>threshold*10){verdict('required','Tax Audit Required — Section 63 (clause a) of the Income-tax Act, 2025 [earlier 44AB(a)]',
       [`Turnover of ₹${t.toLocaleString('en-IN')} exceeds the applicable threshold of ${tname}.`,
-       'Tax Audit Report (Form 3CA / 3CB + 3CD) must be furnished by a practising Chartered Accountant.',
-       'Form 3CD covers ~40 disclosure clauses including ICDS compliance, transfer pricing, GST reconciliation, and clause-level depreciation.'],
-      'Filing deadline: 30 September following the financial year. Penalty under Section 271B: 0.5% of turnover up to ₹1.5 lakh.');return;
+       'Tax Audit Report (Form 26 — consolidated; replaces Form 3CA / 3CB + 3CD from FY 2025-26 onward) must be furnished by a practising Chartered Accountant.',
+       'Form 26 covers ~40 disclosure clauses including ICDS compliance, transfer pricing, GST reconciliation, and clause-level depreciation.'],
+      'Filing deadline: 30 September following the financial year. Penalty for default: 0.5% of turnover up to ₹1.5 lakh under the Income-tax Act, 2025 (corresponding to earlier Section 271B).');return;
     }
     verdict('notrequired','Tax Audit Not Required',
       [`Turnover of ₹${t.toLocaleString('en-IN')} is within the applicable threshold of ${tname}.`,
-       'You can file your ITR without a tax audit — typically ITR-3 (regular) or ITR-4 (Sugam, presumptive 44AD).',
-       'Note: maintaining proper books under Section 44AA is still required if income exceeds ₹2.5 lakh or turnover exceeds ₹25 lakh in any of the three preceding years.']);return;
+       'You can file your ITR without a tax audit — typically ITR-3 (regular) or ITR-4 (Sugam, presumptive scheme).',
+       'Note: maintaining proper books under the Income-tax Act, 2025 (earlier Section 44AA of the 1961 Act) is still required if income exceeds ₹2.5 lakh or turnover exceeds ₹25 lakh in any of the three preceding years.']);return;
   }
   if(state.a==='profession'){
     const r=parseFloat(document.getElementById('receipts').value)||0;
     const pp=getRadio('pp');
     if(r<=0){alert('Please enter your gross receipts.');return;}
-    if(r>5000000){verdict('required','Tax Audit Required — Section 44AB(b)',
-      [`Gross professional receipts of ₹${r.toLocaleString('en-IN')} exceed the ₹50 lakh threshold under Section 44AB(b).`,
-       'Tax Audit Report (Form 3CA / 3CB + 3CD) must be furnished by a practising Chartered Accountant.'],
+    if(r>5000000){verdict('required','Tax Audit Required — Section 63 (clause b) of the Income-tax Act, 2025 [earlier 44AB(b)]',
+      [`Gross professional receipts of ₹${r.toLocaleString('en-IN')} exceed the ₹50 lakh threshold under Section 63 (clause b) of the Income-tax Act, 2025 (earlier Section 44AB(b) of the 1961 Act).`,
+       'Tax Audit Report (Form 26 — consolidated; replaces Form 3CA / 3CB + 3CD from FY 2025-26 onward) must be furnished by a practising Chartered Accountant.'],
       'Filing deadline: 30 September following the financial year.');return;
     }
-    if(pp==='lower'){verdict('maybe','Likely Required — Section 44AB(d)',
-      [`Receipts ₹${r.toLocaleString('en-IN')} are within the ₹50 lakh limit, but you are declaring profit lower than the 50%-of-receipts presumption under Section 44ADA.`,
-       'Section 44AB(d) triggers Tax Audit if total income exceeds the basic exemption limit. Confirm your overall income position to determine final applicability.']);return;
+    if(pp==='lower'){verdict('maybe','Likely Required — Section 63 (clause d) of the Income-tax Act, 2025 [earlier 44AB(d)]',
+      [`Receipts ₹${r.toLocaleString('en-IN')} are within the ₹50 lakh limit, but you are declaring profit lower than the 50%-of-receipts presumption (earlier Section 44ADA of the 1961 Act).`,
+       'Section 63 (clause d) of the Income-tax Act, 2025 (earlier Section 44AB(d)) triggers Tax Audit if total income exceeds the basic exemption limit. Confirm your overall income position to determine final applicability.']);return;
     }
     verdict('notrequired','Tax Audit Not Required',
-      [`Gross receipts of ₹${r.toLocaleString('en-IN')} are within the ₹50 lakh threshold under Section 44AB(b).`,
-       (pp==='yes')?'You can file under Section 44ADA presumptive scheme using ITR-4.':'You can file ITR-3 with regular books of account.',
-       'Maintain books under Section 44AA — required for specified professions regardless of receipts level.']);return;
+      [`Gross receipts of ₹${r.toLocaleString('en-IN')} are within the ₹50 lakh threshold under Section 63 (clause b) of the Income-tax Act, 2025 (earlier Section 44AB(b) of the 1961 Act).`,
+       (pp==='yes')?'You can file under the professional presumptive scheme (earlier Section 44ADA) using ITR-4.':'You can file ITR-3 with regular books of account.',
+       'Maintain books under the Income-tax Act, 2025 (earlier Section 44AA of the 1961 Act) — required for specified professions regardless of receipts level.']);return;
   }
 }
 function verdict(kind,title,paragraphs,deadline){
@@ -302,7 +340,23 @@ function verdict(kind,title,paragraphs,deadline){
   document.getElementById('verdictWrap').innerHTML=html;
   show('result');
 }
-function reset(){document.querySelectorAll('input[type="radio"]').forEach(r=>r.checked=false);document.querySelectorAll('input[type="number"]').forEach(i=>i.value='');document.querySelector('input[name="p"][value="no"]').checked=true;document.querySelector('input[name="pp"][value="no"]').checked=true;show('step1');}
+function reset(){document.querySelectorAll('input[type="radio"]').forEach(r=>{if(r.name!=='fy')r.checked=false;});document.querySelectorAll('input[type="number"]').forEach(i=>i.value='');document.querySelector('input[name="p"][value="no"]').checked=true;document.querySelector('input[name="pp"][value="no"]').checked=true;show('step1');}
+function getSelectedFY(){const r=document.querySelector('input[name="fy"]:checked');return r?r.value:'2025-26';}
+function onFYChange(){
+  const fy=getSelectedFY();
+  const isOld=fy==='2025-26';
+  const ay=isOld?'2026-27':'2027-28';
+  const act=isOld?'Income-tax Act, 1961':'Income-tax Act, 2025';
+  const sec=isOld?'Section 44AB':'Section 63 of the Income-tax Act, 2025 (earlier Section 44AB)';
+  const form=isOld?'Form 3CA / 3CB / 3CD':'Form 26 (consolidated; replaces 3CA / 3CB / 3CD)';
+  const line=document.getElementById('fyActLine');
+  if(line)line.innerHTML='For <strong>FY '+fy+'</strong> (assessed in AY '+ay+'), Tax Audit applies under <strong>'+sec+'</strong> of the <strong>'+act+'</strong>, and the report is filed in <strong>'+form+'</strong>.';
+  document.querySelectorAll('.fy-display').forEach(e=>{e.textContent='FY '+fy;});
+  document.querySelectorAll('.act-display').forEach(e=>{e.textContent=act;});
+  // Reset to step 1 since the verdict text differs by Act
+  document.getElementById('result').classList.remove('active');
+  show('step1');
+}
 const hamburger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');
 hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');navLinks.classList.toggle('open')});
 navLinks.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{hamburger.classList.remove('active');navLinks.classList.remove('open')})});

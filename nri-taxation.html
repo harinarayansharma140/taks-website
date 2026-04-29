@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NRI Taxation Services — Tax Pandey, Chartered Accountants</title>
-<meta name="description" content="Comprehensive NRI taxation services by Tax Pandey. ITR filing, capital gains on property, DTAA benefits, repatriation (Form 15CA/15CB), NRO/NRE advisory, FEMA compliance, and tax planning for returning NRIs.">
-<meta name="keywords" content="NRI taxation India, NRI ITR filing, NRI capital gains property, DTAA tax credit, Form 15CA 15CB, NRO NRE account tax, FEMA compliance NRI, returning NRI tax planning, CA for NRI, Tax Pandey">
+<meta name="description" content="Comprehensive NRI taxation services by Tax Pandey. ITR filing, capital gains on property, DTAA benefits, repatriation (Form 145/146 under the Income-tax Act, 2025; earlier 15CA/15CB), NRO/NRE advisory, FEMA compliance, and tax planning for returning NRIs.">
+<meta name="keywords" content="NRI taxation India, NRI ITR filing, NRI capital gains property, DTAA tax credit, Form 145 146, Form 15CA 15CB, Income-tax Act 2025, NRO NRE account tax, FEMA compliance NRI, returning NRI tax planning, CA for NRI, Tax Pandey">
 <meta name="author" content="Tax Pandey, Chartered Accountants">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://taxpandey.com/nri-taxation.html">
@@ -144,8 +144,17 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
 .footer-col h4{font-family:var(--font-display);color:var(--white);font-size:.92rem;font-weight:700;margin-bottom:1rem}
 .footer-col a{display:block;color:var(--gray-400);text-decoration:none;font-size:.83rem;margin-bottom:.55rem;transition:color .3s ease}
 .footer-col a:hover{color:var(--gold)}
-.footer-disclaimer{border-top:1px solid rgba(255,255,255,.06);padding:1.2rem 0;font-size:.78rem;line-height:1.7;color:var(--gray-400)}
-.footer-disclaimer strong{color:var(--gold-light)}
+.footer-disclaimer{margin-top:1rem;border-top:1px solid rgba(255,255,255,.06);padding:.55rem 0;overflow:hidden;position:relative;background:rgba(0,0,0,.18)}
+.footer-disclaimer::before,.footer-disclaimer::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none}
+.footer-disclaimer::before{left:0;background:linear-gradient(to right,var(--midnight),transparent)}
+.footer-disclaimer::after{right:0;background:linear-gradient(to left,var(--midnight),transparent)}
+.disclaimer-track{display:inline-flex;gap:3rem;white-space:nowrap;animation:disclaimerMarquee 60s linear infinite;font-size:.68rem;line-height:1.5;color:var(--gray-400);font-style:italic;padding-left:100%;will-change:transform}
+.footer-disclaimer:hover .disclaimer-track{animation-play-state:paused}
+.disclaimer-track span{flex-shrink:0}
+.disclaimer-track strong{color:var(--gold-light);font-style:normal;font-weight:600;letter-spacing:.02em}
+.disclaimer-track .sep{color:rgba(201,168,76,.4);font-style:normal}
+@keyframes disclaimerMarquee{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.disclaimer-track{animation:none;white-space:normal;padding:0 5%;font-style:italic}}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-bottom p{font-size:.76rem}
 .footer-legal{display:flex;gap:1.2rem;flex-wrap:wrap}
@@ -252,13 +261,13 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
       <div class="service-card">
         <div class="service-num">02</div>
         <h3>Capital Gains on Property Sale</h3>
-        <p>End-to-end advisory on long-term and short-term capital gains arising from sale of immovable property in India. Guidance on exemptions under Section 54 and Section 54EC, TDS obligations under Section 195, and application for lower deduction certificates.</p>
+        <p>End-to-end advisory on long-term and short-term capital gains arising from sale of immovable property in India. Guidance on exemptions (earlier Sections 54 / 54EC of the 1961 Act, with corresponding provisions in the Income-tax Act, 2025), TDS obligations under Section 393(2) of the Income-tax Act, 2025 (earlier Section 195), and application for lower deduction certificates.</p>
         <span class="service-tag">Section 54 / 54EC / 195</span>
       </div>
       <div class="service-card">
         <div class="service-num">03</div>
         <h3>Rental Income Taxation and TDS</h3>
-        <p>Structuring rental income declarations, ensuring correct TDS deduction by tenants under Section 195, filing quarterly TDS returns, and claiming standard deduction and interest on housing loan for let-out property.</p>
+        <p>Structuring rental income declarations, ensuring correct TDS deduction by tenants under Section 393(2) of the Income-tax Act, 2025 (earlier Section 195), filing quarterly TDS returns, and claiming standard deduction and interest on housing loan for let-out property.</p>
         <span class="service-tag">TDS Compliance</span>
       </div>
       <div class="service-card">
@@ -276,8 +285,8 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
       <div class="service-card">
         <div class="service-num">06</div>
         <h3>Repatriation of Funds</h3>
-        <p>Complete assistance with Form 15CA and Form 15CB certification for repatriation of funds from India. We handle the CA certificate, ensure proper tax payment before remittance, and coordinate with your bank for smooth processing.</p>
-        <span class="service-tag">Form 15CA / 15CB</span>
+        <p>Complete assistance with Form 145 (remitter declaration) and Form 146 (CA certificate) for repatriation of funds from India under the Income-tax Act, 2025 read with Rule 220 of the Income-tax Rules, 2026 — replacing the earlier Form 15CA / 15CB from 1 April 2026. We handle the CA certificate, ensure proper tax payment before remittance, and coordinate with your bank for smooth processing. Forms 15CA / 15CB submitted on or before 31 March 2026 remain valid under the transitional rules.</p>
+        <span class="service-tag">Form 145 / 146</span>
       </div>
       <div class="service-card">
         <div class="service-num">07</div>
@@ -310,7 +319,7 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
       <div class="scenario-card">
         <div class="scenario-num">Scenario 02</div>
         <h3>Rental Income from Indian Property</h3>
-        <p>Tenants paying rent to an NRI landlord must deduct TDS at 30% (plus applicable surcharge and cess) under Section 195. We assist with obtaining a lower TDS certificate, filing quarterly TDS returns on behalf of the tenant, and ensuring correct income declaration in your ITR with all admissible deductions.</p>
+        <p>Tenants paying rent to an NRI landlord must deduct TDS at 30% (plus applicable surcharge and cess) under Section 393(2) of the Income-tax Act, 2025 (earlier Section 195). We assist with obtaining a lower TDS certificate, filing quarterly TDS returns on behalf of the tenant, and ensuring correct income declaration in your ITR with all admissible deductions.</p>
       </div>
       <div class="scenario-card">
         <div class="scenario-num">Scenario 03</div>
@@ -357,7 +366,7 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1" stroke="var(--gold)" stroke-width="2"/></svg>
         </div>
         <h3>End-to-End Service</h3>
-        <p>From residential status determination and ITR filing to TDS management, Form 15CA/15CB certification, and final repatriation — we handle the complete lifecycle. One firm, one point of contact, no loose ends.</p>
+        <p>From residential status determination and ITR filing to TDS management, Form 145/146 certification (replaces 15CA/15CB under the Income-tax Act, 2025), and final repatriation — we handle the complete lifecycle. One firm, one point of contact, no loose ends.</p>
       </div>
       <div class="why-card">
         <div class="why-icon">
@@ -388,15 +397,21 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
       <div class="footer-col"><h4>Quick Links</h4><a href="/#ca">Our CA</a><a href="/#process">How We Work</a><a href="/#testimonials">Client Reviews</a><a href="/#faq">FAQs</a><a href="/#contact">Contact Us</a></div>
       <div class="footer-col"><h4>Resources</h4><a href="/blog/">Blog</a><a href="/#deadlines">Tax Deadlines</a><a href="/#faq">FAQs</a><a href="/#services">All Services</a></div>
     </div>
-    <div class="footer-disclaimer">
-      <p><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</p>
-    </div>
     <div class="footer-bottom">
       <p>© 2026 Tax Pandey — Chartered Accountants. All rights reserved.</p>
       <div class="footer-legal"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a></div>
       <div class="footer-socials"><a href="https://www.linkedin.com/in/ca-kuldeep-pandey-65750763" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="https://www.instagram.com/tax_pandey/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><a href="https://www.facebook.com/people/CA-Kuldeep-Pandey/pfbid026thhpNAEbdpsZsmNmfGtrfvKsJQzheEyNT9CBLmaAXznNGTLF9dMdfniBbXupz6hl/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div>
     </div>
   </div>
+  <div class="footer-disclaimer" role="region" aria-label="Disclaimer per ICAI Council Guidelines">
+    <div class="disclaimer-track">
+      <span><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</span>
+      <span class="sep">◆</span>
+      <span><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</span>
+      <span class="sep">◆</span>
+    </div>
+  </div>
+
 </footer>
 
 <!-- WHATSAPP FLOAT -->

@@ -64,8 +64,17 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
 .footer-col h4{font-family:var(--font-display);color:var(--white);font-size:.92rem;font-weight:700;margin-bottom:1rem}
 .footer-col a{display:block;color:var(--gray-400);text-decoration:none;font-size:.83rem;margin-bottom:.55rem;transition:color .3s ease}
 .footer-col a:hover{color:var(--gold)}
-.footer-disclaimer{border-top:1px solid rgba(255,255,255,.06);padding:1.2rem 0;font-size:.78rem;line-height:1.7;color:var(--gray-400)}
-.footer-disclaimer strong{color:var(--gold-light)}
+.footer-disclaimer{margin-top:1rem;border-top:1px solid rgba(255,255,255,.06);padding:.55rem 0;overflow:hidden;position:relative;background:rgba(0,0,0,.18)}
+.footer-disclaimer::before,.footer-disclaimer::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none}
+.footer-disclaimer::before{left:0;background:linear-gradient(to right,var(--midnight),transparent)}
+.footer-disclaimer::after{right:0;background:linear-gradient(to left,var(--midnight),transparent)}
+.disclaimer-track{display:inline-flex;gap:3rem;white-space:nowrap;animation:disclaimerMarquee 60s linear infinite;font-size:.68rem;line-height:1.5;color:var(--gray-400);font-style:italic;padding-left:100%;will-change:transform}
+.footer-disclaimer:hover .disclaimer-track{animation-play-state:paused}
+.disclaimer-track span{flex-shrink:0}
+.disclaimer-track strong{color:var(--gold-light);font-style:normal;font-weight:600;letter-spacing:.02em}
+.disclaimer-track .sep{color:rgba(201,168,76,.4);font-style:normal}
+@keyframes disclaimerMarquee{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.disclaimer-track{animation:none;white-space:normal;padding:0 5%;font-style:italic}}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-bottom p{font-size:.76rem}
 .footer-legal{display:flex;gap:1.2rem;flex-wrap:wrap}
@@ -175,9 +184,6 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
       <div class="footer-col"><h4>Quick Links</h4><a href="/#ca">Our CA</a><a href="/#services">Services</a><a href="/#faq">FAQs</a><a href="/#contact">Contact Us</a></div>
       <div class="footer-col"><h4>Resources</h4><a href="/blog/">Articles</a><a href="/tax-calculator.html">Tax Calculator</a><a href="/compliance-calendar.html">Compliance Calendar</a></div>
     </div>
-    <div class="footer-disclaimer">
-      <p><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</p>
-    </div>
     <div class="footer-bottom">
       <p>© 2026 Tax Pandey — Chartered Accountants. All rights reserved.</p>
       <div class="footer-legal">
@@ -186,6 +192,15 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
       </div>
     </div>
   </div>
+  <div class="footer-disclaimer" role="region" aria-label="Disclaimer per ICAI Council Guidelines">
+    <div class="disclaimer-track">
+      <span><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</span>
+      <span class="sep">◆</span>
+      <span><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</span>
+      <span class="sep">◆</span>
+    </div>
+  </div>
+
 </footer>
 
 <script>

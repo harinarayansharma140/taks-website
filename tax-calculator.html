@@ -150,8 +150,17 @@ nav.scrolled{padding:.7rem 4%}
 
 /* FOOTER */
 footer{background:var(--midnight);border-top:1px solid rgba(255,255,255,.06);padding:2rem 5% 1.5rem;text-align:center}
-footer .disclaimer{font-size:.78rem;line-height:1.7;color:var(--gray-400);max-width:920px;margin:0 auto 1.2rem;text-align:left;padding-bottom:1.2rem;border-bottom:1px solid rgba(255,255,255,.06)}
-footer .disclaimer strong{color:var(--gold-light)}
+.footer-disclaimer{margin-top:1rem;border-top:1px solid rgba(255,255,255,.06);padding:.55rem 0;overflow:hidden;position:relative;background:rgba(0,0,0,.18)}
+.footer-disclaimer::before,.footer-disclaimer::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none}
+.footer-disclaimer::before{left:0;background:linear-gradient(to right,var(--midnight),transparent)}
+.footer-disclaimer::after{right:0;background:linear-gradient(to left,var(--midnight),transparent)}
+.disclaimer-track{display:inline-flex;gap:3rem;white-space:nowrap;animation:disclaimerMarquee 60s linear infinite;font-size:.68rem;line-height:1.5;color:var(--gray-400);font-style:italic;padding-left:100%;will-change:transform}
+.footer-disclaimer:hover .disclaimer-track{animation-play-state:paused}
+.disclaimer-track span{flex-shrink:0}
+.disclaimer-track strong{color:var(--gold-light);font-style:normal;font-weight:600;letter-spacing:.02em}
+.disclaimer-track .sep{color:rgba(201,168,76,.4);font-style:normal}
+@keyframes disclaimerMarquee{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.disclaimer-track{animation:none;white-space:normal;padding:0 5%;font-style:italic}}
 footer .calc-disclaimer{font-size:.78rem;line-height:1.7;color:var(--gray-400);max-width:920px;margin:0 auto 1rem;text-align:left}
 footer p{font-size:.82rem;color:var(--gray-400);margin-bottom:.5rem}
 footer a{color:var(--gold);text-decoration:none}
@@ -160,10 +169,24 @@ footer .legal-links{font-size:.78rem;color:var(--gray-400);display:flex;justify-
 footer .legal-links a{color:var(--gray-400);font-weight:400}
 footer .legal-links a:hover{color:var(--gold);text-decoration:none}
 
+/* YEAR SELECTOR */
+.fy-selector{background:linear-gradient(135deg,rgba(201,168,76,.06),rgba(201,168,76,.02));border:1.5px solid rgba(201,168,76,.25);border-radius:12px;padding:1rem 1.2rem;margin-bottom:1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1rem}
+.fy-selector .fy-label{font-family:var(--font-mono);font-size:.7rem;font-weight:700;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;flex-shrink:0}
+.fy-options{display:inline-flex;background:var(--white);border:1.5px solid var(--gray-200);border-radius:100px;padding:.25rem;gap:.25rem;flex-wrap:wrap}
+.fy-options label{cursor:pointer;padding:.5rem 1rem;border-radius:100px;font-size:.78rem;font-weight:600;color:var(--gray-600);transition:all .25s ease;display:inline-flex;align-items:center;gap:.4rem;line-height:1;white-space:nowrap}
+.fy-options input{display:none}
+.fy-options label:has(input:checked){background:var(--midnight);color:var(--gold);box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.fy-options label .act-tag{font-size:.62rem;font-weight:600;color:var(--gray-400);text-transform:uppercase;letter-spacing:.05em}
+.fy-options label:has(input:checked) .act-tag{color:var(--gold-light)}
+.fy-act-line{flex-basis:100%;font-size:.76rem;color:var(--gray-600);line-height:1.5;margin-top:.1rem}
+.fy-act-line strong{color:var(--midnight);font-weight:700}
+
 /* UTILITY */
 @media(max-width:480px){
   .calc-card{padding:1.5rem}
   .regime-card{padding:1.3rem}
+  .fy-options{width:100%}
+  .fy-options label{flex:1;justify-content:center}
 }
 </style>
 <script type="application/ld+json">
@@ -192,8 +215,8 @@ footer .legal-links a:hover{color:var(--gold);text-decoration:none}
 <!-- HERO -->
 <section class="calc-hero">
   <div class="calc-hero-glow"></div>
-  <h1>Old vs New Tax Regime Calculator<br><span class="gold">FY 2025-26</span></h1>
-  <p class="hero-sub">Enter your income and deduction details below to find out which tax regime saves you more. Assessment Year 2026-27.</p>
+  <h1>Old vs New Tax Regime Calculator<br><span class="gold" id="heroFY">FY 2025-26</span></h1>
+  <p class="hero-sub" id="heroSub">Enter your income and deduction details below to find out which tax regime saves you more. <span id="heroAY">Assessment Year 2026-27 — under the Income-tax Act, 1961.</span></p>
 </section>
 
 <!-- CALCULATOR -->
@@ -204,6 +227,15 @@ footer .legal-links a:hover{color:var(--gold);text-decoration:none}
     <div class="calc-card">
       <h2>Enter Your Details</h2>
       <p class="card-sub">Fill in your income and eligible deductions to compare both regimes. All fields are in Indian Rupees.</p>
+
+      <div class="fy-selector" role="radiogroup" aria-label="Financial year">
+        <span class="fy-label">Financial Year</span>
+        <div class="fy-options">
+          <label><input type="radio" name="fy" value="2025-26" checked onchange="onFYChange()"><span>FY 2025-26 <span class="act-tag">IT Act 1961</span></span></label>
+          <label><input type="radio" name="fy" value="2026-27" onchange="onFYChange()"><span>FY 2026-27 <span class="act-tag">IT Act 2025</span></span></label>
+        </div>
+        <p class="fy-act-line" id="fyActLine">Income earned in <strong>FY 2025-26</strong> (1 Apr 2025 – 31 Mar 2026) is assessed in <strong>AY 2026-27</strong> under the <strong>Income-tax Act, 1961</strong>. The new Income-tax Act, 2025 applies from FY 2026-27 onwards.</p>
+      </div>
 
       <div class="form-grid">
         <div class="form-group">
@@ -309,7 +341,7 @@ footer .legal-links a:hover{color:var(--gold);text-decoration:none}
     <!-- TAX SLABS REFERENCE -->
     <div class="slabs-section">
       <button class="slabs-toggle" id="slabsToggle" onclick="toggleSlabs()">
-        Tax Slabs Reference - FY 2025-26
+        <span>Tax Slabs Reference — <span id="slabsFY">FY 2025-26</span></span>
         <svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
       <div class="slabs-content" id="slabsContent">
@@ -327,7 +359,7 @@ footer .legal-links a:hover{color:var(--gold);text-decoration:none}
             </table>
           </div>
           <div class="slab-block">
-            <h4>New Tax Regime (FY 2025-26)</h4>
+            <h4 id="newRegimeSlabHeading">New Tax Regime (FY 2025-26)</h4>
             <table class="slab-table">
               <thead><tr><th>Income Slab</th><th>Tax Rate</th></tr></thead>
               <tbody>
@@ -363,11 +395,17 @@ footer .legal-links a:hover{color:var(--gold);text-decoration:none}
 
 <!-- FOOTER -->
 <footer>
-  <div class="disclaimer">
-    <p><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. The calculator outputs are indicative computations based on simplified rules and the inputs provided; specific professional consultation should be obtained before acting on any information herein.</p>
-  </div>
   <p>&copy; 2026 <a href="/">Tax Pandey</a> — Chartered Accountants. All rights reserved.</p>
   <div class="legal-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/">Home</a></div>
+  <div class="footer-disclaimer" role="region" aria-label="Disclaimer per ICAI Council Guidelines">
+    <div class="disclaimer-track">
+      <span><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</span>
+      <span class="sep">◆</span>
+      <span><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</span>
+      <span class="sep">◆</span>
+    </div>
+  </div>
+
 </footer>
 
 <script>
@@ -391,6 +429,27 @@ cityToggle.addEventListener('change',function(){
 function toggleSlabs(){
   document.getElementById('slabsToggle').classList.toggle('open');
   document.getElementById('slabsContent').classList.toggle('open');
+}
+
+// FY / ACT SELECTOR
+function getSelectedFY(){
+  const r=document.querySelector('input[name="fy"]:checked');
+  return r?r.value:'2025-26';
+}
+function onFYChange(){
+  const fy=getSelectedFY();
+  const isOld=fy==='2025-26';
+  const ay=isOld?'2026-27':'2027-28';
+  const act=isOld?'Income-tax Act, 1961':'Income-tax Act, 2025';
+  const fyStart=isOld?'1 Apr 2025 – 31 Mar 2026':'1 Apr 2026 – 31 Mar 2027';
+  document.getElementById('heroFY').textContent='FY '+fy;
+  document.getElementById('heroAY').textContent='Assessment Year '+ay+' — under the '+act+'.';
+  document.getElementById('slabsFY').textContent='FY '+fy;
+  document.getElementById('newRegimeSlabHeading').textContent='New Tax Regime (FY '+fy+')';
+  document.getElementById('fyActLine').innerHTML='Income earned in <strong>FY '+fy+'</strong> ('+fyStart+') is assessed in <strong>AY '+ay+'</strong> under the <strong>'+act+'</strong>.'+(isOld?' The new Income-tax Act, 2025 applies from FY 2026-27 onwards.':' Section numbers are renumbered (e.g., 80C → corresponding new Act provision); slab rates and substantive rules carry through.');
+  // Hide results since they may have been computed for the previous FY
+  const rs=document.getElementById('resultsSection');
+  if(rs)rs.classList.remove('visible');
 }
 
 // INDIAN NUMBER FORMAT
@@ -563,17 +622,19 @@ function calculateTax(){
   let verdictText=document.getElementById('verdictText');
   let verdictSub=document.getElementById('verdictSub');
 
+  const fy=getSelectedFY();
+  const actNote=(fy==='2025-26')?' Computed for FY 2025-26 (AY 2026-27) under the Income-tax Act, 1961.':' Computed for FY 2026-27 (AY 2027-28) under the Income-tax Act, 2025.';
   if(Math.round(oldTotalTax)<Math.round(newTotalTax)){
     oldCard.classList.add('winner');
     verdictText.textContent='You save \u20B9'+formatIndian(diff)+' under the Old Regime';
-    verdictSub.textContent='Based on your deductions, the Old Tax Regime is more beneficial for you.';
+    verdictSub.textContent='Based on your deductions, the Old Tax Regime is more beneficial for you.'+actNote;
   } else if(Math.round(newTotalTax)<Math.round(oldTotalTax)){
     newCard.classList.add('winner');
     verdictText.textContent='You save \u20B9'+formatIndian(diff)+' under the New Regime';
-    verdictSub.textContent='With lower slab rates and standard deduction of \u20B975,000, the New Tax Regime works better for you.';
+    verdictSub.textContent='With lower slab rates and standard deduction of \u20B975,000, the New Tax Regime works better for you.'+actNote;
   } else {
     verdictText.textContent='Both regimes result in the same tax';
-    verdictSub.textContent='Your total tax liability is identical under both regimes.';
+    verdictSub.textContent='Your total tax liability is identical under both regimes.'+actNote;
   }
 
   // Show results

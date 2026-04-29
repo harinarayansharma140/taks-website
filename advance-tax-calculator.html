@@ -86,14 +86,37 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 4%;display:f
 .btn-wa{display:inline-flex;align-items:center;gap:.5rem;background:#25D366;color:var(--white);padding:.9rem 1.8rem;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:transform .2s ease}
 .btn-wa:hover{transform:translateY(-2px)}
 footer{background:var(--midnight);border-top:1px solid rgba(255,255,255,.06);padding:2rem 5% 1.5rem;text-align:center}
-footer .disclaimer{font-size:.78rem;line-height:1.7;color:var(--gray-400);max-width:920px;margin:0 auto 1.2rem;text-align:left;padding-bottom:1.2rem;border-bottom:1px solid rgba(255,255,255,.06)}
-footer .disclaimer strong{color:var(--gold-light)}
+.footer-disclaimer{margin-top:1rem;border-top:1px solid rgba(255,255,255,.06);padding:.55rem 0;overflow:hidden;position:relative;background:rgba(0,0,0,.18)}
+.footer-disclaimer::before,.footer-disclaimer::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none}
+.footer-disclaimer::before{left:0;background:linear-gradient(to right,var(--midnight),transparent)}
+.footer-disclaimer::after{right:0;background:linear-gradient(to left,var(--midnight),transparent)}
+.disclaimer-track{display:inline-flex;gap:3rem;white-space:nowrap;animation:disclaimerMarquee 60s linear infinite;font-size:.68rem;line-height:1.5;color:var(--gray-400);font-style:italic;padding-left:100%;will-change:transform}
+.footer-disclaimer:hover .disclaimer-track{animation-play-state:paused}
+.disclaimer-track span{flex-shrink:0}
+.disclaimer-track strong{color:var(--gold-light);font-style:normal;font-weight:600;letter-spacing:.02em}
+.disclaimer-track .sep{color:rgba(201,168,76,.4);font-style:normal}
+@keyframes disclaimerMarquee{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.disclaimer-track{animation:none;white-space:normal;padding:0 5%;font-style:italic}}
 footer p{font-size:.82rem;color:var(--gray-400);margin-bottom:.5rem}
 footer a{color:var(--gold);text-decoration:none}
 footer a:hover{text-decoration:underline}
 footer .legal-links{font-size:.78rem;color:var(--gray-400);display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-top:.5rem}
 footer .legal-links a{color:var(--gray-400);font-weight:400}
 footer .legal-links a:hover{color:var(--gold);text-decoration:none}
+
+/* YEAR SELECTOR */
+.fy-selector{background:linear-gradient(135deg,rgba(201,168,76,.06),rgba(201,168,76,.02));border:1.5px solid rgba(201,168,76,.25);border-radius:12px;padding:1rem 1.2rem;margin-bottom:1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1rem}
+.fy-selector .fy-label{font-family:var(--font-mono,'Inter',monospace);font-size:.7rem;font-weight:700;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;flex-shrink:0}
+.fy-options{display:inline-flex;background:var(--white);border:1.5px solid var(--gray-200);border-radius:100px;padding:.25rem;gap:.25rem;flex-wrap:wrap}
+.fy-options label{cursor:pointer;padding:.5rem 1rem;border-radius:100px;font-size:.78rem;font-weight:600;color:var(--gray-600);transition:all .25s ease;display:inline-flex;align-items:center;gap:.4rem;line-height:1;white-space:nowrap}
+.fy-options input{display:none}
+.fy-options label:has(input:checked){background:var(--midnight);color:var(--gold);box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.fy-options label .act-tag{font-size:.62rem;font-weight:600;color:var(--gray-400);text-transform:uppercase;letter-spacing:.05em}
+.fy-options label:has(input:checked) .act-tag{color:var(--gold-light)}
+.fy-act-line{flex-basis:100%;font-size:.76rem;color:var(--gray-600);line-height:1.5;margin-top:.1rem}
+.fy-act-line strong{color:var(--midnight);font-weight:700}
+@media(max-width:480px){.fy-options{width:100%}.fy-options label{flex:1;justify-content:center}}
+
 </style>
 </head>
 <body>
@@ -111,8 +134,8 @@ footer .legal-links a:hover{color:var(--gold);text-decoration:none}
 </nav>
 
 <section class="calc-hero">
-  <h1>Advance Tax <span class="gold">Calculator</span></h1>
-  <p>Compute the four quarterly advance tax instalments under <strong>Section 208</strong> of the Income Tax Act, 1961, net of TDS / TCS already deducted. Applicable when the estimated tax liability exceeds <strong>₹10,000</strong> in a financial year.</p>
+  <h1>Advance Tax <span class="gold">Calculator</span> — <span class="gold fy-display">FY 2025-26</span></h1>
+  <p>Compute the four quarterly advance tax instalments under the corresponding advance-tax provisions of the <strong class="act-display">Income-tax Act, 1961</strong> (earlier Section 208 of the 1961 Act), net of TDS / TCS already deducted. Applicable when the estimated tax liability exceeds <strong>₹10,000</strong> in a financial year.</p>
 </section>
 
 <section class="calc-section">
@@ -120,6 +143,16 @@ footer .legal-links a:hover{color:var(--gold);text-decoration:none}
     <div class="calc-card">
       <h2>Estimate your annual tax &amp; instalments</h2>
       <p class="card-sub">Enter your estimated annual income tax liability (after rebates and surcharge) and the TDS / TCS already deducted. The calculator splits the balance into the four statutory instalments due on 15 June, 15 September, 15 December, and 15 March.</p>
+
+
+      <div class="fy-selector" role="radiogroup" aria-label="Financial year">
+        <span class="fy-label">Financial Year</span>
+        <div class="fy-options">
+          <label><input type="radio" name="fy" value="2025-26" checked onchange="onFYChange()"><span>FY 2025-26 <span class="act-tag">IT Act 1961</span></span></label>
+          <label><input type="radio" name="fy" value="2026-27" onchange="onFYChange()"><span>FY 2026-27 <span class="act-tag">IT Act 2025</span></span></label>
+        </div>
+        <p class="fy-act-line" id="fyActLine">Income earned in <strong>FY 2025-26</strong> (1 Apr 2025 – 31 Mar 2026) is assessed in <strong>AY 2026-27</strong> under the <strong>Income-tax Act, 1961</strong>. The new Income-tax Act, 2025 applies from FY 2026-27 onwards.</p>
+      </div>
 
       <div class="form-grid">
         <div class="form-group">
@@ -195,11 +228,17 @@ footer .legal-links a:hover{color:var(--gold);text-decoration:none}
 </section>
 
 <footer>
-  <div class="disclaimer">
-    <p><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. The calculator outputs are indicative computations based on simplified rules and the inputs provided; specific professional consultation should be obtained before acting on any information herein.</p>
-  </div>
   <p>&copy; 2026 <a href="/">Tax Pandey</a> — Chartered Accountants. All rights reserved.</p>
   <div class="legal-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/">Home</a></div>
+  <div class="footer-disclaimer" role="region" aria-label="Disclaimer per ICAI Council Guidelines">
+    <div class="disclaimer-track">
+      <span><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</span>
+      <span class="sep">◆</span>
+      <span><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</span>
+      <span class="sep">◆</span>
+    </div>
+  </div>
+
 </footer>
 
 <script>
@@ -262,6 +301,22 @@ function calc(){
 const hamburger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');
 hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');navLinks.classList.toggle('open')});
 navLinks.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{hamburger.classList.remove('active');navLinks.classList.remove('open')})});
+
+function getSelectedFY(){const r=document.querySelector('input[name="fy"]:checked');return r?r.value:'2025-26';}
+function onFYChange(){
+  const fy=getSelectedFY();
+  const isOld=fy==='2025-26';
+  const ay=isOld?'2026-27':'2027-28';
+  const act=isOld?'Income-tax Act, 1961':'Income-tax Act, 2025';
+  const fyStart=isOld?'1 Apr 2025 – 31 Mar 2026':'1 Apr 2026 – 31 Mar 2027';
+  const line=document.getElementById('fyActLine');
+  if(line)line.innerHTML='Income earned in <strong>FY '+fy+'</strong> ('+fyStart+') is assessed in <strong>AY '+ay+'</strong> under the <strong>'+act+'</strong>.'+(isOld?' The new Income-tax Act, 2025 applies from FY 2026-27 onwards.':' Section numbers are renumbered; substantive rates and rules carry through unless changed by the relevant Finance Act.');
+  // Update any element with class .fy-display
+  document.querySelectorAll('.fy-display').forEach(e=>{e.textContent='FY '+fy;});
+  document.querySelectorAll('.ay-display').forEach(e=>{e.textContent='AY '+ay;});
+  document.querySelectorAll('.act-display').forEach(e=>{e.textContent=act;});
+}
+
 </script>
 </body>
 </html>

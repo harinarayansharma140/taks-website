@@ -125,8 +125,17 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
 .footer-col h4{font-family:var(--font-display);color:var(--white);font-size:.92rem;font-weight:700;margin-bottom:1rem}
 .footer-col a{display:block;color:var(--gray-400);text-decoration:none;font-size:.83rem;margin-bottom:.55rem;transition:color .3s ease}
 .footer-col a:hover{color:var(--gold)}
-.footer-disclaimer{border-top:1px solid rgba(255,255,255,.06);padding:1.2rem 0;font-size:.78rem;line-height:1.7;color:var(--gray-400)}
-.footer-disclaimer strong{color:var(--gold-light)}
+.footer-disclaimer{margin-top:1rem;border-top:1px solid rgba(255,255,255,.06);padding:.55rem 0;overflow:hidden;position:relative;background:rgba(0,0,0,.18)}
+.footer-disclaimer::before,.footer-disclaimer::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none}
+.footer-disclaimer::before{left:0;background:linear-gradient(to right,var(--midnight),transparent)}
+.footer-disclaimer::after{right:0;background:linear-gradient(to left,var(--midnight),transparent)}
+.disclaimer-track{display:inline-flex;gap:3rem;white-space:nowrap;animation:disclaimerMarquee 60s linear infinite;font-size:.68rem;line-height:1.5;color:var(--gray-400);font-style:italic;padding-left:100%;will-change:transform}
+.footer-disclaimer:hover .disclaimer-track{animation-play-state:paused}
+.disclaimer-track span{flex-shrink:0}
+.disclaimer-track strong{color:var(--gold-light);font-style:normal;font-weight:600;letter-spacing:.02em}
+.disclaimer-track .sep{color:rgba(201,168,76,.4);font-style:normal}
+@keyframes disclaimerMarquee{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.disclaimer-track{animation:none;white-space:normal;padding:0 5%;font-style:italic}}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-bottom p{font-size:.76rem}
 .footer-legal{display:flex;gap:1.2rem;flex-wrap:wrap}
@@ -150,6 +159,18 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
 .back-to-top:hover{background:var(--gold);color:var(--midnight);transform:translateY(-2px)}
 .reveal{opacity:0;transform:translateY(35px);transition:all .7s cubic-bezier(.4,0,.2,1)}
 .reveal.visible{opacity:1;transform:translateY(0)}
+
+/* FAQ */
+.faq-section{background:var(--cream)}
+.faq-grid{max-width:820px;margin:3rem auto 0}
+.faq-item{border-bottom:1px solid var(--gray-200)}
+.faq-question{width:100%;background:none;border:none;padding:1.3rem 0;font-family:var(--font-body);font-size:.95rem;font-weight:600;color:var(--gray-800);text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:color .3s ease}
+.faq-question:hover{color:var(--gold)}
+.faq-icon{font-size:1.4rem;color:var(--gold);transition:transform .3s ease;flex-shrink:0;font-weight:300;line-height:1}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-item.open .faq-answer{max-height:1200px}
+.faq-answer p{padding-bottom:1.3rem;color:var(--gray-600);font-size:.9rem;line-height:1.75}
 </style>
 
 <script type="application/ld+json">
@@ -164,7 +185,7 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
     <a href="/#services">Services</a>
     <a href="/#specialised">Specialised</a>
     <a href="/blog/">Blog</a>
-    <a href="/#faq">FAQs</a>
+    <a href="#faq">FAQs</a>
     <a href="/#contact" class="nav-cta">Book Consultation</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -213,8 +234,8 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
       <div class="service-card"><div class="service-num">03</div><h3>Form 67 — Chinese IIT Credit</h3><p>Filing of Form 67 to claim foreign tax credit for Chinese IIT paid. Includes computation of admissible credit (lower of Indian tax on doubled-up income or Chinese IIT actually paid), supporting documentation, and timing within the ITR due date.</p><span class="service-tag">Form 67 / FTC</span></div>
       <div class="service-card"><div class="service-num">04</div><h3>India-China DTAA Application</h3><p>Application of the India-China Double Taxation Avoidance Agreement — Article 14 (employment income), Article 7 (business profits), Article 11 (interest), Article 12 (royalties and FTS), and Article 13 (capital gains).</p><span class="service-tag">DTAA</span></div>
       <div class="service-card"><div class="service-num">05</div><h3>Schedule FA Foreign Asset Disclosure</h3><p>Disclosure of Chinese bank accounts (Bank of China, ICBC, etc.), brokerage holdings, property, business interests, and signatory authorities. Critical for Black Money Act compliance — Rs. 10 lakh penalty per non-disclosed asset.</p><span class="service-tag">Schedule FA</span></div>
-      <div class="service-card"><div class="service-num">06</div><h3>Cross-Border Business Reporting</h3><p>India-side reporting for Indian companies with Chinese operations — withholding tax under Section 195, transfer pricing under Section 92 and Form 3CEB, GST on import of services, and Form 15CA/15CB for outward remittances.</p><span class="service-tag">TP / Section 195</span></div>
-      <div class="service-card"><div class="service-num">07</div><h3>Repatriation — Form 15CA / 15CB</h3><p>CA certification for outward remittance from your Indian accounts to your Chinese accounts. Form 15CB issuance, Form 15CA submission, tax clearance, and bank-side coordination.</p><span class="service-tag">Form 15CA / 15CB</span></div>
+      <div class="service-card"><div class="service-num">06</div><h3>Cross-Border Business Reporting</h3><p>India-side reporting for Indian companies with Chinese operations — withholding tax under Section 393(2) of the Income-tax Act, 2025 (earlier Section 195), transfer pricing under the corresponding provisions and Form 3CEB, GST on import of services, and Form 145/146 for outward remittances (replaces 15CA/15CB).</p><span class="service-tag">TP · Section 393</span></div>
+      <div class="service-card"><div class="service-num">07</div><h3>Repatriation — Form 145 / 146</h3><p>CA certification for outward remittance from your Indian accounts to your Chinese accounts. Form 146 issuance, Form 145 submission, tax clearance, and bank-side coordination — under the Income-tax Act, 2025 (Rule 220 of the 2026 Rules); replaces earlier Form 15CA / 15CB.</p><span class="service-tag">Form 145 / 146</span></div>
       <div class="service-card"><div class="service-num">08</div><h3>Returning from China — RNOR Planning</h3><p>Multi-year RNOR roadmap, optimal timing of return, restructuring of Chinese savings and investments, NRE/NRO conversion planning, and a clean transition path to Resident taxpayer status.</p><span class="service-tag">Relocation Advisory</span></div>
     </div>
   </div>
@@ -249,6 +270,26 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
   </div>
 </section>
 
+
+<!-- COUNTRY FAQ -->
+<section class="section faq-section" id="faq">
+  <div class="container reveal">
+    <div class="section-label">// China-India FAQ</div>
+    <h2 class="section-title">Frequently Asked Questions — China-India Tax</h2>
+    <p class="section-subtitle">Answers to the questions our China-connected clients ask most often. If yours is not covered, send us the specifics on WhatsApp and we will respond.</p>
+    <div class="faq-grid">
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">I worked in China for 200 days last year — am I still an Indian tax resident?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Likely yes. Indian residency under Section 6 of the Income Tax Act, 1961 is met if you spent <strong>182+ days in India</strong> in the relevant FY <em>or</em> 60+ days in the FY plus 365+ days in the preceding 4 FYs. The 60-day rule extends to 182 days only if you left India for employment abroad — courts apply this strictly. We compute residency to the day before advising on filing position.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">How does the India-China DTAA work for the IIT I already paid in China?<span class="faq-icon">+</span></button><div class="faq-answer"><p>If you are an Indian resident, your global income (including China-source salary) is taxable in India. The IIT paid in China is creditable in India under <strong>Article 23 of the India-China DTAA</strong> via <strong>Form 67</strong>, capped at the Indian tax attributable to that income. We compute the credit, file Form 67 before the ITR due date (mandatory — late filing forfeits the credit), and reflect it in Schedule TR / FSI of your return.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">Which DTAA articles matter for an Indian working in China?<span class="faq-icon">+</span></button><div class="faq-answer"><p><strong>Article 4</strong> (residency tie-breaker), <strong>Article 14</strong> (employment income — taxable in China if exercised there subject to the 183-day / employer / PE tests), <strong>Article 7</strong> (business profits — relevant if you consult independently), <strong>Article 11</strong> (interest), <strong>Article 12</strong> (royalties / FTS), <strong>Article 13</strong> (capital gains), and <strong>Article 22</strong> (other income). We map your income types to articles before computing the FTC.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">Do I need to disclose my Chinese bank accounts and ICBC / Bank of China holdings in Schedule FA?<span class="faq-icon">+</span></button><div class="faq-answer"><p>If you are <strong>Resident and Ordinarily Resident</strong>, yes — Schedule FA must include every Chinese bank account, brokerage holding, employer-provided ESOP / RSU, real estate, and signatory authority. Non-disclosure attracts a flat <strong>Rs. 10 lakh penalty per asset</strong> under the Black Money Act, 2015, plus prosecution. NRIs and RNORs are not required to file Schedule FA for the period they are non-resident.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">My Indian company has staff visiting clients in China — does this create a Permanent Establishment?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Possibly. A PE is triggered under <strong>Article 5</strong> of the India-China DTAA if you have a fixed place of business in China, a dependent agent with authority to conclude contracts, or a service PE (employees in China for more than 183 days in any 12-month period providing services). PE risk means China can tax the attributable profits and India loses primary taxing rights. We assess PE exposure before extended staff deployments.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">How are payments to Chinese vendors taxed — does TDS apply?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. Payments to Chinese non-resident vendors for technical services, royalties, or interest attract TDS under Section 393(2) of the Income-tax Act, 2025 (earlier Section 195) read with the India-China DTAA — typically 10 % for FTS / royalties (treaty rate) subject to TRC + Form 10F. Outward remittance requires Form 145 / 146 (earlier 15CA / 15CB) certification. We handle the TDS, certification, and bank-side coordination together.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">I am returning to India after 6 years in China — what is RNOR and how does it help me?<span class="faq-icon">+</span></button><div class="faq-answer"><p>RNOR (Resident but Not Ordinarily Resident) is a transitional residency status under Section 6(6). For the year you return, you are RNOR if you were non-resident in <strong>9 of the preceding 10 years</strong> or in India for less than 729 days in the preceding 7 years. As RNOR, your foreign-source income (Chinese salary / interest / capital gains earned outside India) is <strong>not taxable</strong> in India for up to 2-3 years. We map your specific facts to maximise the RNOR window before triggering full Resident status.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFAQ(this)">What happens to my Chinese ESOPs / RSUs when I return to India?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Vesting that occurs while you are an Indian Resident triggers Indian tax on the perquisite value. Sale of vested shares is a capital gain under Indian law, with the cost stepped to fair market value at grant / vest depending on the scheme. The Chinese employer's IIT withholding is creditable via Form 67, but only if you file the return correctly with Schedule FA + Schedule CG + Schedule FSI. Mishandling at the return-to-India transition is the single most common scenario we untangle.</p></div></div>
+    </div>
+  </div>
+</section>
+
 <section class="cta-section">
   <div class="cta-content reveal">
     <h2>China-India Tax Query? Let's Talk</h2>
@@ -262,11 +303,8 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
     <div class="footer-grid">
       <div class="footer-brand"><a href="/" class="nav-logo"><div class="nav-logo-icon"><img src="logo.png" alt="Tax Pandey"></div>Tax<span>Pandey</span></a><p>ICAI registered Chartered Accountancy firm providing audit, taxation, GST, compliance, and business advisory services. Serving Faridabad and Delhi-NCR since 2018.</p></div>
       <div class="footer-col"><h4>Specialised</h4><a href="/virtual-cfo.html">Virtual CFO</a><a href="/nri-taxation.html">NRI Taxation</a><a href="/us-taxation.html">US-India Tax</a><a href="/uae-taxation.html">UAE-India Tax</a><a href="/china-taxation.html">China-India Tax</a><a href="/singapore-taxation.html">Singapore-India Tax</a></div>
-      <div class="footer-col"><h4>Quick Links</h4><a href="/#ca">Our CA</a><a href="/#services">Services</a><a href="/#testimonials">Reviews</a><a href="/#faq">FAQs</a><a href="/#contact">Contact Us</a></div>
+      <div class="footer-col"><h4>Quick Links</h4><a href="/#ca">Our CA</a><a href="/#services">Services</a><a href="/#testimonials">Reviews</a><a href="#faq">FAQs</a><a href="/#contact">Contact Us</a></div>
       <div class="footer-col"><h4>Resources</h4><a href="/blog/">Blog</a><a href="/tax-calculator.html">Tax Calculator</a><a href="/compliance-calendar.html">Compliance Calendar</a></div>
-    </div>
-    <div class="footer-disclaimer">
-      <p><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</p>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Tax Pandey — Chartered Accountants. All rights reserved.</p>
@@ -274,6 +312,15 @@ footer{background:var(--midnight);padding:4rem 5% 1.5rem;color:var(--gray-400)}
       <div class="footer-socials"><a href="https://www.linkedin.com/in/ca-kuldeep-pandey-65750763" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="https://www.instagram.com/tax_pandey/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><a href="https://www.facebook.com/people/CA-Kuldeep-Pandey/pfbid026thhpNAEbdpsZsmNmfGtrfvKsJQzheEyNT9CBLmaAXznNGTLF9dMdfniBbXupz6hl/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div>
     </div>
   </div>
+  <div class="footer-disclaimer" role="region" aria-label="Disclaimer per ICAI Council Guidelines">
+    <div class="disclaimer-track">
+      <span><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</span>
+      <span class="sep">◆</span>
+      <span><strong>Disclaimer (per ICAI Council Guidelines):</strong> This website is meant solely to provide information about Tax Pandey, Chartered Accountants and the services rendered. The contents do not constitute solicitation, advertisement, or invitation, and should not be construed as professional advice. Visitors should obtain specific professional consultation before acting on any information herein.</span>
+      <span class="sep">◆</span>
+    </div>
+  </div>
+
 </footer>
 
 <div class="whatsapp-float">
@@ -295,6 +342,7 @@ hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');nav
 navLinks.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{hamburger.classList.remove('active');navLinks.classList.remove('open')})});
 const revealObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+function toggleFAQ(btn){btn.parentElement.classList.toggle('open');}
 </script>
 </body>
 </html>
